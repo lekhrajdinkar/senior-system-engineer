@@ -99,7 +99,7 @@ The site is organized into the following key modules:
 
 
 ### Observability 🔸🔸🔸
-[09_observability](docs/09_observability)
+[09_observability](docs/10_System_Design/SD_06_observability)
 - Observability Kickoff
 - Spring Boot Observability
 - Datadog Monitoring

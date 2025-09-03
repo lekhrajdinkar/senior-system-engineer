@@ -197,19 +197,25 @@ nav:
           - Kickoff: 06_message-broker/rmq/01_kickoff.md
           - project-1(java): 06_message-broker/rmq/02_project.md
 
-
-  - Observability:
-      - Kickoff: 09_observability/00_kick_off.md
-      - Spring boot: 09_observability/01_Observability-spring.md
-      - Datadog: 09_observability/02_observabilty-datadog.md
-      #- Datadog Agent Config (YAML): 09_observability/datadog-agent.yaml
-
   - 💻System Design:
+      - CSE ☑️:
+          - principle:
+              - cse_best_practice: 10_System_Design/00_CSE/principles/00_cse_best_practice.md
+              - SDLC (based on resume): 10_System_Design/00_CSE/principles/01_my-sdlc-task.md
+              - Agile (Scrum): 10_System_Design/00_CSE/principles/02_agile-scrum.md
+              - Agile (Kanban): 10_System_Design/00_CSE/principles/02_agile-kanban.md
+              - DDD: 10_System_Design/00_CSE/principles/03_DDD.md
+          - coding:
+              - 03_code_review: 10_System_Design/00_CSE/coding/01_code_review.md
+              - 03_coding_best_practice: 10_System_Design/00_CSE/coding/02_coding_best_practice.md
+              - 03_coding_patterns: 10_System_Design/00_CSE/coding/03_coding_patterns.md
+
       - start/kickoff ☑️:
           - cap-theorem: 10_System_Design/SD_00_start/00_cap-theorem.md
           - tech-stack-master-list-1: 10_System_Design/SD_00_start/01_technology-stack-master-list-1.md
           - sd-core-concepts: 10_System_Design/SD_00_start/02_sd-core-concepts.md
           - design-patterns: 10_System_Design/SD_00_start/03_design-patterns-1.md
+
       - High performance ☑️:
           - Start: 10_System_Design/SD_01_performance/01_start.md
       - High Availability ☑️:
@@ -230,7 +236,10 @@ nav:
       - Distributed system ☑️:
           - Start: 10_System_Design/SD_05_Distributed/01_distributed-start.md
       - Observability ☑️:
-          - Start: 10_System_Design/SD_06_obs/01_Obs_start.md
+          - Start: 10_System_Design/SD_06_observability/01_Obs_start.md
+          - Kickoff: 10_System_Design/SD_06_observability/00_kick_off.md
+          - Spring boot: 10_System_Design/SD_06_observability/01_Observability-spring.md
+          - Datadog: 10_System_Design/SD_06_observability/02_observabilty-datadog.md
       - Security ☑️:
           - JWT: 10_System_Design/SD_07_security/01_start.md
           - OAuth2.0 & OIDC: 10_System_Design/SD_07_security/04_03_OAUth+OIDC.md
