@@ -59,10 +59,26 @@ while (true)
 }    
 ```
 
-- Kafka StreamProcessorApp (High-level)
+- **Kafka StreamProcessorApp** (High-level)
   - Built on top of Kafka consumer & producer APIs
-  - Built-in : State stores, Windowing, Joins, Aggregations, Repartitioning
-  - Fault-tolerant via changelog topics
+  - Built-in : 
+    - State stores (Stateless + stateful processing) 
+    - Windowing (Maintains separate state per window) 
+    - Joins:
+      - Stream–Table Join (Enrichment)
+      - Stream–Stream Join
+    - Aggregations (want summaries, not raw events) 
+    - **Repartitioning** (change key for event and distribte events to partition again)
+    ```java
+        // Key = orderId
+        // Value = { userId, amount }
+        builder.stream("orders")
+            .selectKey((orderId, order) -> order.getUserId()) // 👈🏻 selectKey(...)
+            .groupByKey()
+            .count();
+    ```
+  - Fault-tolerant via **changelog topics**
+  - **Horizontally scalable** via Kafka partitions
   - Exactly-once semantics
   - Flow: **Topic → Stream → Transform → Aggregate/Join → Output Topic** 🔸
   - **cons**:
@@ -77,13 +93,12 @@ while (true)
 
 ---
 ## C. System Design Example   
-## C.1 Real-Time Fraud Detection App (JT)
+### C.1 Real-Time Fraud Detection App (JT)
 - Kafka Streams + Spring Boot + Java21
 - https://www.youtube.com/watch?v=U7RZcBtP6Dw&list=PLVz2XdJiJQxz55LcpHFM6QIB-Px40w3Gt&index=4
 - ![img.png](temp/06/01/img.png)
 
 ### C.2 from chatGPT-5.2
-#### HLD
 ```declarative
 [ Kafka Topic: orders ]
     |
@@ -96,11 +111,4 @@ while (true)
     |
     v
 [ Kafka Topic: customer-order-totals ]
-
 ```
-- Key Characteristics
-  - Stateless + stateful processing
-  - Uses embedded **RocksDB** state store
-  - Exactly-once capable (configurable)
-  - **Horizontally scalable** via Kafka partitions
-  - fault tolerance
