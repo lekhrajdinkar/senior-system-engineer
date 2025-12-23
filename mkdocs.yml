@@ -193,6 +193,7 @@ nav:
           - Extended Notes: 06_message-broker/kakfa/Notes_04_extended.md
           - Wikimedia Project: 06_message-broker/kakfa/Notes_03_project_wikimedia.md
           - Case Studies: 06_message-broker/kakfa/Notes_05_case-studies.md
+          - Streams: 06_message-broker/kakfa/Notes_06_JT_kafka-Streams.md
       - ✅RabbitMQ:
           - Kickoff: 06_message-broker/rmq/01_kickoff.md
           - project-1(java): 06_message-broker/rmq/02_project.md
