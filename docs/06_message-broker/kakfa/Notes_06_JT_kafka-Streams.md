@@ -1,4 +1,6 @@
 # Kafka Streams
+- docs: https://chatgpt.com/c/6951ccd9-ddac-8333-a10e-28ed6ebec776
+- POC project/java: https://github.com/lekhrajdinkar/microservice-java/blob/main/README.md#kafka-projects
 
 ## A. Intro
 - **Scenario**: 
@@ -77,7 +79,13 @@ while (true)
             .groupByKey()
             .count();
     ```
-  - Fault-tolerant via **changelog topics**
+  - Changelog Topics (Fault Tolerance)
+    ```
+    - Every state store has a backing Kafka changelog topic
+    - State updates are continuously written to Kafka
+    - On crash/restart → state is restored from changelog
+    - <application-id>-<store-name>-changelog
+    ```   
   - **Horizontally scalable** via Kafka partitions
   - Exactly-once semantics
   - Flow: **Topic → Stream → Transform → Aggregate/Join → Output Topic** 🔸
