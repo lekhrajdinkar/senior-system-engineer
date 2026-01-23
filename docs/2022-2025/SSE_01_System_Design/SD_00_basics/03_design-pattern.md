@@ -1,8 +1,8 @@
-## 🔶Decorator pattern
+# Design pattern
+https://youtu.be/USLwIwyWVIM
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/USLwIwyWVIM?si=vWrpCYhP0PzpSot_" allowfullscreen></iframe>
-
-- eg: [https://www.perplexity.ai/search/decorator-pattern-9mJUDwF0TvyuNvoDb_9bRg](https://www.perplexity.ai/search/decorator-pattern-9mJUDwF0TvyuNvoDb_9bRg)
+## 1. Decorator pattern
+- [https://www.perplexity.ai/search/decorator-pattern-9mJUDwF0TvyuNvoDb_9bRg](https://www.perplexity.ai/search/decorator-pattern-9mJUDwF0TvyuNvoDb_9bRg)
 - Structural design pattern used in OOP
 - add new **behaviors** or functionalities to individual objects dynamically—without altering the structure or code of the existing classes. 
 
@@ -61,7 +61,7 @@ public class CoffeeShop
 ```
 
 ---
-## 🔶Command pattern
+## 2. Command pattern
 - [https://www.perplexity.ai/search/command-pattern-in-oop-J8oD_ouMTaigVow8ijg8mg](https://www.perplexity.ai/search/command-pattern-in-oop-J8oD_ouMTaigVow8ijg8mg)
 - behavioral design pattern that encapsulates a request or action as an object.
 - Analogy/situation: re-mappable remote to different device. 🗣️
@@ -127,7 +127,7 @@ public class CommandPatternDemo {
 ```
  
 --- 
-## 🔶Adapter
+## 3. Adapter
 - [https://www.perplexity.ai/search/adaptor-pattern-java-tl9As0vCQxKXe2MF8239nA](https://www.perplexity.ai/search/adaptor-pattern-java-tl9As0vCQxKXe2MF8239nA)
 - structural design pattern 
 - that acts as a **bridge** between two incompatible interfaces

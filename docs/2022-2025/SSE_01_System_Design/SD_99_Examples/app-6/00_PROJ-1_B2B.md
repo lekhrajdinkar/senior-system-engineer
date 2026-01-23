@@ -1,6 +1,6 @@
 ## Event drivern Architecture
 
-![system-2022-design.png](../../draw-io/system-2022-design.png)
+![system-2022-design.png](../draw-io/system-2022-design.png)
 
 ---
 ## B2B::Design pattern
