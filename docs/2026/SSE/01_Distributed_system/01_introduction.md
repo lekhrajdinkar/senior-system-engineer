@@ -13,7 +13,7 @@
 - **Fault Tolerance** 
   - A major goal is to survive partial failures 
   - e.g., if one node fails, others continue                                                                                            
-- Concurrency & Parallelism |  Yes, parallelism is common but it's not the only or defining property. 
+- Concurrency & Parallelism
 - Distributed systems also emphasize resilience, scalability, and consistency.             
 - **Transparency** - Users shouldn’t feel the system is distributed (location, access, and failure transparency).                                                                                         
 - **Shared State**  
