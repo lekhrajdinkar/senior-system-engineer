@@ -1,21 +1,20 @@
-# Solution Engineering
-## Platform Engineer
-- [message broker](docs/2022-2025/PE_03_message-broker)
-  - [kakfa](docs/2022-2025/PE_03_message-broker/kakfa)
-  - [rmq](docs/2022-2025/PE_03_message-broker/rmq)
-- [docker](docs/2022-2025/PE_01_Docker/README.md) 
-- [Kubernetes](docs/2022-2025/PE_02_Kubernetes/README.md)
-
-## System Engineer
-- **System Design**:
-  - [System_Design](docs/2022-2025/SSE_01_System_Design)
-  - [blogs - byteByteGo.md](docs/2022-2025/SSE_01_System_Design/blogs_01_byteByteGo.md)
+# Solution Engineering | [docs](streamlit-docs/README.md)
+## ✔️2022-2025
+- Platform Engineer
+  - [PE_01_Docker](docs/2022-2025/PE_01_Docker)
+  - [PE_02_Kubernetes](docs/2022-2025/PE_02_Kubernetes)
+  - [PE_03_message-broker](docs/2022-2025/PE_03_message-broker)
+- System Engineer
+  - [SSE_01_System_Design](docs/2022-2025/SSE_01_System_Design)
+- DevOps Engineer
+  - [DevOps_01_terraform](docs/2022-2025/DevOps_01_terraform)
+  - [DevOps_02_harness](docs/2022-2025/DevOps_02_harness)
+- Cloud Engineer
+  - [CE_01_AWS_DVA](docs/2022-2025/CE_01_AWS_DVA)
+  - [CE_02_AWS_SAA](docs/2022-2025/CE_02_AWS_SAA)
+- Discussion
+  - [Discussion_2024.md](docs/2022-2025/revision_01_2024.md)
+  - [Discussion_2025.md](docs/2022-2025/revision_02_2025.md)
   
-## DevOps Engineer
-- [IAC - terraform](docs/2022-2025/DevOps_01_terraform)
-- [ci/cd pipeline - harness](docs/2022-2025/DevOps_02_harness)
-  
-## Cloud Engineer
-- **AWS certification Notes**:
-  - [AWS SAA](docs/01_aws)
-  - [AWS DVA](docs/2022-2025/CE_01_AWS_DVA)
+---
+## ✔️2026
