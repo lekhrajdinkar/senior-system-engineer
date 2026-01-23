@@ -1,10 +1,10 @@
 # EKS
 ## k8s
-- [03_Kubernetes](../../../03_Kubernetes)
+- [03_Kubernetes](../../PE_02_Kubernetes)
 - cloud-agnostic
 ![img.png](../99_img/compute/eks/img.png)
 ---
-- [04_EKS](../../../03_Kubernetes/04_EKS)
+- [04_EKS](../../PE_02_Kubernetes/04_EKS)
 - **pod** + **service** 
 - **control panel/master node** 
 - **worker-nodes**

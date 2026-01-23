@@ -26,9 +26,9 @@
     - deploy via
         - containers (Docker)
         - orchestration (**Kubernetes**) : pods+services
-            - [03_Kubernetes](../../03_Kubernetes)
+            - [03_Kubernetes](../../PE_02_Kubernetes)
     - https://github.com/lekhrajdinkar/03-spring-cloud-v2/tree/main/Notes
-    - [01_monolith_MicroServices.md](../SD_03_scalability/micro-service/01_monolith_MicroServices.md)[00_kickOff](../../03_Kubernetes/00_kickOff)
+    - [01_monolith_MicroServices.md](../SD_03_scalability/micro-service/01_monolith_MicroServices.md)[00_kickOff](../../2022-2025/PE_02_Kubernetes/00_kickOff)
 - **Load Balancers**
     - AWS :: ELB/Elastic Load Balancer - alb, nlb,
     - `NGINX`

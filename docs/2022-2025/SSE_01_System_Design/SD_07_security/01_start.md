@@ -24,7 +24,7 @@
   
 ---
 ## 🗣️examples
-- [user onboarding example in organisation](../SD_99_Examples/byteMonk/02_IDP%2Bfederation.md)
+- [user onboarding example in organisation](../SD_99_Examples/byteMonk/02_IDP+federation.md)
 
 ---
 ## 🔗Reference:

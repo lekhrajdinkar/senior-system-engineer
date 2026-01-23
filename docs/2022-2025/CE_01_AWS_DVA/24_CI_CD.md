@@ -1,5 +1,5 @@
-- [05_harness](../../05_harness)
-- [04_terraform](../../04_terraform)
+- [05_harness](../DevOps_02_harness)
+- [04_terraform](../DevOps_01_terraform)
 ---
 # A. Concept
 - CI
