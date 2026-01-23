@@ -1,12 +1,6 @@
-## reference
-- [java springboot project](https://github.com/lekhrajdinkar/02-backend-pack/tree/main/src/main/java/com/lekhraj/java/spring/kafka)
-- [https://www.udemy.com/course/apache-kafka](https://www.udemy.com/course/apache-kafka)
-- [https://conduktor.io/apache-kafka-for-beginners](https://conduktor.io/apache-kafka-for-beginners)
-- [https://learn.conduktor.io/kafka/](https://learn.conduktor.io/kafka/)
-- [🗨️gpt session](https://chatgpt.com/c/674a1fef-5634-800d-b445-dfa969b74011)
----
-# kafka
-## A intro
+# kafka Concepts
+## ✔️Overview
+- kk https://www.youtube.com/watch?v=9mNYokzTD14 netflix
 -  **real-time data streaming pipelines**. (primary task)
 - **data stream** : unbounded/endless sequence of data, with data throughput can high or low. eg:
     - Log Analysis - Log stream from multiple ms.
@@ -15,22 +9,16 @@
 - **distributed system**
     - cluster + brokers/nodes (has `TOPICS`)
     - scalable and fault-tolerant to node loss.
+- fast delivery for millions of events
+- fast sequential data retrival on HDD storage
 
 ---
-## B install
-- 1 **curl -L https://releases.conduktor.io/quick-start -o docker-compose.yml && docker compose up -d --wait && echo "Conduktor started on http://localhost:8080"**
-- 2 https://github.com/conduktor/kafka-beginners-course/tree/main/conduktor-platform - worked(old one)
-- next:
-    - for new update: https://conduktor.io/get-started
-    - check all container: https://releases.conduktor.io/quick-start -o docker-compose.yml
-    - launch UI/conduktor : http://localhost:8080
----
-## C use cases
+## ✔️use cases
 - https://chatgpt.com/c/6748bff9-8df8-800d-8faa-ac5244853529
 ### 1 as a data integration layer
 - producer  and consumer system/s, with diff data-format + schema, protocol
-- ![img.png](temp/img-3.png)
-- ![img.png](temp/img.png)
+- ![img.png](../../../99_img/2025/pe_03/img-3.png)
+- ![img.png](../../../99_img/2025/pe_03/img.png)
 ### 2 Decouple systems
 ### 3 Microservice communication
 ### 4 Integration with Big Data technologies
@@ -40,10 +28,11 @@
 - collect logs
 - collect web user activity
 
-- ![img_1.png](temp/img_1.png)
-- ![img.png](temp/01/img.png)
+- ![img_1.png](../../../99_img/2025/pe_03/img_1.png)
+- ![img.png](../../../99_img/2025/pe_03/01/img.png)
+
 ---
-## D fundamental / component
+## ✔️fundamental component
 - https://chatgpt.com/c/6748c06d-048c-800d-996e-6ca852cd0329
 - `producer` --> **kafka-Cluster [ broker > topic > partition ]** --> `consumer group/s` [consumer-1,... ]
 
@@ -53,7 +42,7 @@
 - if we connect to any broker, then can discover and connect to other broker in the same cluster
     - Every broker in the cluster has metadata about all the other brokers
     - therefore any broker in the cluster is also called a `bootstrap server`.
-    - ![img_5.png](temp/01/img_5.png)
+    - ![img_5.png](../../../99_img/2025/pe_03/01/img_5.png)
 
 --- 
 ### **1 topics**
@@ -105,7 +94,7 @@
   
   - RF=4 (invalid) :  must be <= no of broker
   ```
-- ![img_6.png](temp/01/img_6.png)
+- ![img_6.png](../../../99_img/2025/pe_03/01/img_6.png)
 
 ---
 ### **2 producer**
@@ -123,7 +112,7 @@
     - use kafka 3+
     - detects duplicate and prevent it.
     - has retry ability with duplicate check.
-    - ![img.png](temp/01/img-99.png)
+    - ![img.png](../../../99_img/2025/pe_03/01/img-99.png)
 
 - kafka 3+ sets below :point_left:
 ```
@@ -142,12 +131,12 @@
 - **High throughput producer**:
     - **partition class**
         - **RoundRobin**
-            - ![img_1.png](temp/04/img_1.png)
+            - ![img_1.png](../../../99_img/2025/pe_03/04/img_1.png)
         - **sticky** (looks for batch.size + linger.ms)
             - **linger.ms = 10ms** # `accumulate` message for 10 ms and then send
             - **batch.size = 16000** # `accumulate` message till 16 kb and then publish
             - note: increase above values, to achieve High throughput
-            - ![img.png](temp/04/img.png)
+            - ![img.png](../../../99_img/2025/pe_03/04/img.png)
     - compression (use **snappy**)
         - compression.type=snappy
         - spring.kafka.producer.properties.compression.type=snappy
@@ -162,7 +151,7 @@
         - true unless partition NOT chnages :point_left:
         - uses **hashing** `murmur2 algo`
 
-- ![img_1.png](temp/01/img_1.png)
+- ![img_1.png](../../../99_img/2025/pe_03/01/img_1.png)
 - `Kafka Message Serializers` / `Kafka Message Deserializers`
     - IntegerSerializer
     - StringSerializer
@@ -180,10 +169,10 @@
 - each partition of topic is consumed by one consumer within a consumer group :point_left:
 - Messages are effectively divided among the consumers.
 - static consumer in group --> having `group.instance.id` is also set. :point_left:
-- ![img_2.png](temp/01/img_2.png)
-- ![img_3.png](temp/01/img_3.png)
-- ![img_4.png](temp/01/img_4.png)
-- ![img.png](temp/02/img.png)
+- ![img_2.png](../../../99_img/2025/pe_03/01/img_2.png)
+- ![img_3.png](../../../99_img/2025/pe_03/01/img_3.png)
+- ![img_4.png](../../../99_img/2025/pe_03/01/img_4.png)
+- ![img.png](../../../99_img/2025/pe_03/02/img.png)
 ```
 topic with 2 partition consumed by :
 - consumer-1
@@ -230,8 +219,8 @@ dividing the workload between the two partitions.
 - whenever consume leaves/joins group, rebalance happens
 - moving partition b/w consumers.
 - if static member leave the group and joins back within **session.timeout.ms**, the gets it original partition.
-- ![img.png](temp/03/img.png)
-- ![img_1.png](temp/03/img_1.png)
+- ![img.png](../../../99_img/2025/pe_03/03/img.png)
+- ![img_1.png](../../../99_img/2025/pe_03/03/img_1.png)
 
 #### **4.7 liveliness** :yellow_circle:
 - threads running on broker to check  of consumer/s:
@@ -286,101 +275,18 @@ dividing the workload between the two partitions.
     - stores configurations for topics and permissions.
     - does NOT store consumer offsets
     - ensemble / Zookeeper cluster: 3,5, 7,...
-    - ![img_1.png](temp/02/img_1.png)
+    - ![img_1.png](../../../99_img/2025/pe_03/02/img_1.png)
 
 - **5.5 Kafka KRaft Mode**
 
----
-
-# Programs
+## reference
+- [https://www.udemy.com/course/apache-kafka](https://www.udemy.com/course/apache-kafka)
+- [https://conduktor.io/apache-kafka-for-beginners](https://conduktor.io/apache-kafka-for-beginners)
+- [https://learn.conduktor.io/kafka/](https://learn.conduktor.io/kafka/)
 - https://chatgpt.com/c/674a1fef-5634-800d-b445-dfa969b74011
-```
-    <dependency>
-        <groupId>org.springframework.kafka</groupId>
-        <artifactId>spring-kafka</artifactId>
-    </dependency>
-    
-spring.kafka.bootstrap-servers=localhost:9092
-spring.kafka.consumer.group-id=kafka-generic-consumer-group
-spring.kafka.consumer.auto-offset-reset=earliest/latest/none
+- project:
+  - https://github.com/lekhrajdinkar/microservice-java/tree/main/KafkaModule/src/main/java/kafka/spring
 
-spring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer
-```
-
-## producer
-```
- - @Autowired KafkaTemplate<String, String> kafkaTemplate;
- - String message = objectMapper.writeValueAsString(student);
- - kafkaTemplate.send("topic-1", message);
-```
-### produce - sysn + async
-- **sysc** - send(produceRecord)
-- **a-sync**  - send(produceRecord, `new Callback() { @override onCompletion ... }`)
-
-### produce in batch
-- props.put("batch.size","400");
-- key must be null
-- props.put("partitioner.class","RR); // for demo purpose only.
-- consumer side
-    - read messages in batch `poll()`
-    - process batch `for(m:messages)`
-    - then update offset manually
-    - keep consumer code, idempotent.
-
-### produce with key (k1,k2,k3)
-- add consumer group with 3 consumer/s
-- check ordering :)
-
----
-## consumer
-```
- @KafkaListener(topics = {"kafka-topic-1", "kafka-topic-2"}, groupId = "kafka-generic-consumer-group") m(String s) {...}
-```
-- consume : props.groupId("group.id","") + props.put("group.instance.id","") **static consumer**
-- props.put("auto.offset.rest","earliest")
-
-
-### scenario-1: generic consumer for diff schema
-```
-kafka-topic-1 (schema : student)
-kafka-topic-2 (schema- customer)
-kafka-generic-consumer-1 : subscribed to kafka-topic-1 and kafka-topic-2.
-
-# producer sending json 
-# De-Serailize json to string
-# while consuming, Objectmapper.readObject(jsonStr, student/customer.class)
-spring.kafka.consumer.value-deserializer=org.apache.kafka.common.serialization.StringDeserializer
-
-```
-
-### scenario-2 : partitions < consumer
-```
-Topic: topic-1 with 2 partitions (partition-0 and partition-1).
-Consumer Group: topic-1-group-1.
-Consumers: c1, c2, c3, c4.
-
-# Partition Assignment
-partition-0: Assigned to c1.
-partition-1: Assigned to c2.
-c3 and c4 are idle because there are not enough partitions for them.
-```
-
-### scenario-3 : partitions > consumer
-```
-Topic: topic-1 with 4 partitions (partition-0, partition-1, partition-2, partition-3).
-Consumer Group: topic-1-group-1.
-Consumers: c1, c2
-
-# Partition Assignment :
-
-## --- Using RangeAssignor --- 
-c1: partition-0, partition-1.
-c2: partition-2, partition-3.
-
-## ---  Using RoundRobinAssignor --- 
-c1: partition-0, partition-2.
-c2: partition-1, partition-3.
-```
 
 
  

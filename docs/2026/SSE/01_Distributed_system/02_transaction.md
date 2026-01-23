@@ -14,7 +14,6 @@
   
 ## solution-1 : 2PC 
 - phases : prepare > commit
-- 
 - there is a **coordinator component**, contains the logic to manage the transaction.
 - ![img.png](../../../99_img/2026/02/01/img.png)
 - cons:
