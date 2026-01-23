@@ -3,7 +3,7 @@
 - https://aws.amazon.com/blogs/
 - https://www.udemy.com/course/aws-certified-developer-associate-dva-c01
 
-![img.png](../99_img/dva/00/img.png)
+![img.png](../../01_aws/99_img/dva/00/img.png)
 
 ---
 # 2. Progress :books:
@@ -12,29 +12,29 @@
   - practice paper: https://www.udemy.com/course/aws-certified-developer-associate-practice-tests-dva-c01/
 
 ## Section 4 `IAM` :green_circle:
-- [01_IAM.md](../06_Security/01_IAM.md)
+- [01_IAM.md](../../01_aws/06_Security/01_IAM.md)
 - Directory service:
-  - [01_SSO+DirectoryService.md](../06_Security/01_SSO+DirectoryService.md)
+  - [01_SSO+DirectoryService.md](../../01_aws/06_Security/01_SSO+DirectoryService.md)
 
 ## Section 5 `EC2` :green_circle:
-- [01_EC2.md](../01_compute/01_EC2.md)
+- [01_EC2.md](../../01_aws/01_compute/01_EC2.md)
 
 ## Section 6  `EBS_EFS` :green_circle:
-- [01_EBS_EFS.md](../02_storage/01_EBS_EFS.md)
+- [01_EBS_EFS.md](../../01_aws/02_storage/01_EBS_EFS.md)
 
 ## Section 7 : `ELB_ASG` :green_circle:
 - [01_ELB_ASG.md](..%2F04_network%2F01_ELB_ASG.md)
 
 ## Section 8 -  `RDS + Aurora + ElastiCache` :green_circle:
-- [01_RDS.md](../03_database/01_RDS.md)
+- [01_RDS.md](../../01_aws/03_database/01_RDS.md)
 - [02_Aurora.md](../03_database/02_Aurora.md)
-- [03_ElastiCache.md](../03_database/03_ElastiCache.md)
+- [03_ElastiCache.md](../../01_aws/03_database/03_ElastiCache.md)
 ```
     ElastiCache Strategies
     Amazon MemoryDB for Redis
 ```
 ## Section 9 - `Route 53` :green_circle:
-- [02_Rout53.md](../04_network/02_Rout53.md)
+- [02_Rout53.md](../../01_aws/04_network/02_Rout53.md)
 ```
     Routing Policy - Traffic Flow & Geoproximity Hands On
 ```
@@ -45,7 +45,7 @@
   - [03_VPC-2.md](../04_network/03_VPC-2-NAT)
   - [03_VPC-3.md](../04_network/03_VPC-3-vpcPeer+vpce)
   - [03_VPC-4.md](../04_network/03_VPC-4-tolologies)
-- [04_CloudFront_DVA.md](../04_network/04_CloudFront_DVA.md)
+- [04_CloudFront_DVA.md](../../01_aws/04_network/04_CloudFront_DVA.md)
 ```
     VPC Fundamentals - Section Introduction
     VPC, Subnets, IGW and NAT
@@ -68,13 +68,13 @@
 ```
 
 ## Section 11,13,14 - `S3` :green_circle:
-- [03_S3-1.md](../02_storage/03_S3-1.md)
+- [03_S3-1.md](../../01_aws/02_storage/03_S3-1.md)
 - [03_S3-2.md](../02_storage/03_S3-2-more)
 - [03_S3-3.md](../02_storage/03_S3-3-ACL)
 
 ## Section 15 - `CloudFront` :green_circle:
-- [04_CloudFront.md](../04_network/04_CloudFront.md)
-- [04_CloudFront_DVA.md](../04_network/04_CloudFront_DVA.md)
+- [04_CloudFront.md](../../01_aws/04_network/04_CloudFront.md)
+- [04_CloudFront_DVA.md](../../01_aws/04_network/04_CloudFront_DVA.md)
 ```
     CloudFront - Caching & Caching Policies
     CloudFront - Cache Behaviors
@@ -86,8 +86,8 @@
 ```
 
 ## Section 16 `ECS, ECR & Fargate` :green_circle:
-- [02_Containers_ECS.md](../01_compute/02_Containers_ECS.md)
-- [02_Kubernetes_EKS.md](../01_compute/02_Kubernetes_EKS.md)
+- [02_Containers_ECS.md](../../01_aws/01_compute/02_Containers_ECS.md)
+- [02_Kubernetes_EKS.md](../../01_aws/01_compute/02_Kubernetes_EKS.md)
 ```
     Amazon ECS - Rolling Updates
     Amazon ECS Task Definitions - Deep Dive
@@ -96,44 +96,44 @@
     Amazon ECR - Hands On
 ```
 ## Section 17 `beanstalk` :green_circle:
-- [05_1_Beanstalk_SSA.md](../01_compute/05_1_Beanstalk_SSA.md)
-- [05_2_Beanstalk_DVA-deployments.md](../01_compute/05_2_Beanstalk_DVA-deployments.md)
+- [05_1_Beanstalk_SSA.md](../../01_aws/01_compute/05_1_Beanstalk_SSA.md)
+- [05_2_Beanstalk_DVA-deployments.md](../../01_aws/01_compute/05_2_Beanstalk_DVA-deployments.md)
 
 ## Section 18 `Cloudformation` :green_circle:
 - [18_CLOUD_FORMATION.md](18_CLOUD_FORMATION.md)
 
 ## Section 19 `SQS,SNS, KDS, KDF` :green_circle:
-- [05_decoupling](../05_decoupling)
+- [05_decoupling](../../01_aws/05_decoupling)
 
 ## Section 20 `Monitor` :green_circle:
-- [01_CW-Metric.md](../07_monitoring/01_CW-Metric.md)
-- [02_CW-Logs.md](../07_monitoring/02_CW-Logs.md)
-- [03_CW-Alarms.md](../07_monitoring/03_CW-Alarms.md)
-- [04_X-rays_DVA.md](../07_monitoring/04_X-rays_DVA.md) :yellow_circle:
-- [05_cloudTrail.md](../07_monitoring/05_cloudTrail.md)
-- [06_AWS_config.md](../07_monitoring/06_AWS_config.md)
+- [01_CW-Metric.md](../../01_aws/07_monitoring/01_CW-Metric.md)
+- [02_CW-Logs.md](../../01_aws/07_monitoring/02_CW-Logs.md)
+- [03_CW-Alarms.md](../../01_aws/07_monitoring/03_CW-Alarms.md)
+- [04_X-rays_DVA.md](../../01_aws/07_monitoring/04_X-rays_DVA.md) :yellow_circle:
+- [05_cloudTrail.md](../../01_aws/07_monitoring/05_cloudTrail.md)
+- [06_AWS_config.md](../../01_aws/07_monitoring/06_AWS_config.md)
 
 ## Section 21 : `lambda` :green_circle:
-- [03_lambda-01-saa.md](../01_compute/03_lambda-01-saa.md)
-- [03_lambda-dva-01-CLI.md](../01_compute/03_lambda-dva-01-CLI.md)
-- [03_lambda-dva-02-trigger.md](../01_compute/03_lambda-dva-02-trigger.md)
-- [03_lambda-dva-03-context+event.md](../01_compute/03_lambda-dva-03-context+event.md)
+- [03_lambda-01-saa.md](../../01_aws/01_compute/03_lambda-01-saa.md)
+- [03_lambda-dva-01-CLI.md](../../01_aws/01_compute/03_lambda-dva-01-CLI.md)
+- [03_lambda-dva-02-trigger.md](../../01_aws/01_compute/03_lambda-dva-02-trigger.md)
+- [03_lambda-dva-03-context+event.md](../../01_aws/01_compute/03_lambda-dva-03-context+event.md)
 
 ## Section 22 : `DynamoDB` :green_circle:
-- [04_1_DynamoDB_SSA.md](../03_database/04_1_DynamoDB_SSA.md)
-- [04_2_DynamoDB_DVA-components.md](../03_database/04_2_DynamoDB_DVA-components.md)
-- [04_3_DynamoDB_DVA-operations.md](../03_database/04_3_DynamoDB_DVA-operations.md)
-- [04_4_DynamoDB_DVA-cli.md](../03_database/04_4_DynamoDB_DVA-cli.md)
+- [04_1_DynamoDB_SSA.md](../../01_aws/03_database/04_1_DynamoDB_SSA.md)
+- [04_2_DynamoDB_DVA-components.md](../../01_aws/03_database/04_2_DynamoDB_DVA-components.md)
+- [04_3_DynamoDB_DVA-operations.md](../../01_aws/03_database/04_3_DynamoDB_DVA-operations.md)
+- [04_4_DynamoDB_DVA-cli.md](../../01_aws/03_database/04_4_DynamoDB_DVA-cli.md)
 
 ## Section 23 : `API-gateway` :green_circle:
-- [05_1_API_gateway_SAA.md](../04_network/05_1_API_gateway_SAA.md)
-- [05_2_API_gateway_DVA.md](../04_network/05_2_API_gateway_DVA.md)
+- [05_1_API_gateway_SAA.md](../../01_aws/04_network/05_1_API_gateway_SAA.md)
+- [05_2_API_gateway_DVA.md](../../01_aws/04_network/05_2_API_gateway_DVA.md)
 
 ## Section 24 : `CI/CD` :green_circle:
 - [24_CI_CD](24_CI_CD)
 
 ## Section 25 : `SAM :Serverless Application Model` :green_circle:
-- [00_serverless_pardigm.md](../00_kick_off/00_serverless_pardigm.md)
+- [00_serverless_pardigm.md](../../01_aws/00_kick_off/00_serverless_pardigm.md)
 - [00_start.md](25_SAM.md)
 - [SAM_project](25_SAM_project)
 
@@ -141,47 +141,47 @@
 - [26_CDK.md](26_CDK.md)
 
 ## Section 27 : `Cognito` :green_circle:
-- [02_1_cognito_SAA.md](../06_Security/02_1_cognito_SAA.md)
+- [02_1_cognito_SAA.md](../../01_aws/06_Security/02_1_cognito_SAA.md)
 
 ## Section 28 : serverless more: `Step function, AppSync, Amplify` :green_circle:
-- [28_1_STEP_FUNCTION.md](../01_compute/28_1_STEP_FUNCTION_DVA.md)
-- [28_2_AppSync.md](../01_compute/28_2_AppSync_DVA.md)
-- [28_3_Amplify.md](../01_compute/28_3_Amplify_DVA.md)
+- [28_1_STEP_FUNCTION.md](../../01_aws/01_compute/28_1_STEP_FUNCTION_DVA.md)
+- [28_2_AppSync.md](../../01_aws/01_compute/28_2_AppSync_DVA.md)
+- [28_3_Amplify.md](../../01_aws/01_compute/28_3_Amplify_DVA.md)
 
 ## Section 29: `Advance IAM (short)` :green_circle:
-- [01_IAM.md](../06_Security/01_IAM.md)
-- [01_SSO+DirectoryService.md](../06_Security/01_SSO+DirectoryService.md)
+- [01_IAM.md](../../01_aws/06_Security/01_IAM.md)
+- [01_SSO+DirectoryService.md](../../01_aws/06_Security/01_SSO+DirectoryService.md)
 
 ## Section 30 : `security: KMS,SSM,Secretmanager` :green_circle:
-- [04_1_KMS_SSA.md](../06_Security/04_1_KMS_SSA.md)
-- [04_2_KMS_DVA-cli.md](../06_Security/04_2_KMS_DVA-cli.md)
+- [04_1_KMS_SSA.md](../../01_aws/06_Security/04_1_KMS_SSA.md)
+- [04_2_KMS_DVA-cli.md](../../01_aws/06_Security/04_2_KMS_DVA-cli.md)
 - [04_3_KMS+HSM_DVA-more.md](../06_Security/04_3_KMS%2BHSM_DVA-more.md)
-- [05_SSM-param-store.md](../06_Security/05_SSM-param-store.md)
-- [06_secret_manager.md](../06_Security/06_secret_manager.md)
+- [05_SSM-param-store.md](../../01_aws/06_Security/05_SSM-param-store.md)
+- [06_secret_manager.md](../../01_aws/06_Security/06_secret_manager.md)
 - more (SSA)
-  - [07_ACM.md](../06_Security/07_ACM.md)
-  - [08_WAF + FirewallManager.md](../06_Security/08_WAF+FirewallManager.md)
-  - [09_sheild.md](../06_Security/09_sheild.md)
-  - [99_more_securiy_services_for_SSA.md](../06_Security/99_more.md)
+  - [07_ACM.md](../../01_aws/06_Security/07_ACM.md)
+  - [08_WAF + FirewallManager.md](../../01_aws/06_Security/08_WAF+FirewallManager.md)
+  - [09_sheild.md](../../01_aws/06_Security/09_sheild.md)
+  - [99_more_securiy_services_for_SSA.md](../../01_aws/06_Security/99_more.md)
 
 ## Section 31 : `other services` :green_circle:
 ### DVA
-- [03_openSearch.md](../08_Analytics/03_openSearch.md)
-- **ses**: [02_SES+pinpoint.md](../97_more-services/02_SES+pinpoint.md)
-- [01_athena_adhocSQL_serverless.md](../08_Analytics/01_athena_adhocSQL_serverless.md)
-- [06_MSK.md](../05_decoupling/06_MSK.md)
-- [07_ACM.md](../06_Security/07_ACM.md)
-- **macie**: [99_more.md](../06_Security/99_more.md)
-- [06_AWS_config.md](../07_monitoring/06_AWS_config.md)
+- [03_openSearch.md](../../01_aws/08_Analytics/03_openSearch.md)
+- **ses**: [02_SES+pinpoint.md](../../01_aws/97_more-services/02_SES+pinpoint.md)
+- [01_athena_adhocSQL_serverless.md](../../01_aws/08_Analytics/01_athena_adhocSQL_serverless.md)
+- [06_MSK.md](../../01_aws/05_decoupling/06_MSK.md)
+- [07_ACM.md](../../01_aws/06_Security/07_ACM.md)
+- **macie**: [99_more.md](../../01_aws/06_Security/99_more.md)
+- [06_AWS_config.md](../../01_aws/07_monitoring/06_AWS_config.md)
 
 ### SAA
-- [97_more-services](../97_more-services)
-- [09_DR](../09_DR)
-- [08_Analytics](../08_Analytics)
-- [10_ML](../10_AI_ML)
+- [97_more-services](../../01_aws/97_more-services)
+- [09_DR](../../01_aws/09_DR)
+- [08_Analytics](../../01_aws/08_Analytics)
+- [10_ML](../../01_aws/10_AI_ML)
 - more:
-  - [98_SAA_discussion](../98_SAA_discussion)
-  - [practice-test-SAA](../practice-test)
+  - [98_SAA_discussion](../../01_aws/98_SAA_discussion)
+  - [practice-test-SAA](../../01_aws/practice-test)
 
 ---
 ## services

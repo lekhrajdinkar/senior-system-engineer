@@ -43,5 +43,5 @@
 - Type of test:
   - **Fine-grained Assertions**
   - **Snapshot Test**
-  - ![img.png](../99_img/moreSrv/cdk.png)
+  - ![img.png](../../01_aws/99_img/moreSrv/cdk.png)
 

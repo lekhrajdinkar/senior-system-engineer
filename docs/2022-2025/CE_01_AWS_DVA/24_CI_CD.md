@@ -16,8 +16,8 @@
     - step:success
     - step:`failed` --> eb:event --> notify
 - pipeline creates **artifact** in ` s3`, then passed to next stage.
-- ![img.png](../99_img/dva/ci_cd/01/img.png)
-- ![img_1.png](../99_img/dva/ci_cd/01/img_1.png)
+- ![img.png](../../01_aws/99_img/dva/ci_cd/01/img.png)
+- ![img_1.png](../../01_aws/99_img/dva/ci_cd/01/img_1.png)
 
 ---
 ## 0. codeCommit
@@ -30,7 +30,7 @@
 - can launch inside VPC-1
 - set **env var**
   - reference from SSM + secret manager
-  - ![img_1.png](../99_img/dva/kms/05/img_1.png)
+  - ![img_1.png](../../01_aws/99_img/dva/kms/05/img_1.png)
 - fully managed continuous integration (CI) service
 - **build project**:
   - add `buildspec.yaml` (root dir)
@@ -43,7 +43,7 @@
     - build container
     - Use prepackaged Docker images
     
-![img_2.png](../99_img/dva/ci_cd/01/img_2.png)
+![img_2.png](../../01_aws/99_img/dva/ci_cd/01/img_2.png)
 
 ---    
 ## 2. CodeDeploy
@@ -53,7 +53,7 @@
   - on ecs already present
   - ec2/on-prem, install it.
 - **deployment speed**:
-  - ![img_5.png](../99_img/dva/ci_cd/01/img_5.png)
+  - ![img_5.png](../../01_aws/99_img/dva/ci_cd/01/img_5.png)
 ```
 • AllAtOnce: most downtime
 • HalfAtATime: reduced capacity by 50%
@@ -67,13 +67,13 @@
   - **blue-green deployment** (no downtime)
     - old ASG(blue)
     - create new ASG (green) : and deploy new version.
-    - ![img_3.png](../99_img/dva/ci_cd/01/img_3.png)
+    - ![img_3.png](../../01_aws/99_img/dva/ci_cd/01/img_3.png)
     - then use below **traffic routing**  strategies to shift traffic to green ASG :point_left:
       - **Linear**: grow traffic every N minutes until 100%
       - **Canary**: try X percent then 100%
       - **AllAtOnce**: immediate
     - once all shift turn off blue ASG
-    - ![img_4.png](../99_img/dva/ci_cd/01/img_4.png)
+    - ![img_4.png](../../01_aws/99_img/dva/ci_cd/01/img_4.png)
 
 - **Rollback**
   - enable automatic rollback option.
@@ -111,11 +111,11 @@
 
 - security: create **repo policy**
 
-![img.png](../99_img/dva/ci_cd/02/img.png)
+![img.png](../../01_aws/99_img/dva/ci_cd/02/img.png)
 
-![img_1.png](../99_img/dva/ci_cd/02/img_1.png)
+![img_1.png](../../01_aws/99_img/dva/ci_cd/02/img_1.png)
 
-![img_2.png](../99_img/dva/ci_cd/02/img_2.png)
+![img_2.png](../../01_aws/99_img/dva/ci_cd/02/img_2.png)
 
 - [handon](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/learn/lecture/36528108#overview)
 
@@ -125,7 +125,7 @@
 - **profiler** : looks for dynamic metric and gives recommendation
 - using **synk scan** :point_left:
 
-![img_3.png](../99_img/dva/ci_cd/02/img_3.png)
+![img_3.png](../../01_aws/99_img/dva/ci_cd/02/img_3.png)
 
 ---
 ## extra: 

@@ -7,7 +7,7 @@
     - rsource-2
     - ...
     - resolves order / dependency
-    - ![img_2.png](../99_img/dva/cf/01/img_2.png)
+    - ![img_2.png](../../01_aws/99_img/dva/cf/01/img_2.png)
   - stack-2 (app stack)
   - ...
   - versioned in git
@@ -17,7 +17,7 @@
   - estimate the costs of your resources
   - schedule to destroy and re-create, to save cost.
 
-![img.png](../99_img/dva/cf/01/img.png)
+![img.png](../../01_aws/99_img/dva/cf/01/img.png)
 
 ---
 ## B. Template
@@ -41,9 +41,9 @@
 - certain resources not support
   - use **`CF custom resource`** 
     - backed by **lambda**  - serviceToken (arm od lambda)
-    - ![img_1.png](../99_img/dva/cf/02/img_1.png)
+    - ![img_1.png](../../01_aws/99_img/dva/cf/02/img_1.png)
     - **usecase**-1: empty s3 bucket before delete.
-      - ![img_2.png](../99_img/dva/cf/02/img_2.png)
+      - ![img_2.png](../../01_aws/99_img/dva/cf/02/img_2.png)
       
 #### 2.2 Delete Policy
 - resource-1
@@ -61,7 +61,7 @@
 
 ---
 ### 3. parameter (dynamic input)
-- ![img_3.png](../99_img/dva/cf/01/img_3.png)
+- ![img_3.png](../../01_aws/99_img/dva/cf/01/img_3.png)
 - refer/use them
   - **!Ref** parameter1
   - **Fn::Ref** parameter1, or resource1
@@ -99,7 +99,7 @@ AWS::NoValue Doesn’t return a value
 - static variable, fixed hardcoded value
 - use/refer
   - !FindInMap [ map-1, key, object-attribute-1]
-  - ![img_4.png](../99_img/dva/cf/01/img_4.png)
+  - ![img_4.png](../../01_aws/99_img/dva/cf/01/img_4.png)
 
 ---
 ### 5. output (optional)
@@ -109,8 +109,8 @@ AWS::NoValue Doesn’t return a value
   - stack-1(vpc-1) : output **export** `vpc-id`
   - stack-2(app-1) : refer `vpc-id` in this stack
 - eg:
-  - ![img_5.png](../99_img/dva/cf/01/img_5.png)
-  - ![img_6.png](../99_img/dva/cf/01/img_6.png)
+  - ![img_5.png](../../01_aws/99_img/dva/cf/01/img_5.png)
+  - ![img_6.png](../../01_aws/99_img/dva/cf/01/img_6.png)
 
 ---
 ### 6. Conditional
@@ -176,7 +176,7 @@ Resources:
 
 ---
 ### 7. input from SSM + secretManager
-![img.png](../99_img/dva/kms/05/img.png)
+![img.png](../../01_aws/99_img/dva/kms/05/img.png)
 
 ---
 ### 99. more
@@ -192,14 +192,14 @@ Resources:
 
 #### **changeset**
   - change in template - add, modify (replacemnet=true/false), etc
-  - ![img_1.png](../99_img/dva/cf/01/img_1.png)
+  - ![img_1.png](../../01_aws/99_img/dva/cf/01/img_1.png)
 
 #### **stackSet**
 - AWS org
     - admin account
     - child accounts/s
 
-![img_3.png](../99_img/dva/cf/02/img_3.png)
+![img_3.png](../../01_aws/99_img/dva/cf/02/img_3.png)
 
 ---
 ## C. Security :point_left:
@@ -212,7 +212,7 @@ Resources:
 - **pipelineRole-1**
   - `s3:*`
 
-- ![img.png](../99_img/dva/cf/02/img.png)
+- ![img.png](../../01_aws/99_img/dva/cf/02/img.png)
 
 - login in with Board-access-role
   - by default, it will be used for deploying stack.

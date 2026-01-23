@@ -12,7 +12,7 @@ nav:
         - Storage: 02_docker/03_Storage.md
         - Networking: 02_docker/04_network.md
   - Kubernetes:
-      - Start: 03_Kubernetes/index.md
+      - Start: 03_Kubernetes/README.md
       - ✅Minikube:
           - Introduction: 03_Kubernetes/01_minikube/01_miniKube-1-start.md
           - Hands on: 03_Kubernetes/01_minikube/02_minikube-2-handson.md
@@ -183,7 +183,7 @@ nav:
           - "Handson": 01_aws/00_DVA-C02/99_handson.md
 
       - AWS Practice:
-          - "Practice Test": 01_aws/practice-test/index.md
+          - "Practice Test": 01_aws/practice-test/README.md
 
   - MessageBroker:
       - Messaging Protocols: 06_message-broker/01_messaging_protocols.md
@@ -262,10 +262,6 @@ nav:
               - 110 notification system: 10_System_Design/SD_99_Examples/byte-byte-go/110_notification-system.md
           - byteMonk ☑️:
               - byteMonk_reference: 10_System_Design/SD_99_Examples/byteMonk/00_byteMonk_reference.md
-
-extra_css:
-  - mkdocs.css
-
 theme:
   name: material
   features:
