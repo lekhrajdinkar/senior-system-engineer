@@ -1,0 +1,95 @@
+# IAM
+## Overview
+- **identity** -- who (login), handles by idp.
+- **Access mgt**  -- what can access (roles / polices)
+- AWS iam is not enough  for org.
+- https://www.youtube.com/watch?v=esw0GzYWUyw&ab_channel=ByteMonk
+- ![img.png](../SD_99_img/99/bm/02/img.png)
+
+---
+## IAM Architecture (in org)
+- **Flow**
+    - Provision user identities from HR and SCIM into Identity Repository.
+    - **Identity Provider** authenticates users based on repository data.
+        - Authentication using MFA, password, or biometrics , then return oidc identity token
+        - Authorization RBAC/ABAC policies + Oauth2 accessToken
+        - Federation enables SSO to external applications / service providers.
+      
+### A. pre-work  
+**User Provisioning System**
+
+- HR System: Manages personnel identity data
+  - eg: access central system ✔️
+- **SCIM**: 
+  - Standard for automated identity provisioning into identity repositories
+
+**Identity Repository** (Stores user identity data)
+
+- LDAP ✔️
+- Active Directory (AD)
+- Azure Active Directory (Azure AD)
+- Okta Universal Directory 👈🏻
+
+---
+### B. Identity, part (Who)
+#### 1. Identity Provider (IdP)
+
+![img.png](../../../99_img/2026/02/01/iam-2.png)
+
+- scenario: login github with google > google confirm identity > github trust
+- idp is system which makes it work
+  - verifies credential
+  - issues secure token
+  - hands off token to app/service
+- provider:
+    - Okta  ✔️
+    - Auth0
+    - Azure AD
+    - Google
+- Authentication, by looking into Identity Repository:
+  - Passwords  ✔️
+  - Multi-Factor Authentication (MFA) ✔️
+  - OTP
+  - Biometrics
+  - Passwordless methods
+- Issues authentication tokens:
+  - ➖SAML
+  - ➖OpenID connect  OAuth
+
+#### 2. Federation / Single Sign-On (SSO)
+- **Service Providers** --> Applications or systems, users access via federation
+  - GitHub
+  - Salesforce
+  - harness,
+  - venafi,
+  - hcp,
+  - aws
+- federation help with:
+  - to authenticate once with idp
+  - get access to multiple app ( **service-providers** ) without login again.
+    - passes auth token (saml, openID connect)
+    - basically there is **trust relationship** between app abd idp
+- thus this enables SSO.
+- Note: Idp can also share access token
+- ccgg: 👈🏻
+  - idp shares id token only
+  - login as federated iam user
+  - then aws iam, for access mgt of aws resources. 
+  - so, not idp provided access token
+
+---
+### C. Access management, part
+- Determine user permissions and boundaries.
+- components:
+  - Role
+  - group
+  - Attributes
+- **common authZ Model**:
+  - Role-Based Access Control (RBAC) ✔️
+  - Attribute-Based Access Control (ABAC)
+  - Decision engines eg: OPA
+- IAM sits inside:
+  - Application-level,  java SB `@hasRole`
+  - Platform-level:
+    - aws -->  iam-role,iam-policies for aws resources only
+    - okta --> all SaaS, across app resources
