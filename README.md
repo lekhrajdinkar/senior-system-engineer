@@ -18,3 +18,6 @@
   
 ---
 ## ✔️2026
+- [01_Design_pattern](docs/2026/SSE/01_Design_pattern)
+- [02_Distributed_system](docs/2026/SSE/02_Distributed_system)
+- [99_case_study](docs/2026/SSE/99_case_study)
