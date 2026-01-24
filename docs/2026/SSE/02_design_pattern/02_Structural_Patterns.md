@@ -1,10 +1,12 @@
-# Design pattern
-https://youtu.be/USLwIwyWVIM
+# Structural Patterns (Object composition & structure)
+- Used to organize classes and objects cleanly.
 
-## 1. Decorator pattern
+## Decorator ✔️
+- Add behavior dynamically (without inheritance hell)
+- https://youtu.be/USLwIwyWVIM bm
 - [https://www.perplexity.ai/search/decorator-pattern-9mJUDwF0TvyuNvoDb_9bRg](https://www.perplexity.ai/search/decorator-pattern-9mJUDwF0TvyuNvoDb_9bRg)
-- Structural design pattern used in OOP
-- add new **behaviors** or functionalities to individual objects dynamically—without altering the structure or code of the existing classes. 
+- adds new **behaviors** or functionalities to individual **objects** dynamically
+- without altering the structure or code of the existing **classes**.
 
 ```java
 // Step 1: Component Interface
@@ -60,84 +62,18 @@ public class CoffeeShop
 }
 ```
 
----
-## 2. Command pattern
-- [https://www.perplexity.ai/search/command-pattern-in-oop-J8oD_ouMTaigVow8ijg8mg](https://www.perplexity.ai/search/command-pattern-in-oop-J8oD_ouMTaigVow8ijg8mg)
-- behavioral design pattern that encapsulates a request or action as an object.
-- Analogy/situation: re-mappable remote to different device. 🗣️
-- **component**:
-  - **command** interface :: execute() 
-    - concrete command 1 ::  execute(){...}
-    - concrete command 2 ::  execute(){...}
-  - **receiver**  class - contains the actual business logic.
-    - b1(){...}
-    - b2(){...}
-  - **invoker** class - invokes the command
-    - remoteControl (with re-mappable buttons)
-
-```java
-// Command interface
-interface Command {    void execute();}
-
-// Receiver class - contains the actual business logic
-class Light {
-    public void turnOn() {        System.out.println("Light is ON");    }
-    public void turnOff() {        System.out.println("Light is OFF");    }
-}
-
-// Concrete Command to turn on the light
-class TurnOnCommand implements Command {
-    private Light light;
-    public TurnOnCommand(Light light) {        this.light = light;    }
-    public void execute() {        light.turnOn();    }
-}
-
-// Concrete Command to turn off the light
-class TurnOffCommand implements Command {
-    private Light light;
-    public TurnOffCommand(Light light) {        this.light = light;    }
-    public void execute() {        light.turnOff();    }
-}
-
-// Invoker class - invokes the command
-class RemoteControl {
-    private Command command;
-    public void setCommand(Command command) {        this.command = command;    }
-    public void pressButton() {        command.execute();    }
-}
-
-// Client - sets up objects and commands
-public class CommandPatternDemo {
-    public static void main(String[] args) 
-    {
-        Light livingRoomLight = new Light(); // Receiver-1
-
-        // 1️⃣ The client creates a command object and sets its receiver. 
-        Command turnOn = new TurnOnCommand(livingRoomLight);
-        Command turnOff = new TurnOffCommand(livingRoomLight);
-
-        RemoteControl remote = new RemoteControl(); //Invoker
-
-        // 2️⃣ client assigns the command to an invoker
-        remote.setCommand(turnOn);        remote.pressButton(); //action-11
-        remote.setCommand(turnOff);        remote.pressButton(); //action-2
-    }
-}
-
-```
- 
---- 
-## 3. Adapter
+## Adapter ✔️
+- https://youtu.be/USLwIwyWVIM bm
 - [https://www.perplexity.ai/search/adaptor-pattern-java-tl9As0vCQxKXe2MF8239nA](https://www.perplexity.ai/search/adaptor-pattern-java-tl9As0vCQxKXe2MF8239nA)
-- structural design pattern 
+- structural design pattern
 - that acts as a **bridge** between two incompatible interfaces
 - Key Components of Adapter Pattern:
-  - **Target Interface**: The interface expected by the client.
-  - **Adaptee**: The existing class with an incompatible interface.
-  - **Adapter**: 
-    - Implements the target interface ◀️◀️
-    - and, wraps the adaptee, 
-    - translating the client's calls to the adaptee.
+    - **Target Interface**: The interface expected by the client.
+    - **Adaptee**: The existing class with an incompatible interface.
+    - **Adapter**:
+        - Implements the target interface ◀️◀️
+        - and, wraps the adaptee,
+        - translating the client's calls to the adaptee.
 
 ```java
 
@@ -172,3 +108,18 @@ public static void main(String[] args) {
 }
 
 ```
+
+## Bridge 
+- Separate abstraction from implementation
+
+## Composite  
+- Tree structures (files/folders, UI components)
+
+## Facade
+Simple interface over complex subsystems
+
+## Flyweight 
+- Share objects to save memory
+
+## Proxy
+- Control access (lazy loading, security, caching)

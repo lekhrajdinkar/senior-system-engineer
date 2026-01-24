@@ -1,6 +1,5 @@
 # kafka Concepts
 ## ✔️Overview
-- kk https://www.youtube.com/watch?v=9mNYokzTD14 netflix
 -  **real-time data streaming pipelines**. (primary task)
 - **data stream** : unbounded/endless sequence of data, with data throughput can high or low. eg:
     - Log Analysis - Log stream from multiple ms.
@@ -11,7 +10,16 @@
     - scalable and fault-tolerant to node loss.
 - fast delivery for millions of events
 - fast sequential data retrival on HDD storage
-
+- key:
+  - producer - creates events (user actions, ms)
+  - consumers -services to processes events
+  - Broker -reliable higway for evrnt to flow through the system/s👈🏻
+- pros:
+  - **Extremely low latency** (zero-copy, sequential-logs)
+  - **batching** reduces n/w bandwidth bt 90%
+  - **true parallelism** through partitioning
+  - **fault tolerance** via replication
+  
 ---
 ## ✔️use cases
 - https://chatgpt.com/c/6748bff9-8df8-800d-8faa-ac5244853529
