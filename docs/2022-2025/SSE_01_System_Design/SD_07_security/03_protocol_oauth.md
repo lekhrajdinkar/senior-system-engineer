@@ -3,18 +3,24 @@
 - OAuth2.0 - delegated **authorization** protocol
 - OIDC : on top of OAuth with addition oidc scope to return identity token for **Authentication**
 - safe way to connect to app without. sharing password.
-- **component**
-  - auth server (token issuer) +  Idp (for authentication)
+
+- ✔️**component**
+  - ➖auth server (token issuer) +  Idp (for authentication)
     - Could be same or separate entity.
     - google, okta, facebook, etc play both role.
-  - resource server (token verifier) 
-  - resource owner (user / person)
-  - client 
-- **generic flow**:
+  - ➖resource server (token verifier)
+  - ➖resource owner (user / person)
+  - ➖client 
+  
+- ✔️**generic flow**:
   - Step-1 : client --> request access token --> from Auth server
     - how to safely get it ?
-  - Step-2 : client --> access token (short live, limited access) --> to resource server (will verify and set boundaries as per claims in token )
+  - Step-2 : client --> access token (**short live, limited access**) --> to resource server
     - set as Authorization header (type of token - bearer)
+    - RS Validates access_token signature:
+      - way-1 configure a public key (jwt), 
+      - way-2 using Okta's JWKS (JSON Web Key Set) endpoint
+    - RS Verifies claims like exp, aud, scope, etc.
 
 ---
 ## Token
@@ -26,7 +32,7 @@
     - could use other format as well.
     - but OAuth with JWT token, is the best security combination.
     - JWT itself powerful protocol. 👈🏻
-    - check more: [jwt](03_jwt.md)
+    - check more: [jwt](03_protocol_jwt.md)
 
 ---  
 ## Grant type (OAuth flows)
@@ -72,6 +78,32 @@
     - resource owner, clicks allow/deny
     - **access-token** 👉redirected (`app1.com/callback`) to client app1(browser) from authz server
   
+---
+
+## Scenario
+- okta as both
+```
+When Okta issues tokens:
+
+Okta is the "Issue"r"
+
+    It creates the JWT (ID token and access token).
+    The iss claim in the token will look like:
+    "iss": "https://<your-okta-domain>.okta.com/oauth2/default"
+
+
+Okta is also the "Verifier" (indirectly, via your app)
+
+    Your backend application verifies the JWT token against Okta’s public keys (JWKS endpoint).
+    This is done by checking the signature using Okta’s public key.
+    So your app is the one doing verification, but the trust anchor is still Okta.
+```
+
+| Role              | Description                                                                                                       |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Issuer**        | Okta (signs the JWT with its private key)                                                                         |
+| **Verifier**      | Your app/API (verifies JWT using Okta's public key)                                                               |
+| **JWKS endpoint** | URL where your app fetches Okta’s public keys, e.g.: `https://<your-okta-domain>.okta.com/oauth2/default/v1/keys` |
 
 
 

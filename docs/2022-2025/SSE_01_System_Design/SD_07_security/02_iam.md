@@ -6,6 +6,16 @@
 - https://www.youtube.com/watch?v=esw0GzYWUyw&ab_channel=ByteMonk
 - ![img.png](../SD_99_img/99/bm/02/img.png)
 
+- **Authn**
+    - ✔️login by idp,
+    - ✔️login by idp once for multiple SP === SSO
+    - 🧾token : identity token
+    - ➿protocols: OIDC, SAML
+- **Authz**
+    - ✔️Access Mgt, delegate Authorization, boundaries
+    - 🧾token: access token
+    - ➿protocols: OAuth
+  
 ---
 ## IAM Architecture (in org)
 - **Flow**
@@ -65,10 +75,11 @@
   - hcp,
   - aws
 - federation help with:
-  - to authenticate once with idp
+  - to authenticate **once** with idp
   - get access to multiple app ( **service-providers** ) without login again.
     - passes auth token (saml, openID connect)
     - basically there is **trust relationship** between app abd idp
+  - Again this is complex flow, and driver by [protocol_saml](03_protocol_saml.md)
 - thus this enables SSO.
 - Note: Idp can also share access token
 - ccgg: 👈🏻

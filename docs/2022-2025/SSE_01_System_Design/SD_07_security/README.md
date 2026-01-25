@@ -1,5 +1,7 @@
 # Security Home Page
 
+
+---
 ## ✔️Artifacts
 ### ByteMonk
 - https://www.youtube.com/playlist?list=PLKX-zWo5N7Wdf00rGvzvnUZuAJvg0ndcy playlist-1 lek
@@ -10,18 +12,3 @@
 ### ByteByteGo
 
 
----
-## ✔️POC
-### okta setup and App integration
-- okta dev https://dev-16206041.okta.com/ + signed up with github + setup MFA 
-- **task**:
-  - setup:
-    - `issuer-1` Setup / or use default. 
-    - set authentication rule
-  - fastAPI (py) 
-    - client credential set with `isuuer-1`
-    - hit from postman
-  - UI:
-    - Authorization-flow + pkce
-    - use `issuer-1`
-    - pending
