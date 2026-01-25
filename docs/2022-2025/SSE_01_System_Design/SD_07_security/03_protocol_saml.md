@@ -1,13 +1,18 @@
 # SAML
 ## Overview 
 ```
-SP (sp1, sp2, sp3, ...) <-- SSO ( using some protocol ) --> IDP
+SP (sp1, sp2, sp3, ...) <-- SSO ( using some protocol ) --> IDP 
 ---
 SAML enabled SP (sp1, sp2, sp3, ...) <-- SSO ( protocol SAML )--> IDP
 SP <-- exchanges XML Assertion doc --> IDP
+---
+IDP here are:
+    - Enterrice web App (Workday, ServiceNow, SalesForce, etc)
+    - not mobile app or Modern APIs
 ```
 - https://www.youtube.com/watch?v=4ULlJEupV-I&list=PLJq-63ZRPdBt-RFGwsJO9Pv6A8ZwYHua9 bm
 - SAML (Security Assertion Markup Language), XML based.
+- verbose, less ideal for mobile app or Modern APIs 👈🏻
 - It allows:
   - IDP authenticate user once 
   - and pass their identity to **ServerProvider** in our org ( Saas, AWS, harness, github etc)
@@ -18,6 +23,8 @@ SP <-- exchanges XML Assertion doc --> IDP
 ![img_1.png](../../../99_img/2026/07/01/img_1.png)
 
 ![img.png](../../../99_img/2026/07/01/img.png)
+
+![img.png](../../../99_img/2026/02/05/img.png)
 
 ---
 ## SAML Assertion
