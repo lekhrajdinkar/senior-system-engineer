@@ -13,6 +13,7 @@
     - performance is improved, 
     - efficient for ms comm.
   - flexible and adaptable, since use to represent **variety of claims**
+  - fixes Scalability issues : since session info is not stored on backend server, no need to scale it.
 - **signing JWT**
   - private key to sign
   - public key to verify jwt
