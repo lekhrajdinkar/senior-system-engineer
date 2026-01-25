@@ -64,9 +64,23 @@
 - picture: https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow
 
 #### 2.1 authorization flow + PKCE - SPA
-- todo
+- OAuth2.1 make PKCE mandatory
+- use case: SPA, Mobile App, Desktop App
+- https://www.youtube.com/watch?v=5FrA0UzV1Aw
+  - randon String - cc `code challenge`
+  - hash RSA (cc) = cv `code verifier`
+  - AuthZ code request (attach - cc)
+  - get Authz code
+  - exchange code with token request (pass cv)
+  - verifies cv and return token.
 
-### 3. implicit flow (old) - SPA
+![img_2.png](../../../99_img/2026/02/04/img_2.png)
+
+![img_3.png](../../../99_img/2026/02/04/img_3.png)
+
+![img_4.png](../../../99_img/2026/02/04/img_4.png)
+
+### 3. implicit flow (old) - SPA ❌
 - Simplified version of Authorization code flow.
 - web app (js/ng) request token directly.
 - Flow (https)

@@ -1,6 +1,7 @@
 # Jwt
 ## Overview
-- [JWT](https://chatgpt.com/c/6866e4b3-d6d8-800d-a053-ad736cec9b28)
+- Session token - stateful or stateless (JWT)
+- https://chatgpt.com/c/6866e4b3-d6d8-800d-a053-ad736cec9b28
 - https://www.youtube.com/watch?v=iB__rLXGsas&list=PLJq-63ZRPdBt-RFGwsJO9Pv6A8ZwYHua9 bm
 - old - Session-token.
   - eg: Jsession ID in JSP app. stored by server.
@@ -17,7 +18,7 @@
 - **signing JWT**
   - private key to sign
   - public key to verify jwt
-- 
+- Harder to revoke access.
 ---
 ## use case
 ![img.png](../../../99_img/2026/02/02/img.png)
