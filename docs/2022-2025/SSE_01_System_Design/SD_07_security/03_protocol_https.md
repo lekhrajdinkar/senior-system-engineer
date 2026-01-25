@@ -32,8 +32,13 @@ A TLS certificate contains:
     Digital signature by CA’s private key
 
 - CA only signs the certificate after verification
+    - sign with ca-private-key
 ```
+- 3rd party CA;s public kay is already present in chrome and other browser 👈🏻👈🏻
 
+![img.png](../../../99_img/2026/02/03/img.png)
+
+---
 ## Scenarios for understanding
 ### Flow-1 (No certificate)
 ```
