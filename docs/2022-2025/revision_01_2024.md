@@ -46,6 +46,7 @@
 
 ---
 ## ✔️ `DE`  Data Engineer
+NA
 
 ---
 ## ✔️ `CE` Cloud Engineer | AWS
@@ -71,6 +72,7 @@
 - https://chat.deepseek.com/a/chat/s/3c19b702-9118-49ed-9599-35975a1fbef5  ng2
 
 
+---
 ```
 # 0000
 ## ✔️ `SE` Solution Engineer

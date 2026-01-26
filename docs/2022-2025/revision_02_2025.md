@@ -42,7 +42,7 @@
 - https://chatgpt.com/c/68687acf-675c-800d-b53d-9ed724e65011 | http/1.1 SSE - server sent event
 - https://chatgpt.com/c/68688297-3814-800d-8516-bfa0d0710ae7
 
-## MicroService / Distributed System
+### MicroService / Distributed System
 - https://chatgpt.com/c/6866fdf3-f81c-800d-bc19-300ca43e9e11 | Circuit breaker
 - https://chatgpt.com/c/68670260-abb8-800d-ad4f-fb728ab714e3 | rate limiting
 - https://chatgpt.com/c/6868c61b-ee08-800d-99f1-afd4d886ac47 | cache (redis)
