@@ -37,8 +37,8 @@
     - https://chat.deepseek.com/a/chat/s/54037123-7914-4b22-bc0e-04901c4c7c27JMX
     - https://chat.deepseek.com/a/chat/s/72fb223a-30f7-4d66-aab9-a6062959d6b9Thread & ForkJoinPool
 
-- **SpringBoot** : https://chat.deepseek.com/a/chat/s/a959550c-7855-4b5b-b576-c759b780558dSpringBoot Guide
-- **Hibernate**: https://chat.deepseek.com/a/chat/s/8e1072c2-9522-4d97-8c6b-d6cdc8ef7c97Hibernate Basics
+- **SpringBoot** : https://chat.deepseek.com/a/chat/s/a959550c-7855-4b5b-b576-c759b780558d SpringBoot Guide
+- **Hibernate**: https://chat.deepseek.com/a/chat/s/8e1072c2-9522-4d97-8c6b-d6cdc8ef7c97 Hibernate Basics
 - **maven**: https://chat.deepseek.com/a/chat/s/1d48393c-791e-4d20-9c28-c934ff151b15 | https://chatgpt.com/c/684f8fe5-c36c-800d-b8cd-f9e0b32887ce
 
 
