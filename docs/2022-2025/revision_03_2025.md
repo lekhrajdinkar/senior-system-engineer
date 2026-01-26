@@ -30,31 +30,7 @@ case study
 - http://youtube.com/post/UgkxVqGK_bc_VivnsxsaQLIuY47JX_lGb1W0?feature=shared | scan to pay 1
 - http://youtube.com/post/UgkxGvw1HtCKogJZlgGcDQk09gRn4-9WzMN4?feature=shared | scan to pay 2
 
----
-## `DE` Data Engineer
-storage 
-- http://youtube.com/post/UgkxoX2eonTJj6Kg95C5IuYPFRHCA-UDQEh5?feature=shared | Types of Memory and Storage 1
-- http://youtube.com/post/UgkxJsovvbJV_SvF7LlbjbKZ_IHULk1Wy9ir?feature=shared | Types of Memory and Storage 2
-- http://youtube.com/post/UgkxK9NDMaU51Qc_Soltah-xFkNy7Mai08hn?feature=shared | Linux file system
-
-database(SQL)
-- http://youtube.com/post/Ugkx6PHnH7fttZO75Q-sUngBjQAic30Bjss0?feature=shared | Database Types (**SQL vs NoSQL**)
-- http://youtube.com/post/UgkxqQ0HX7efAlYLoaVevP2arF5syQMb_gja?feature=shared | How to Learn Databases 
-- http://youtube.com/post/Ugkx8-t9pQQqug7XlQCyEDpY2TGJtE1KuGPi?feature=shared | Database :: Data Structures 1
-- http://youtube.com/post/UgkxC14_n0hdN8YZHXEa_KeWlgNbUprjbvMA?feature=shared | Database :: Data Structures 2 
-- https://blog.bytebytego.com/p/database-index-internals-understanding?utm_source=substack&utm_medium=email | Database Index 1🔸
-- https://blog.bytebytego.com/p/consistency-and-partition-tolerance?utm_source=substack&utm_medium=email    | Database Index 2
-- http://youtube.com/post/UgkxWMhcK0DUjeITG8DGj2DVQ4bj_D7zGJSK?feature=shared | Normalization 🔸
-- http://youtube.com/post/UgkxgI1e28CdG5UtHOPomzv6gP17knkpWE2l?feature=shared | SQL Joins Types
-- https://blog.bytebytego.com/p/a-guide-to-database-sharding-key?utm_source=substack&utm_medium=email | sharding Strategies
-- https://blog.bytebytego.com/p/a-guide-to-database-replication-key?utm_source=substack&utm_medium=email | Database Replication Strategies
-
-More
-- http://youtube.com/post/Ugkx42jQxaRYx0hol3oVHSaFL8f3mfFtrj7-?feature=shared | Data is cached everywhere
-- http://youtube.com/post/UgkxaoabXqAGt-jiINDUh7RzUc5tjxD1_M9o?feature=shared | Data Lake Architecture Works
-
----
-web 
+web
 - http://youtube.com/post/UgkxFUG7AorKreXAVt6bTY0bB7U5U8LtFQ9F?feature=shared | webapp flow 🔸
 - http://youtube.com/post/UgkxfPGKzDWj1nHORQZrkKq4PNcjxrSwqAFm?feature=shared | webapp flow (google.com)
 - http://youtube.com/post/UgkxsRhxspJjdVHBuK-LgGsY7t0-kJ9og00C?feature=shared | Server Types
@@ -77,6 +53,30 @@ API
 - http://youtube.com/post/UgkxllPF-NyYfBXknVoh2KDn1pxdRVJj0nKC?feature=shared | API Testing 2
 - http://youtube.com/post/UgkxtozRpn2THAPQia4HrwlIUy5Ln86HTEiM?feature=shared | API performance
 - http://youtube.com/post/UgkxLxv7GwjfLpkPlyy-j3FaW5BBdVIXJAcc?feature=shared | microservices :: Good practices
+- http://youtube.com/post/UgkxtozRpn2THAPQia4HrwlIUy5Ln86HTEiM?feature=shared | performance
+
+---
+## `DE` Data Engineer
+storage 
+- http://youtube.com/post/UgkxoX2eonTJj6Kg95C5IuYPFRHCA-UDQEh5?feature=shared | Types of Memory and Storage 1
+- http://youtube.com/post/UgkxJsovvbJV_SvF7LlbjbKZ_IHULk1Wy9ir?feature=shared | Types of Memory and Storage 2
+- http://youtube.com/post/UgkxK9NDMaU51Qc_Soltah-xFkNy7Mai08hn?feature=shared | Linux file system
+
+database(SQL)
+- http://youtube.com/post/Ugkx6PHnH7fttZO75Q-sUngBjQAic30Bjss0?feature=shared | Database Types (**SQL vs NoSQL**)
+- http://youtube.com/post/UgkxqQ0HX7efAlYLoaVevP2arF5syQMb_gja?feature=shared | How to Learn Databases 
+- http://youtube.com/post/Ugkx8-t9pQQqug7XlQCyEDpY2TGJtE1KuGPi?feature=shared | Database :: Data Structures 1
+- http://youtube.com/post/UgkxC14_n0hdN8YZHXEa_KeWlgNbUprjbvMA?feature=shared | Database :: Data Structures 2 
+- https://blog.bytebytego.com/p/database-index-internals-understanding?utm_source=substack&utm_medium=email | Database Index 1🔸
+- https://blog.bytebytego.com/p/consistency-and-partition-tolerance?utm_source=substack&utm_medium=email    | Database Index 2
+- http://youtube.com/post/UgkxWMhcK0DUjeITG8DGj2DVQ4bj_D7zGJSK?feature=shared | Normalization 🔸
+- http://youtube.com/post/UgkxgI1e28CdG5UtHOPomzv6gP17knkpWE2l?feature=shared | SQL Joins Types
+- https://blog.bytebytego.com/p/a-guide-to-database-sharding-key?utm_source=substack&utm_medium=email | sharding Strategies
+- https://blog.bytebytego.com/p/a-guide-to-database-replication-key?utm_source=substack&utm_medium=email | Database Replication Strategies
+
+More
+- http://youtube.com/post/Ugkx42jQxaRYx0hol3oVHSaFL8f3mfFtrj7-?feature=shared | Data is cached everywhere
+- http://youtube.com/post/UgkxaoabXqAGt-jiINDUh7RzUc5tjxD1_M9o?feature=shared | Data Lake Architecture Works
 
 ---
 ## ✔️ `PE` platform Engineer
