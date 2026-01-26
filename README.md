@@ -14,9 +14,9 @@
 ---
 ## ✔️2021-2025
 Solution Engineer | [git - java](https://github.com/lekhrajdinkar/microservice-java) | [git - py](https://github.com/lekhrajdinkar/microservice-python)
-- [SSE_01_cse](docs/2022-2025/SE_01_cse)
-- [SSE_02_SD](docs/2022-2025/SE_02_SD)
-- [SSE_99_case_study](docs/2022-2025/SE_99_case_study)
+- [SE_01_cse](docs/2022-2025/SE_01_cse)
+- [SE_02_SD](docs/2022-2025/SE_02_SD)
+- [SE_99_case_study](docs/2022-2025/SE_99_case_study)
  
 Platform Engineer
 - [PE_01_Docker](docs/2022-2025/PE_01_Docker)
