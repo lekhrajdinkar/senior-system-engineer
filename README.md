@@ -14,8 +14,10 @@
 ---
 ## ✔️2021-2025
 Solution Engineer | [git - java](https://github.com/lekhrajdinkar/microservice-java) | [git - py](https://github.com/lekhrajdinkar/microservice-python)
-- [SSE_01_System_Design](docs/2022-2025/SSE_02_SD)
-
+- [SSE_01_cse](docs/2022-2025/SE_01_cse)
+- [SSE_02_SD](docs/2022-2025/SE_02_SD)
+- [SSE_99_case_study](docs/2022-2025/SE_99_case_study)
+ 
 Platform Engineer
 - [PE_01_Docker](docs/2022-2025/PE_01_Docker)
 - [PE_02_Kubernetes](docs/2022-2025/PE_02_Kubernetes)
@@ -36,9 +38,9 @@ Cloud Engineer
 ---
 ## ✔️2026
 Solution Engineer | [git - java](https://github.com/lekhrajdinkar/microservice-java) | [git - py](https://github.com/lekhrajdinkar/microservice-python)
-- [01_Design_pattern](docs/2026/SSE_01_Design_pattern)
-- [02_Distributed_system](docs/2026/SSE_02_Distributed_system)
-- [99_case_study](docs/2026/SSE_99_case_study)
+- [SE_01_Design_pattern](docs/2026/SE_01_Design_pattern)
+- [SE_02_Distributed_system](docs/2026/SE_02_Distributed_system)
+- [SE_99_case_study](docs/2026/SE_99_case_study)
 
 Platform Engineer
 
