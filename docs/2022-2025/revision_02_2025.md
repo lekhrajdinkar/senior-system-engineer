@@ -1,5 +1,7 @@
-# Content By Role | 2025
-## platform Engineer
+# 2025
+> ℹ️ depSeek chat - login with ld@g | chatGPT chat - login with ld@g
+---
+## ✔️ `PE` platform Engineer
 ### message broker
 - https://chatgpt.com/c/68686ca2-4ea8-800d-a845-5e9470120aca | rabbit vs IBM/MQ vs  kafka
 - https://chatgpt.com/c/686adae6-b920-800d-b5ab-cf7efb8ade83 | kafka 
@@ -10,21 +12,21 @@
 - https://chatgpt.com/c/6869b4b8-d6a0-800d-bade-43463301c026 | fargate profile + rate limiting on eks
 
 ---
-## Data Engineer
+## ✔️ `DE`  Data Engineer
 - https://chatgpt.com/c/686b38f4-4d50-800d-9f7f-145a010a0247 | read and write patterns
 - https://chatgpt.com/c/686b2978-bbb0-800d-b87e-8d1cf3361f98 | handling high throughput
 - https://chatgpt.com/c/686b1481-05d0-800d-9efa-1afb744604d5 | redis with horizontal scaling
 - https://chatgpt.com/c/686b0a08-0334-800d-8676-f5fcdbd4fefb | Aurora serverless Consistency
 
 ---
-## Cloud Engineer | AWS
+## ✔️ `CE`  Cloud Engineer | AWS
 - https://chatgpt.com/c/6869f74f-2694-800d-a959-70a3ee3d53b8 | networking - VPC peering IP overlapping
 - https://chatgpt.com/c/686a02af-f0d4-800d-8ca8-6ecc699d3d91 | RAM
 - https://chatgpt.com/c/686a2757-ff5c-800d-a96f-00b013ef8348 | IAM policy condition examples
 - https://chatgpt.com/c/686b21c4-d250-800d-bac7-864e2543bf83 | vpce 
 
 ---
-## Solution Engineer
+## ✔️ `SE`  Solution Engineer
 ### system Design
 - https://chatgpt.com/c/6868a89c-9af8-800d-9b88-ed2b45d56bb3 | fundamental concept short
 - https://chatgpt.com/c/6866eef2-d2c0-800d-93af-049c42633ccd | CAP and dynamo
@@ -44,6 +46,7 @@
 - https://chatgpt.com/c/6866fdf3-f81c-800d-bc19-300ca43e9e11 | Circuit breaker
 - https://chatgpt.com/c/68670260-abb8-800d-ad4f-fb728ab714e3 | rate limiting
 - https://chatgpt.com/c/6868c61b-ee08-800d-99f1-afd4d886ac47 | cache (redis)
+- https://chat.deepseek.com/a/chat/s/fd1a0ce0-8d75-4dfd-8db1-92a37a59257f | Microservices
 
 ### networking
 - https://chatgpt.com/c/6869b8d8-7bec-800d-8db8-5a34c3f0f207 | tcp, udp, http
@@ -59,3 +62,4 @@
 
 ### examples
 - https://chatgpt.com/c/68688297-3814-800d-8516-bfa0d0710ae7 | ETF price
+
