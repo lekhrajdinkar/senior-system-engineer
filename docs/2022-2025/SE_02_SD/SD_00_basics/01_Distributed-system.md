@@ -16,7 +16,7 @@
   - run these os process on diff laptop, connected on same network. little better.
   - take this further ahead brings the concept of DS.
 - eg:
-  - microservices system 👈🏻
+  - microservices - popular way to build DS 👈🏻
   - Simple app running on Cloud is also DS, since cloud infra Distributed with region/s, az. And may auto-scale if user base grows
 
     
