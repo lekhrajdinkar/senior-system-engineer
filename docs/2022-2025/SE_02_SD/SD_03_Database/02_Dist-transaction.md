@@ -3,14 +3,7 @@
 - transaction spans several services/ms
 - participant performs local transactions
 - https://www.baeldung.com/cs/saga-pattern-microservices
-- ACID
-  - **Atomicity**
-  - **Consistency** takes data from one valid state to another valid state.
-  - **Isolation** guarantees that concurrent transactions should produce the same result that sequentially transactions would have produced
-  - **Durability**: Remain committed irrespective of any type of system failure
-- isolation level  
-  - the amount of data that is visible in a transaction 
-  - when the other services access the same data simultaneously.
+
   
 ## solution-1 : 2PC 
 - phases : prepare > commit
