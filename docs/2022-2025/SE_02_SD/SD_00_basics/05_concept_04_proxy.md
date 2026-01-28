@@ -1,9 +1,9 @@
 # Proxy
 ## Overview
 - https://www.youtube.com/watch?v=qbuMKSTv3yU
-- importance in designing Distributed design
+- important concept in designing Distributed design
 
-## Forward Proxy
+### Forward Proxy
 - proxy configured at client side
 - Acts on behalf of the client
   - The client's requests --> forward proxy --> reaches to the server
@@ -13,7 +13,7 @@
   - conceal their identity, as the origin server only sees the forward proxy's IP address (1:24-1:31). 
 - eg: A VPN is a common example 👈🏻
 
-## Reverse Proxy
+### Reverse Proxy
 - Acts on behalf of the servers
 - also known as a **gateway**
 - appears as the destination server to the client

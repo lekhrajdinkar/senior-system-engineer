@@ -11,7 +11,7 @@
       - data moves b/w node.
     - solution - use consistent hashing
     - Note: Always industry grade hash function for `MD5`, `SHA-1`, `Bcrypt`
-    - ![img.png](img.png)
+    - ![img.png](../../../99_img/2026/02/01/01/img.png)
 
   - **Scenario-2**:
     - event/data --> kafka partition-0, 1, or 3 ?
@@ -20,7 +20,7 @@
   - **Scenario-3**:
     - data/record/row --> which shard of **Database** ? 
     - shards can be same machine or diff machine
-    - ![img_1.png](img_1.png)
+    - ![img_1.png](../../../99_img/2026/02/01/01/img_1.png)
   
 ## Consistent hashing
 - https://www.youtube.com/watch?v=NLMZzElM8Z4
@@ -71,4 +71,4 @@ C: k3, k4
 ❌ Not a full reshuffle
 
 ```
-![img_2.png](img_2.png)
+![img_2.png](../../../99_img/2026/02/01/01/img_2.png)

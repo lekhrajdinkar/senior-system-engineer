@@ -9,7 +9,7 @@
   - lb for backend-server
   - lb for multi-DB reader instance
   - DNS load balancer
-  - ![img_3.png](img_3.png)
+  - ![img_3.png](../../../99_img/2026/02/01/01/img_3.png)
 
 ## Serve Selection strategy
 **Random**
