@@ -7,14 +7,9 @@
 > 
 > CAP IS: “When partition happens, you must choose between C and A”
 
-## Network Partition
-- This occurs when a network failure (temporary and permanent)
-- divides a distributed system into isolated parts, 
-- preventing communication between them.
-- This is an unavoidable fact in distributed systems
-- Single Node server, has No Partition :)
 
-> A network partition is not an anomaly that stops a distributed system from being distributed; 
+
+> 👉👉A **network partition** is not an anomaly that stops a distributed system from being distributed; 
 rather, it's a common and expected challenge that distributed systems are designed to handle, 
 by choosing how they will prioritize **consistency** or **availability** during such an event.
 

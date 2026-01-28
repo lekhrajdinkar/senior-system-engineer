@@ -1,8 +1,16 @@
 # Caching
 ## Overview
-- storing data in a location different from the original data source
-- high-speed data storage layer
-- provide faster data access
+- storing data in a **different location**  
+  - other from the original data source
+  - to provide faster data access.
+- high-speed data storage layer. 
+
+## **when to use**
+  - ideal for **static or immutable data**, 
+    - Dynamic data, complex, need to efficiently synchronize data across multiple locations
+  - **single entity** reads or writes data
+  - **consistency or staleness** of data is not a major concern
+    - else, design a system to properly **invalidate** stale data
 
 ## Where can Caching be Placed
 **Client Level**
@@ -10,8 +18,11 @@
 
 **Server Level** 
 - The server can cache data after calling the database once.
-  - cache for each node
-  - common cache for all node, dedicated system
+  - **Distributed** Caches. 
+    - eg: use for youtube view count
+  - common **single** cache for all node like eg redis. 
+    - ensuring a single source of truth
+    - eg: use for youtube view coment
   - ![img_4.png](../../../99_img/2026/02/01/01/img_4.png) ![img_5.png](../../../99_img/2026/02/01/01/img_5.png)
 
 **Between Server and Database** 
@@ -22,7 +33,7 @@
 - This is generally out of scope for software engineers
 
 ---
-##  When Caching is Helpful
+##  When Caching is Helpful 👈🏻
 **Minimizing Network Calls** 
 - In a client-server-database architecture, 
 - network calls between these separate machines are common.
@@ -38,7 +49,7 @@
 ---
 ## Caching Systems for Writes 
 
-**Write-Through Cache:** 
+✔️**Write-Through Cache:** 
 - When data is edited, the system writes the data to both :
   - the cache 
   - the main database, **at the same time**.
@@ -47,7 +58,7 @@
 
 ![img_6.png](../../../99_img/2026/02/01/01/img_6.png)
 
-**Write-Back Cache:** 
+✔️**Write-Back Cache:** 
 - When data is edited, the system  updates 
   - the cache **immediately** + sends a response back to the client (non-blocking) 
   - The database is updated **asynchronously** at a later time.
@@ -56,3 +67,20 @@
 - Downside: The cache and database can **temporarily be out of sync**.
 
 ![img_7.png](../../../99_img/2026/02/01/01/img_7.png)
+
+---
+## Cache Eviction Policies 
+- Since cache memory is limited
+
+**Least Recently Used (LRU):** 
+Removes the data that hasn't been accessed for the longest time
+
+**Least Frequently Used (LFU):** 
+Removes data that has been accessed the fewest times (4:07).
+
+**Other policies**  
+- Last-In, First-Out (LIFO)
+- First-In, First-Out (FIFO) 
+- random eviction
+
+The choice of policy depends on the specific use case of the system
