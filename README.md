@@ -2,8 +2,8 @@
 ## Home
 - [Streamlit-docs-viewer readme.md](streamlit-docs/README.md)
 - **Docs by Roles (6)**:
-    - `DE` | Data Engineer | check [git](https://github.com/lekhrajdinkar/data-engineer)
-    - `AI` | AI Engineer | check [git](https://github.com/lekhrajdinkar/AI-Engineer)
+    - `DE` | Data Engineer | check [➕git](https://github.com/lekhrajdinkar/data-engineer)
+    - `AI` | AI Engineer | check [➕git](https://github.com/lekhrajdinkar/AI-Engineer)
     - `SE` | Solution Engineer | check below
     - `PE` | Platform Engineer | check below
     - `CE` | Cloud Engineer | check below
@@ -13,7 +13,7 @@
 
 ---
 ## ✔️2021-2025
-> 👩‍💻Solution Engineer | [git - java](https://github.com/lekhrajdinkar/microservice-java) | [git - py](https://github.com/lekhrajdinkar/microservice-python)
+> 👩‍💻Solution Engineer | [➕git - java](https://github.com/lekhrajdinkar/microservice-java) | [➕git - py](https://github.com/lekhrajdinkar/microservice-python)
 > - [SE_01_cse](docs/2022-2025/SE_01_cse)
 > - [SE_02_SD](docs/2022-2025/SE_02_SD)
 > - [SE_03_micro_service_pattern](docs/2022-2025/SE_03_micro-service)
