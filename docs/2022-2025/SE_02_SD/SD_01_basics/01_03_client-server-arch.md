@@ -5,7 +5,7 @@
 - ...
 
 ---
-## Polling
+## ✔️Polling
 - https://www.youtube.com/watch?v=b4qyOpGg748
 - client repeatedly requests data from a server at set intervals.
 - eg:
@@ -18,7 +18,7 @@
 > ℹ️ suitable for data that doesn't **need to be updated very frequently**
 
 ---
-## Streaming
+## ✔️Streaming
 - https://www.youtube.com/watch?v=b4qyOpGg748
 - the client opening a **long-lived connection** with the server, 
 - typically through a **socket**, 
@@ -30,7 +30,7 @@
 > - Enables a **continuous flow of data**
 
 ---
-## Pub-Sub 
+## ✔️Pub-Sub 
 Async comm between client-server
 
 ([🔗kakfa](../../PE_03_message-broker/kakfa) is popular tool) 👈🏻
@@ -44,28 +44,25 @@ Async comm between client-server
 > 
 > **Message Replay**, due to their underlying persistent storage
 
-### Components(4)
-**Publishers:** 
+**Components(4)**
+- Publishers:
+- Topics: 
+  - Act as channels or intermediaries with specific information.
+  - Persistent Storage via Topic
+- Subscribers: 
+  - Clients that listen for data from topics.
+  - can subscribe to multiple topics based on their needs.
+  - Unlike streaming, subscribers listen to the topic, not directly to the publishers
+- Messages: Represent data or event
 
-**Topics:** 
-- Act as channels or intermediaries with specific information.
-- Persistent Storage via Topic
-
-**Subscribers:** 
-- Clients that listen for data from topics.
-- can subscribe to multiple topics based on their needs.
-- Unlike streaming, subscribers listen to the topic, not directly to the publishers
-
-**Messages**: 
-- Represent data or event
-
-### More
+**More**
 - **separation of concern**. separate topic for each business domain.
 - **Content based filter** subscriber to filter data
 
 ---
-## Peer 2 Peer
+## ✔️Peer 2 Peer
 https://www.youtube.com/watch?v=2v6KqRB7adg
+
 ![img.png](../../../99_img/2026/02/07/02/img.png) ![img_1.png](../../../99_img/2026/02/07/02/img_1.png)
 
 **Example of transferring large video files to thousands of machines**
