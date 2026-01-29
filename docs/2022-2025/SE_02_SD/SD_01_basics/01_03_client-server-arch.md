@@ -6,10 +6,14 @@
 
 ---
 ## ✔️Polling
+### Short Polling
 - https://www.youtube.com/watch?v=b4qyOpGg748
-- client repeatedly requests data from a server at set intervals.
+- client repeatedly requests data from a server **at set intervals** 
+  - using any network protocol.eg: https, etc
+- **problem** : it creates many new connections and often results in empty responses.
 - eg:
   - Temperature Monitoring
+  - AJAX application polls bts
   - not ideal for real-time applications like chat
 - **reducing** the polling interval
   -  it significantly increases the **load on the server**, 
@@ -17,12 +21,26 @@
   
 > ℹ️ suitable for data that doesn't **need to be updated very frequently**
 
+![img.png](../../../99_img/2026/02/07/03/img.png)
+
+### Long Polling
+- A variation where the server holds the client's request 
+- until data is available or a timeout occurs
+- This allows the server to "push" information, 
+- but clients still need to reconnect periodically after timeouts
+- https://www.youtube.com/watch?v=pnj3Jbho5Ck (02:00)
+
+**problem**: since holds client's request, thus resource intensive.
+
+![img_1.png](../../../99_img/2026/02/07/03/img_1.png)
+
 ---
 ## ✔️Streaming
 - https://www.youtube.com/watch?v=b4qyOpGg748
 - the client opening a **long-lived connection** with the server, 
 - typically through a **socket**, 
 - allowing the server to **push** information **without a client request**
+- Analogy: client opens a file and server can write any moment until client closes file.
 
 > ℹ️ **instantaneous experiences**
 > - the server proactively sends or "pushes" data to the client, 
@@ -74,6 +92,25 @@ https://www.youtube.com/watch?v=2v6KqRB7adg
    - **peer discovery** 
    - **peer selection strategies** within a P2P network
    - Centralized database (tracker), Gossip protocol, distributed hash table (DHT)
+    
+---
+## ✔️Web protocol
 
+### Rest (https/tls)
 
+### Web Socket (ws)
+- https://www.youtube.com/watch?v=pnj3Jbho5Ck
+- check Long Polling problem
+- This protocol establishes a persistent, **bi-directional connection** between the client and server
+- It allows for simultaneous sending and receiving of data
+  - over a single **TCP connection** (handshake, tcp, ws)
+  - eliminating latency issues found in long polling
 
+WebSockets are ideal for **real-time applications**
+```
+Stock trading websites displaying live price fluctuations (4:27).
+Chat applications (4:35).
+Gaming applications that require automatic UI refreshes
+```
+
+### GRPC
