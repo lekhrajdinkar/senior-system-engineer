@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=pU1uifHXhE4
 - node_count = 10
 - hash(client_key) = client_id (1 to 10)
 - client_id % node_count
-- node_count changes, 
+- if node_count get changed, then 
   - Need to re-distribute.
   - cant eliminate
   - but how to minimize re-distribute
@@ -53,24 +53,24 @@ Node C → hash 300
 ---
 
 cleint-1 key-1 --> hash 30 --> next clockwise node = 50(A)
-cleint-1 key-2 --> hash 70 --> next clockwise node = 150(B)
-cleint-1 key-3 --> hash 160 --> next clockwise node = 300(C)
-cleint-1 key-4 --> hash 300 --> next clockwise node = 300(C)
+cleint-2 key-2 --> hash 70 --> next clockwise node = 150(B)
+cleint-3 key-3 --> hash 160 --> next clockwise node = 300(C)
+cleint-4 key-4 --> hash 300 --> next clockwise node = 300(C)
 
-A: k1
-B: k2
-C: k3, k4
+Node A gets: k1
+Node B gets: k2
+Node C gets: k3, k4
 
 ---
 
-Node Added : Node D → hash 100
+➕ Node Added : Node D → hash 100
 
-50(A) ---- 100(D) ---- 150(B) ---- 300(C)
+50(A) ---- ✔️100(D) ---- 150(B) ---- 300(C)
 
 cleint-1 key-1 --> hash 30 --> next clockwise node = 50(A)
-cleint-1 key-2 --> hash 70 --> next clockwise node = 100(B)  ❗ (was B)
-cleint-1 key-3 --> hash 160 --> next clockwise node = 300(C)
-cleint-1 key-4 --> hash 300 --> next clockwise node = 300(C)
+cleint-2 key-2 --> hash 70 --> next clockwise node = 100(B)  ❗ (was B)
+cleint-3 key-3 --> hash 160 --> next clockwise node = 300(C)
+cleint-4 key-4 --> hash 300 --> next clockwise node = 300(C)
 
 A: k1
 D: k2
