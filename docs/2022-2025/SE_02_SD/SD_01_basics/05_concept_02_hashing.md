@@ -1,31 +1,40 @@
-# hashing
-## Overview
-- https://www.youtube.com/watch?v=pU1uifHXhE4
-- Scenario where hashing needed:
-  - **Scenario-1**:
-    - which algo/logic LB must use, to send traffic from a client to same server ?
-    - `(client_key % no of node)`. 
-    - preciously, simple hashing `( hash(key) % n )`
-    - problem, if no of node is fluctuating (add / delete), then: 
-      - need to do **expensive** re-distribute.
-      - data moves b/w node.
-    - solution - use consistent hashing
-    - Note: Always industry grade hash function for `MD5`, `SHA-1`, `Bcrypt`
-    - ![img.png](../../../99_img/2026/02/01/01/img.png)
+# Hashing
+## Problem statement
+> Distribute **uniformly** among fluctuating node count (add / delete)
+> - need to do **expensive** re-distribute.
+> - data moves b/w node.
 
-  - **Scenario-2**:
-    - event/data --> kafka partition-0, 1, or 3 ?
-    - event/data --> AWS Kinesis shard-0, 1, or 3 ?
+**Distribution Scenario**
+- **Scenario-1**: load is distributed for serving client 👈🏻
+  - ![img.png](../../../99_img/2026/02/01/01/img.png)
 
-  - **Scenario-3**:
-    - data/record/row --> which shard of **Database** ? 
-    - shards can be same machine or diff machine
-    - ![img_1.png](../../../99_img/2026/02/01/01/img_1.png)
-  
-## Consistent hashing
-- https://www.youtube.com/watch?v=NLMZzElM8Z4
-- It **minimizes** data movement when nodes are added or removed in a distributed system (caches, DB shards, message brokers).
+- **Scenario-2**: event is distributed for processing 👈🏻
+  - event/data --> kafka partition-0, 1, or 3 ?
+  - event/data --> AWS Kinesis shard-0, 1, or 3 ?
+
+- **Scenario-3**: data is distributed for storage 👈🏻
+  - data/record/row --> which shard of **Database** ? 
+  - shards can be same machine or diff machine
+  - ![img_1.png](../../../99_img/2026/02/01/01/img_1.png)
+
+### Solution-1: Simple hashing 🔺
+https://www.youtube.com/watch?v=pU1uifHXhE4
+- node_count = 10
+- hash(client_key) = client_id (1 to 10)
+- client_id % node_count
+- node_count changes, 
+  - Need to re-distribute.
+  - cant eliminate
+  - but how to minimize re-distribute
+  - check below ⤵️
+
+### Solution-2: Consistent hashing
+- overview : https://www.youtube.com/watch?v=NLMZzElM8Z4
+- It **minimizes** data movement when nodes are added or removed in a distributed system (caches, DB shards, message brokers, pods).
 - **key goes to the first node clockwise from its hash** 👈🏻
+
+**Understand by example**
+
 ```
 0 -------------------------------- 360
 |                                  |
@@ -37,6 +46,7 @@
 Node A → hash 50
 Node B → hash 150
 Node C → hash 300
+** industry grade hash function for `MD5`, `SHA-1`, `Bcrypt`
 
 50(A) -------- 150(B) -------- 300(C) -------- back to 50
 
