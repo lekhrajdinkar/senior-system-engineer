@@ -23,6 +23,9 @@ by choosing how they will prioritize **consistency** or **availability** during 
 - Ensures that all nodes in a distributed system have the same, most up-to-date data. 
 - If there's a partition, the system will not allow any actions until the network is restored, 
 - guaranteeing 100% accurate data.
+- levels of consistency
+  - Strong
+  - eventual
 
 ✔️Availability (A) 
 - Ensures that the system remains operational and responsive even if some data is inconsistent or stale.

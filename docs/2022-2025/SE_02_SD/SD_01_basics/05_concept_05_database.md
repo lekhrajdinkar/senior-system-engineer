@@ -1,4 +1,9 @@
 # Database SD concept
+## ✔️Data Consistency
+levels of consistency
+- Strong
+- eventual
+
 ## ✔️Replication
 ### Overview
 - https://www.youtube.com/watch?v=CSCw16AfWHM
@@ -33,25 +38,12 @@
 ---
 ## ✔️Relational DB
 - https://www.youtube.com/watch?v=6bZdMZb8xI8
-- https://github.com/lekhrajdinkar/data-engineer/tree/main/docs/2012-2021 👈🏻👈🏻
+- concepts: https://github.com/lekhrajdinkar/data-engineer/tree/main/docs/2012-2021 👈🏻👈🏻
+- offer powerful querying capabilities due to their structured nature
 
 ---
-## ✔️ACID
-ACID | https://www.youtube.com/watch?v=Sahvj-0UYxM
-- **Atomicity**
-- **Consistency** 
-  - takes data from one valid state to another valid state.
-  - constraints
-- **Isolation** 
-  - guarantees that concurrent transactions should produce the same result that sequentially transactions would have produced
-- **Durability**: 
-  - Remain committed irrespective of any type of system failure
 
-isolation level
-- the amount of data that is visible in a transaction
-- when the other services access the same data simultaneously.
 
----
-## ✔️NoSQL DB
+
 
 
