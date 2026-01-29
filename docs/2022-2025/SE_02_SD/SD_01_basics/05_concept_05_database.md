@@ -36,12 +36,16 @@ levels of consistency
   - mitigate : **hashing** is a reasonable way to split data uniformly
 
 ---
-## ✔️Relational DB
-- https://www.youtube.com/watch?v=6bZdMZb8xI8
-- concepts: https://github.com/lekhrajdinkar/data-engineer/tree/main/docs/2012-2021 👈🏻👈🏻
+## ✔️Relational vs Non_relational
+Relation
 - offer powerful querying capabilities due to their structured nature
+- https://www.youtube.com/watch?v=6bZdMZb8xI8
+- https://github.com/lekhrajdinkar/data-engineer/tree/main/docs/2012-2021 👈🏻👈🏻
 
----
+Non_relational
+- [check here](05_concept_06_noSql.md)
+
+
 
 
 

@@ -31,7 +31,10 @@
 
 ---
 ## Pub-Sub 
-(kafka is popular tool) 👈🏻
+Async comm between client-server
+
+([🔗kakfa](../../PE_03_message-broker/kakfa) is popular tool) 👈🏻
+
 > **At Least Once Delivery**
 >   - subscriber receives a message but loses connection before acknowledging it.
 >   - leading the topic to re-send the message when the connection is re-established
@@ -41,7 +44,7 @@
 > 
 > **Message Replay**, due to their underlying persistent storage
 
-### Components
+### Components(4)
 **Publishers:** 
 
 **Topics:** 
@@ -57,8 +60,23 @@
 - Represent data or event
 
 ### More
--  **separation of concern**.
-- **Contend based filter**
+- **separation of concern**. separate topic for each business domain.
+- **Content based filter** subscriber to filter data
+
+---
+## Peer 2 Peer
+https://www.youtube.com/watch?v=2v6KqRB7adg
+![img.png](../../../99_img/2026/02/07/02/img.png) ![img_1.png](../../../99_img/2026/02/07/02/img_1.png)
+
+**Example of transferring large video files to thousands of machines**
+1. single server approach (10 videos, 5GB each) - `15 min`
+2. sharding, 5 server (2 videos each, 5GB each) - `15/5 = 3 min`
+3. P2P solution - `1 sec`
+   -  large file is split into small chunks and distributed among peers
+   - These peers then communicate with each other in **parallel** to assemble the complete file
+   - **peer discovery** 
+   - **peer selection strategies** within a P2P network
+   - Centralized database (tracker), Gossip protocol, distributed hash table (DHT)
 
 
 
