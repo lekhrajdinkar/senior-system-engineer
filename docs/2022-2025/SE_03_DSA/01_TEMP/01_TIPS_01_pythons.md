@@ -1,8 +1,4 @@
 # leetcode : python
-## reference
-- [leetcode :: src](../../../../src/leetcode)
-
----
 ## python tips : Set 1
 ```python
 list(self.data.keys())[r] #dict 
@@ -49,6 +45,12 @@ list1.index(i1tem1) # for list + handle error
 
 "".join(array of str)
 
+```
+## python tips : Set 2
+```python
+# flattern 
+schedule = [[[2,4],[7,10]],[[1,5]],[[6,9]]]
+intervals = [item for employee in schedule for item in employee]
 ```
 
 

@@ -30,9 +30,27 @@ class Solution:
         return max_sum
     # section::mySolution::end
 
-    # section::helloInterview::start
+
+    # section::maxSum::start
+    def maxSum(self, nums: List[int], k: int) -> int:
+       start = 0
+       max_sum = float('-inf') # the smallest possible value
+       sum1 = 0
+       for end in range(len(nums)):
+           sum1 = sum1 + nums[end] # accumulate sum
+           if end-start+1 == k:  # current window reached
+               max_sum = max(max_sum, sum1)
+
+               # prep for next window
+               sum1 = sum1 - nums[start] # 1. sub from left
+               start += 1 # 2. start pointer of next window
+       return max_sum
+    # section::maxSum::end
+
+
+    # section::maxSum_distinct::start
     # rather than using set, then used dict to track duplicates, which easy and preferred ⭐
-    def maxSum(self, nums, k):
+    def maxSum_distinct(self, nums, k):
         max_sum = float("-inf")
         start = 0
         state = {}
@@ -49,8 +67,9 @@ class Solution:
                     del state[nums[start]]
                 start += 1
         return 0 if max_sum == float("-inf") else max_sum
-   # section::helloInterview::end
+   # section::maxSum_distinct::end
 
 if __name__ == '__main__':
     Solution().maxSum_1( [1,5,4,2,9,9,9], 3)
     Solution().maxSum( [1,5,4,2,9,9,9], 3)
+    Solution().maxSum_distinct( [1,5,4,2,9,9,9], 3)

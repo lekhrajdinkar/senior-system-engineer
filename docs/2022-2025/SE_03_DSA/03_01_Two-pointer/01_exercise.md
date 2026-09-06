@@ -11,20 +11,18 @@
 
 ```python
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
+    # more space complexity
+    def moveZeroes_1(self, nums: List[int]) -> None:
         print('Before ',nums)
         nums[:] = list(filter(lambda x: x!= 0, nums)) + ([0]*nums.count(0))
         print('After ',nums)
 
-```
-```python
-class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        nextNonZero = 0
+        left = 0 # nextNonZero tracker
         for i in range(len(nums)):
             if nums[i] != 0:
-                nums[i], nums[nextNonZero] =   nums[nextNonZero], nums[i]  # swap
-                nextNonZero = nextNonZero + 1
+                nums[i], nums[left] =   nums[left], nums[i]  # swap
+                left = left + 1
 ```
 
 ---
