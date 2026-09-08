@@ -55,8 +55,31 @@ class Solution:
     # section::section-875::end
 
     # section::section-33::start
-    def search33(self, matrix: List[List[int]], k: int) -> int:
-        pass
+    def search33(self, nums, target) -> int:
+        left = 0
+        right = len(nums) - 1
+
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                return mid
+
+            if nums[left] <= nums[mid]:   # left half is sorted 💡
+                if nums[left] <= target and target < nums[mid]:
+                    # target is in the left half
+                    right = mid - 1
+                else:
+                    # target is in the right half
+                    left = mid + 1
+            else:  # right half is sorted 💡
+                if nums[mid] < target and target <= nums[right]:
+                    # target is in the right half
+                    left = mid + 1
+                else:
+                    # target is in the left half
+                    right = mid - 1
+
+        return -1
     # section::section-33::end
 
 
