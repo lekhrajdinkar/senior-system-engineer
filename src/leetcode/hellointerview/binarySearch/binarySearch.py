@@ -84,27 +84,92 @@ class Solution:
 
 
     # section::section-410::start
-    def kthSmallest2(self, matrix: List[List[int]], k: int) -> int:
+    # split-array-largest-sum
+    def section410(self, matrix: List[List[int]], k: int) -> int:
+        # tried but failed 🔺
         pass
     # section::section-410::end
 
+    # section::section-410-hi-sol::start
+    def section410_2(nums, k):
+        def canSplit(maxSum):
+            subarrays = 1
+            currentSum = 0
+            for num in nums:
+                if currentSum + num > maxSum:
+                    subarrays += 1
+                    currentSum = num
+                else:
+                    currentSum += num
+            return subarrays <= k
 
+        left = max(nums)
+        right = sum(nums)
+
+        while left < right:
+            mid = (left + right) // 2
+            if canSplit(mid):
+                right = mid
+            else:
+                left = mid + 1
+
+        return left
+    # section::section-410-hi-sol::end
+
+    # section::section-378-example::start
+    """
+    matrix = [
+        [ 1, 5, 9],
+        [10,11,13],
+        [12,13,15]]
+    k = 8
+    """
+    # section::section-378-example::end
     # section::section-378::start
-    def kthSmallest3(self, matrix: List[List[int]], k: int) -> int:
+    # kth-smallest-element-in-a-sorted-matrix
+    def section378(self, matrix: List[List[int]], k: int) -> int:
+        # tried but failed 🔺
         pass
     # section::section-378::end
 
 
     # section::section-1011::start
-    def kthSmallest4(self, matrix: List[List[int]], k: int) -> int:
-        pass
+    # Capacity To Ship Packages Within D Days --> not working, wrong 🔺
+    # Time: O(n × log(sum(weights)))
+    def section1011(self, matrix: List[List[int]], k: int) -> int:
+        def shipWithinDays(self, weights: List[int], days: int) -> int:
+            def canHandleLoadIndays(capacity) -> bool:
+                currentW = 0
+                dayRequired = 1
+                for w in weights:
+                    if currentW + w > capacity:
+                        currentW = w
+                        dayRequired += 1
+                    else:
+                        currentW = currentW + w
+                print(f"with capacity: {capacity}, dayRequired: {dayRequired}")
+
+                if dayRequired <= days: return True
+                else:return False
+
+            # ========= Binary search ======
+            # dayRequired <= days → capacity works → try smaller capacity
+            # dayRequired > days → capacity too small → increase capacity
+            left = max(weights);  right = sum(weights)
+            while left < right:
+                mid = ( left + right ) // 2
+                if canHandleLoadIndays(mid):
+                    left = mid
+                else:
+                    right = mid + 1
+            return left
     # section::section-1011::end
 
 ## ===========
 
+#find([5,6,76,89,23,0],89)
+#find([5,6,76,89,23,0],76)
 
-find([5,6,76,89,23,0],89)
-find([5,6,76,89,23,0],76)
-
+from typing import List
 
 
