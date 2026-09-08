@@ -1,8 +1,6 @@
 from tokenize import endpats
 from typing import List
-
 from src.leetcode.hellointerview.intervals import util
-
 
 # https://www.hellointerview.com/learn/code/intervals/can-attend-meetings
 # leetcode locked
