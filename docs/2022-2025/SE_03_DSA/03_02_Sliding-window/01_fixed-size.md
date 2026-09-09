@@ -16,7 +16,7 @@
 
 ```python
 def fixed_length_sliding_window(nums, k):
-    state = # choose appropriate data structure
+    state = {} # choose appropriate data structure
     start = 0
     max_ = 0
     for end in range(len(nums)):

@@ -1,4 +1,4 @@
-# Overview
+# Intervals
 ## Reference
 - https://www.hellointerview.com/learn/code/intervals/overview
 
