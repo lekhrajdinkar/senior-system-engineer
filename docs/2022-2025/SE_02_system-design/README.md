@@ -1,4 +1,4 @@
-# System design 2026 | [artifact.md](temp/artifact.md)
+# System design 2026 | [artifact.md](temp/00_artifact.md)
 
 ## Module 1: Foundations of System Design 
 [Foundation](SD_01_foundation) `bm 16`

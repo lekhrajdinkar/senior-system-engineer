@@ -500,7 +500,7 @@ nav:
       - Deloyment 01 Strategies: 2022-2025/SE_02_system-design/SD_25_observability/09_deloyment_01_strategies.md
     - Temp:
       - 01 Topic List: 2022-2025/SE_02_system-design/temp/01-topic-list.md
-      - Artifact: 2022-2025/SE_02_system-design/temp/artifact.md
+      - Artifact: 2022-2025/SE_02_system-design/temp/00_artifact.md
   - SE 03 DSA:
     - Sorting Part 1: 2022-2025/SE_03_DSA/01_sorting-part-1.md
   - SE 99 Case Studies:

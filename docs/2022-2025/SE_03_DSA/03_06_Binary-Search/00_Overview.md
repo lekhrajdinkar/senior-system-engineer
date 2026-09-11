@@ -52,6 +52,7 @@ chatgpt solution
 
 ---
 ## 378. Kth Smallest Element in a Sorted Matrix 🟡
+> can solve with heap ?
 - https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
 - https://www.hellointerview.com/learn/code/binary-search/kth-smallest-element-in-a-sorted-matrix
 

@@ -1,5 +1,5 @@
 # System Design - Artifacts
-## hello interview `hi` ⭐
+## hello interview ⭐
 - https://www.hellointerview.com/learn/courses/system-design $280 | premium | ldus@g
 - https://www.hellointerview.com/learn/system-design/in-a-hurry/problem-breakdowns
     - read about common deep dives and pitfalls | Common Patterns

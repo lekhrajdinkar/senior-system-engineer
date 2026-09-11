@@ -1,4 +1,21 @@
-# mermaid
+# Drawings tools
+## excalidraw and drawio
+- https://excalidraw.com/
+- https://app.diagrams.net/
+
+|                          | **Draw.io**                         | **Excalidraw**            |
+| ------------------------ | ----------------------------------- | ------------------------- |
+| Style                    | Professional / structured           | Hand-drawn / whiteboard   |
+| Best for                 | HLD, architecture, network diagrams | Interviews, brainstorming |
+| AWS/K8s diagrams         | ⭐⭐⭐⭐⭐                               | ⭐⭐⭐                       |
+| Speed                    | Medium                              | ⭐⭐⭐⭐⭐                     |
+| Collaboration            | Good                                | Excellent                 |
+| Presentation-ready       | ⭐⭐⭐⭐⭐                               | ⭐⭐⭐                       |
+| System-design interviews | ⭐⭐⭐⭐                                | ⭐⭐⭐⭐⭐                     |
+| Learning/notes           | ⭐⭐⭐⭐                                | ⭐⭐⭐⭐⭐                     |
+
+
+## mermaid
 
 https://mermaid.ai/app/dashboard
 
