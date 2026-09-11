@@ -29,7 +29,7 @@
 @[code:section::section-658](../../../../src/leetcode/hellointerview/heap/excercise1.py)
 
 ---
-## 23. Merge k Sorted Lists 
+## 23. Merge k Sorted Lists ✔️
 - https://leetcode.com/problems/merge-k-sorted-lists/description/
 - https://www.hellointerview.com/learn/code/heap/merge-k-sorted-lists#step-1-initialize-the-heap
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 295. Find Median from Data Stream
+## 295. Find Median from Data Stream ✔️
 - https://leetcode.com/problems/find-median-from-data-stream/
 - https://www.hellointerview.com/learn/code/heap/find-median-from-data-stream
 

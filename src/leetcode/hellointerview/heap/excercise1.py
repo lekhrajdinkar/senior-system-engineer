@@ -110,7 +110,7 @@ class MedianFinder:
         heapq.heapify(self.arr_l)
         heapq.heapify(self.arr_r)
 
-    def addNum(self, num: int) -> None:
+    def addNum(self, num: int) -> None: # O(log n) 💡💡
         # insert
         #if num <= -self.arr_l[0]:
         if not self.arr_l or num <= -self.arr_l[0]:
@@ -142,7 +142,7 @@ class MedianFinder2:
 
     def addNum(self, num: int) -> None:
         self.arr.append(num)
-        self.arr.sort()
+        self.arr.sort() # 🔺🔺 O (n log n) eating time here
 
     def findMedian(self) -> float:
         l = len(self.arr)

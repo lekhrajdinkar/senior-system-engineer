@@ -9,6 +9,17 @@
 - **height** of a heap is `O(log n)`, where `n` is the number of elements in the heap
 - Python provides a built-in `heapq`
 
+```python
+arr = [4,5,9,6,2,1,8]
+print ("Before: ",arr)
+
+import heapq
+heapq.heapify(arr)     # O(n)
+# arr.sort()           # O(n log n)
+print ("After: ",arr) 
+# Parent <= Children/s (2)
+```
+
 ![img.png](img.png)
 
 | Relationship    | Formula        |
