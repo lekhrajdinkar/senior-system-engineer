@@ -1,4 +1,4 @@
-# Sorting
+# Sorting : part-1
 ## reference
 - https://gemini.google.com/app/7ed3618cadf2e93d
 - https://www.w3schools.com/dsa/dsa_algo_bubblesort.php

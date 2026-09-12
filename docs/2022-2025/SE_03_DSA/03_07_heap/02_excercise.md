@@ -48,9 +48,9 @@
 
 ---
 ## 378. Kth Smallest Element in a Sorted Matrix 
+> original sol by [binary-search](../03_06_Binary-Search/00_Overview.md#378-kth-smallest-element-in-a-sorted-matrix-)
 - https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
 - https://www.hellointerview.com/learn/code/binary-search/kth-smallest-element-in-a-sorted-matrix
-- [binary-search](../03_06_Binary-Search/00_Overview.md#378-kth-smallest-element-in-a-sorted-matrix-)
 
 [03_378.excalidraw](../draw/03/06/03_378.excalidraw)
 

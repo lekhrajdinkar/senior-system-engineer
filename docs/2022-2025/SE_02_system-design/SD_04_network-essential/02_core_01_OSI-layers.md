@@ -161,25 +161,8 @@ flowchart LR
 - Connection starts with **3-way handshake**: SYN → SYN-ACK → ACK
 - Identified by: Source IP + Source Port + Destination IP + Destination Port
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant S as Server
-    Note over C,S: ⭐TCP 3-Way Handshake
-    C->>S: SYN
-    S->>C: SYN-ACK
-    C->>S: ACK
-    Note over C,S: 🏃‍➡️🏃‍♂️TCP Connection ESTABLISHED
-    C->>S: Data (SEQ)
-    S->>C: ACK
-    S->>C: Data (SEQ)
-    C->>S: ACK
-    Note over C,S: ❌Connection Termination
-    C->>S: FIN
-    S->>C: ACK
-    S->>C: FIN
-    C->>S: ACK
-```
+[01_TCP-flow.excalidraw](../temp/draw/network/01_TCP-flow.excalidraw)
+
 ---
 ### 3. QUIC
 
@@ -218,31 +201,6 @@ sequenceDiagram
 - we need to repeat this connection setup process for every request,
 - like, **short live stateless connection.** : open-close, open-close, ...
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant D as DNS Server
-    participant S as Web Server
-
-    C->>D: DNS query for domain
-    D-->>C: IP address
-
-    Note over C,S: TCP three-way handshake
-    C->>S: SYN
-    S-->>C: SYN-ACK
-    C->>S: ACK
-
-    Note over C,S: HTTP request/response
-    C->>S: HTTP GET request
-    Note right of S: Server processing
-    S-->>C: HTTP response<br/>Web page content
-
-    Note over C,S: TCP connection teardown
-    C->>S: FIN
-    S-->>C: ACK
-    S->>C: FIN
-    C-->>S: ACK
-```
 #### [TLS handshake⭐](../SD_24_security/03_protocol_https_tls.md)
 
 #### [HTTP/S used over API ](../SD_08_API-Design)
