@@ -77,3 +77,57 @@ class Solution:
         target -= root.val
         return self.pathSum_hi_sol(root.left, target) or self.pathSum_hi_sol(root.right, target)
     # section::section-112-hi::end
+
+
+    # ==========================
+    # section::section-1448::start
+    def goodNodes(self, root:  Optional[TreeNode]) -> int:
+        def dfs2(node: TreeNode, parentValue: int) -> int :
+            count=0
+            # dont need to handle leaf case
+            if node is None:
+                return 0
+            else:
+                if node.val >= parentValue:count+=1
+                l = dfs2(node.left, node.val)
+                r = dfs2(node.right, node.val)
+                return l + count + r
+
+        # same as dfs2() function above, but does not return
+        count = 0
+        def dfs(node: TreeNode, parentValue: int) :
+            nonlocal count
+            if node is None:
+                pass
+            elif node.left is None and node.right is None:
+                if node.val >= parentValue:
+                    count+=1
+                    print(f"leaf Node: {node.val} > parent Node : {parentValue} | count: {count}" )
+                #else: print(f"leaf Node: {node.val} < parent Node : {parentValue} 🔺"  )
+            else:
+                if node.val >= parentValue:
+                    count+=1
+                    print(f"Node: {node.val} > parent Node : {parentValue} | count: {count}" )
+                #else: print(f"Node: {node.val} < parent Node : {parentValue} 🔺"  )
+
+                dfs(node.left, node.val)
+                dfs(node.right, node.val)
+
+        #dfs(root,root.val);print(f"Final good node count: {count}")
+        count=dfs2(root,root.val); print(f"Final good node count: {count}")
+        # assumes root is non-null
+        return count
+    # section::section-1448::end
+
+
+
+    # ==========================
+    # section::section-00::start
+    def goodNode(node):
+        if node is None:
+            return False
+        if node.left is None and node.right is None:
+            pass
+        else:
+            pass
+    # section::section-00::end

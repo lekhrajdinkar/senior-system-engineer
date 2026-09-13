@@ -112,4 +112,10 @@ def maxValue(node):
 ```
 ---
 
+### tab:3 3. Pass Values
+- in some cases, questions require us to **pass information down** from parents to child nodes
+- If we need more parameters than the original function signature allows, then we need to introduce a **helper function** to help us
 
+---
+## Exercises
+[Exercise-1.md](99_Exercise-1.md)
