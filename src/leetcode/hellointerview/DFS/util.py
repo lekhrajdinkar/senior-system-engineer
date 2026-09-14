@@ -34,6 +34,7 @@ def array_to_tree(arr) -> Optional[TreeNode]:
             queue.append(current.right)
         i += 1
 
+    draw_tree(root)
     return root
 
 

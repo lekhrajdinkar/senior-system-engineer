@@ -184,9 +184,8 @@ class Solution:
 
     # section::section-543::start
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        def dfs(node): # gives depth
+        def dfs(node:TreeNode): # gives depth
             nonlocal max_diameter
-
             if node is None: # Height of empty subtree
                 return 0
             else:
@@ -196,7 +195,6 @@ class Solution:
                 # capture diameter
                 max_diameter = max(max_diameter, (left + right))
                 print(f"Node: {node.val} | Left height: {left} | Right height: {right} | Diameter: {(left + right)} | Max: {max_diameter}")
-
                 # return depth from parent node (Not ROOT)
                 return 1 + max(left, right) # Return height to parent 👈👈⭐
 
@@ -206,16 +204,73 @@ class Solution:
     # section::section-543::end
 
     # section::section-687::start
-    def dfs_687(node: TreeNode):
-        pass
+    def longestUnivaluePath(self, root: Optional[TreeNode]) -> int:
+        # dfs(node,depth) returns the longest downward path
+        # starting from node where all values are equal to node.val.
+        def dfs_depth( node :TreeNode, depth) -> int:
+            nonlocal result
+            if node is None:
+                return 0
+            elif node.left is None and node.right is None:
+                print(f"Leaf Node: {node.val}(depth:{depth})")
+                return depth
+            else:
+                l = 0; r = 0
+                print(f"Node: {node.val}(depth:{depth})")
+
+                if node.left and node.left.val == node.val:
+                    l = dfs_depth(node.left, depth+1)
+                else:
+                    l = dfs_depth(node.left, 0)
+
+                if node.right and node.right.val == node.val:
+                    r = dfs_depth(node.right, depth+1)
+                else:
+                    r = dfs_depth(node.right, 0)
+
+                result = max( result, l+r)
+                print(f"Node: {node.val}(depth:{depth}) | Left: {l} | Right: {r} | Result: {l+r} | max_ : {result}")
+                return max(l,r) # Return longest ONE direction to parent
+
+        result = 0
+        dfs_depth(root,0)
+        return result
+
+        """
+        │       ┌── 5
+        │   ┌── 5
+        └── 5
+            │   ┌── 1
+            └── 4
+                └── 1
+        Node: 5(depth:0)
+        Node: 4(depth:0)
+        Leaf Node: 1
+        Leaf Node: 1
+        Node: 4(depth:0) | Left: 0 | Right: 0 | Result: 0 | max_ : 0
+        Node: 5(depth:1)
+        Leaf Node: 5
+        Node: 5(depth:1) | Left: 0 | Right: 2 | Result: 2 | max_ : 2
+        Node: 5(depth:0) | Left: 0 | Right: 2 | Result: 2 | max_ : 2
+        """
     # section::section-687::end
 
 # =============main======
 
 if __name__ == "__main__":
-    arr1 = [1,2,4,4,7,5,1]
-    arr2 = [5,4,8,11,None,13,4,7,2,None,None,5,1]
 
-    bt1: TreeNode = array_to_tree(arr2); draw_tree(bt1)
+    def test_113(): # 113: pathSum
+        arr1 = [1,2,4,4,7,5,1]
+        arr2 = [5,4,8,11,None,13,4,7,2,None,None,5,1]
+        print('='*50);Solution().pathSum(array_to_tree(arr2), 22)
+        print('='*50);Solution().pathSum(array_to_tree(arr1), 22)
 
-    Solution().pathSum(bt1, 22)
+    def test_687(): # 687: longestUnivaluePath
+        print('='*50);Solution().longestUnivaluePath(array_to_tree([1,4,5,4,4,None,5]))
+        print('='*50);Solution().longestUnivaluePath(array_to_tree([5,4,5,1,1,None,5]))
+        print('='*50);Solution().longestUnivaluePath(array_to_tree([1,2,2,2,2]))
+        print('='*50);Solution().longestUnivaluePath(array_to_tree([1,None,1,1,1,1,1,1]))
+
+
+    #test_113()
+    test_687()
