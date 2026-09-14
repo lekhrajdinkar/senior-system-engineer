@@ -13,6 +13,7 @@
 
 ---
 ## Binary tree
+> https://leetcode.com/problem-list/binary-tree/
 - The **height** of a binary tree is the **number of edges** on the longest path between the root node and a leaf node
 - A binary tree is **balanced** if the height of the left and right subtrees of every node differ by at most 1
 - A binary tree is **complete** if every level, except possibly the last, is completely filled, and all nodes are as far left as possible.

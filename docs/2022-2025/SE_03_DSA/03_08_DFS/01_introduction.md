@@ -2,7 +2,7 @@
 ## Reference
 - https://www.hellointerview.com/learn/code/depth-first-search/introduction
 - https://www.hellointerview.com/learn/code/depth-first-search/fundamentals
-- https://www.hellointerview.com/learn/code/depth-first-search/return-values
+- https://leetcode.com/problem-list/depth-first-search/
 
 ## Overview
 > Understanding when to use DFS vs BFS is critical.

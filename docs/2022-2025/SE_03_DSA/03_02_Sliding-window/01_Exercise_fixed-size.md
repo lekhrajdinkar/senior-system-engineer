@@ -10,7 +10,7 @@
 - 2 pointers: `start` and `ends`. 
   - both moves with same delta (for fixed)
   - both moves at different delta (in variable window) 
-- compare template with [varying-size window](02_varying-size.md#template-)
+- compare template with [varying-size window](02_Exercise_varying-size.md#template-)
 
 [02_01_max_window_sum.excalidraw](../draw/03/02/02_01_max_window_sum.excalidraw)
 
