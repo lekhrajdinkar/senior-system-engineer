@@ -1,4 +1,4 @@
-# DSA: Depth-First Search
+# DSA: DFS - Introduction
 ## Reference
 - https://www.hellointerview.com/learn/code/depth-first-search/introduction
 - https://www.hellointerview.com/learn/code/depth-first-search/fundamentals

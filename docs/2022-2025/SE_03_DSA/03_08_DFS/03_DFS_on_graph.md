@@ -1,4 +1,4 @@
-# 1. DSA: on Graph
+# 3. DSA: on Graph
 ## Overview
 > Pattern: 
 > - connected components
@@ -40,3 +40,8 @@ def dfs(node, visited):
 - trick: start from the border and see which cells can be reached from this boundary cell.
 
 @[code:section:section-2](../../../../src/leetcode/hellointerview/DFS/exercise-1.py)
+
+
+---
+## More Exercise
+[Exercise-2-Graph.md](03_Exercise-Graph.md)

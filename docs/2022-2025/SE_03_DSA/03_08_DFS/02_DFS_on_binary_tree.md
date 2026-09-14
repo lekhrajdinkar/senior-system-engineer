@@ -24,7 +24,7 @@
 
 ---
 ## DFS implementation (on binary tree)
-### tab:1 1. Traversal 
+### 1. Traversal 
 
 [02_dfs-in-tree.excalidraw](../draw/03/07_DFS/02_dfs-in-tree.excalidraw)
 
@@ -51,7 +51,7 @@ def dfs(node): # DFS on binary tree
 - This process continues until we have visited all the nodes in the binary tree.
 
 ---
-### tab:2 2. Return Values
+### 2. Return Values
 - the next step is to have each recursive call to DFS, **return a value**
 - Make sure to return value of the **base case**
 
@@ -60,62 +60,19 @@ def dfs(node): # DFS on binary tree
 > - sum of nodes
 > - ...
 
-```python
-def dfs(node):
-    # base case
-    if node is None:
-        return #some value ⭐
-    ...
-
-    left = dfs(node.left)
-    right = dfs(node.right)
-    return # value based on left and right ⭐
-```
-
 **✔️Problem-1: Sum of Nodes**
 - `sum(node) = sum(node.left) + sum(node.right) + node.val`
 -  bubbles up, from the leaf nodes up to the parent nodes until we reach the root node
 -  each recursive call should return the **sum of its subtree**
 
-```python
-def dfs(node):
-    # base case: empty subtree
-    if node is None:
-        return 0
-    
-    # base case: leaf node
-    if node.left is None and node.right is None:
-        return node.val
-    
-    left = dfs(node.left)
-    right = dfs(node.right)
-    return left + node.val + right 
-```
-
 **✔️Problem-2: Find the maximum value in a binary tree**
 - `max(left, node.val, right )`
 
-```python
-def maxValue(node):
-    # base case: empty subtree
-    if node is None:
-        # An empty subtree has a maximum value of negative infinity.
-        return float('-inf')
-
-    # base case: leaf node
-    if node.left is None and node.right is None:
-        return node.val
-
-    left = maxValue(node.left)
-    right = maxValue(node.right)
-    return max(left, node.val, right ) # ⭐
-```
 ---
-
-### tab:3 3. Pass Values
+### 3. Pass Values
 - in some cases, questions require us to **pass information down** from parents to child nodes
 - If we need more parameters than the original function signature allows, then we need to introduce a **helper function** to help us
 
 ---
-## Exercises
-[Exercise-1.md](99_Exercise-1.md)
+## More Exercises
+[Exercise-1-BS.md](02_Exercise-BT.md)
