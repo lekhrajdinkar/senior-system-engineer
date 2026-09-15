@@ -17,13 +17,7 @@
 ### tab:2 visual
 [04_graph.excalidraw](../draw/03/07_DFS/04_graph.excalidraw)
 
----
-## Time ans space Complexity
-**DFS traversal**
-- `O(N + M)` time and `O(N + M)` space
-- where N is the number of nodes
-- and M is the number of edges in the graph
-- The space complexity is due to the **adjacency list** that stores the graph structure
+
 
 ---
 ## DFS on graph
@@ -36,7 +30,6 @@ Graph problems **add complexity**:
 - you need to handle cycles,
 - different representations (adjacency lists and matrices),
 - and sometimes disconnected components.
-
 
 ```python
 visited = set()
@@ -60,12 +53,20 @@ def dfs(node, visited):
 - Use a **for loop** to iterate over each neighbor of the current node, and recursively call dfs on each neighbor.
 
 ---
+## Time and space Complexity
+**DFS traversal**
+- `O(N + M)` time and `O(N + M)` space
+- where N is the number of nodes
+- and M is the number of edges in the graph
+- The space complexity is due to the **adjacency list** that stores the graph structure
+
+---
 ## 1. representation: Adjacency Lists 
 ### tab:1 Example
 - n = 4
 - edges = [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]]
 
-```
+```neighbours
 adjList = 
 {
   0: [1, 3, 2],

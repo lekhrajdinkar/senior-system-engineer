@@ -1,7 +1,9 @@
 from collections import deque
-from typing import Optional
+from typing import Optional, List
 
-
+# =================
+# Tree
+# =================
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -10,7 +12,6 @@ class TreeNode:
 
 
 def array_to_tree(arr) -> Optional[TreeNode]:
-
     if not arr or arr[0] is None:
         return None
 
@@ -19,15 +20,12 @@ def array_to_tree(arr) -> Optional[TreeNode]:
     i = 1
 
     while queue and i < len(arr):
-
         current = queue.popleft()
-
         # Left
         if i < len(arr) and arr[i] is not None:
             current.left = TreeNode(arr[i])
             queue.append(current.left)
         i += 1
-
         # Right
         if i < len(arr) and arr[i] is not None:
             current.right = TreeNode(arr[i])
@@ -39,10 +37,8 @@ def array_to_tree(arr) -> Optional[TreeNode]:
 
 
 def draw_tree(node, prefix="", is_left=True):
-
     if node is None:
         return
-
     # Print right subtree first
     if node.right:
         draw_tree(
@@ -53,7 +49,6 @@ def draw_tree(node, prefix="", is_left=True):
 
     # Print current node
     print(prefix + ("└── " if is_left else "┌── ") + str(node.val))
-
     # Print left subtree
     if node.left:
         draw_tree(
