@@ -113,6 +113,52 @@ def dfs(adjList: dict):
 
 ---
 ## 2. representation: 2D matrix grids
+### tab:1 Example
+- Another common way to represent a graph is as a matrix (2D-grid). 
+- Each cell in the grid represents a node. | node: `(x,y)`
+- The **neighbors** of each node are the cells that are adjacent to it 
+  - so fixed at most `4` neighbors
+  - `(x-1,y)`, `(x+1,y)` | left and right 
+  - `(x,y-1)`, `(x,y+1)`| up and down
+
+```visual
+ grid = [
+            [1, 0, 1],      
+            [1, 0, 0],
+            [0, 0, 1]
+      ]
+```
+### tab:2 DFS on 2d-matrices
+- DFS on a matrix is similar to DFS on an adjacency list
+-  We still have to keep track of visited nodes, and we **recursively call DFS on each neighbor** of the current node.
+- main difference is that each cell can have at most 4 neighbors (up, down, left, right)
+- Use a `for loop ` to iterate over each neighbor of the current node, and recursively call
+
+```python
+def dfs(matrix):
+  visited = set() # tuple (x,y) coordinate
+  # up, down, left, right
+  directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+  def dfs_helper(r, c):
+    if (r, c) in visited:
+      return
+    
+    # check if the cell is out of bounds
+    if (r < 0 or r >= len(matrix))   or   (c < 0 or c >= len(matrix[0])):
+      return
+    
+    visited.add((r, c))
+    # DFS on neighbour
+    for dr, dc in directions: # run max 4 times
+      dfs_helper(r + dr, c + dc)
+        
+    return
+  
+  dfs_helper(0, 0)
+```
+### tab:3 visual on dfs
+[06_graph_2d-matrices.excalidraw](../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
+
 ---
 ## Exercise
 [Exercise-2-Graph.md](03_Exercise-Graph.md)

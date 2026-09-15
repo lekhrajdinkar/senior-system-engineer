@@ -31,13 +31,10 @@ class Solution:
             adjList[node.value] = [ x.value for x in node.neighbors]
             visited.add(node.value)
 
-            for x in node.neighbors: dfs(x, visited)
+            for x in node.neighbors: dfs(x, visited) # DFS into neighbors
 
-        visited = set()
-        #adjList: Dict[int, List[int] = {}
-        adjList = {}
-        dfs(node, visited)
-
+        visited = set(); adjList = {}
+        dfs(node, visited) # start here
         return adjList
     # section::section-3::end
 
@@ -62,8 +59,22 @@ class Solution:
             return False
 
         if hasCycle(0,-1): return False # Check cycle | condition 1
-        return True if len(visited) == n-1 else False # Check single connectivity | condition 2
+        return True if len(visited) == n else False # Check single connectivity | condition 2
     # section::section-4::end
+
+    # ======================= 2d Matrices ==========
+
+    # section::section-200::start
+    # section::section-200::end
+
+    # section::section-733::start
+    # section::section-733::end
+
+    # section::section-130::start
+    # section::section-130::end
+
+    # section::section-417::start
+    # section::section-417::end
 
 
     # =================
