@@ -178,8 +178,8 @@ example:  Uber where users are reporting their locations at regular intervals. c
 -  forward a batch of updates to the root processor
 - ![img_12.png](../../../99_img/2026/hi/pattern/04/img_12.png)
 --- 
-## interview
-### when to use
+## Interview
+### tab:1 when to use
 - proactively identify bottlenecks, validate them, and propose solutions as deep dive
 
 understand tradeoffs: 
@@ -187,7 +187,7 @@ understand tradeoffs:
 - partitioning means the read path may be compromised, cross shard joins, etc
 - batching adds latency and moving pieces. 
 
-### Use case / scenario
+### tab:2 Use case / scenario
 - https://www.hellointerview.com/learn/system-design/problem-breakdowns/instagram
 - https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed
 - https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-post-search
