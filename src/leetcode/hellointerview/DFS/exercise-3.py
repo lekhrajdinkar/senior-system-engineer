@@ -13,12 +13,12 @@ class Solution:
     # section::section-template-1::end
 
     # section::section-733-v2::start
-    # Flood-fill ✔️
+    # Flood-fill
     def floodfill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
         visited = set() # tuple (x,y) coordinate
         directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         parentOriginalColor = image[sr][sc]
-        print(f"✔️--  fill color: {parentOriginalColor} with color: {color} --")
+        print(f"--  fill color: {parentOriginalColor} with color: {color} --")
 
         def dfs_helper(r, c, depth): # DEPTH IS UNnecessary, added for print
             if (r, c) in visited: return
@@ -26,7 +26,7 @@ class Solution:
             visited.add((r, c))
             print(f"|{'__'*depth}🐛visited ({r},{c}), at depth {depth}")
 
-            # here
+            # ✔️here
             if image[r][c] == parentOriginalColor:
                 print(f"|__{'__'*depth}Filled from color: {image[r][c]} to {color}")
                 image[r][c] = color
@@ -55,18 +55,17 @@ class Solution:
             if (r, c) in visited:return
             if r < 0 or r >= rows or c < 0 or c >= cols: return
 
-            if grid[r][c] != "1": return # BREAK (if found non-connected)
+            if grid[r][c] != "1": return # ✔️BREAK (if found non-connected)
 
             visited.add((r, c))
             for dr, dc in directions:
                 dfs(r + dr, c + dc)
 
-        # each for each cell ⭐
         for r in range(rows):
             for c in range(cols):
                 if grid[r][c] == "1" and (r, c) not in visited: # ⭐
                     dfs(r, c) # ripple effect will get all connected nodes
-                    count += 1 # once broke count all as single rock
+                    count += 1 # ✔️once broke count all as single rock
 
         print(f"count: {count}")
         return count

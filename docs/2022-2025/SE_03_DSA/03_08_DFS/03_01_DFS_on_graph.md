@@ -4,29 +4,27 @@
 
 ---
 ## Graph Basic
-### tab:1 Overview
+[04_graph.excalidraw](../draw/03/07_DFS/04_graph.excalidraw)
+
+- representations : 
+  - adjacency lists 
+  - 2d matrices
 - Graphs consist of **nodes** (also frequently referred to as vertices), and **edges** that connect the nodes.
 - graphs can be either directed or undirected.
 - Nodes that are connected to each other via an edge are known as the **neighbors** of that node.
 - A graph can contain **cycles**| A cycle is a path that starts and ends at the same node.
-- Graphs can also have **connected and disconnected components**
-    - A connected graph is a graph where there is a path between every pair of nodes
-    - fact: A tree is a connected graph with no cycles
-    - A disconnected graph is a graph where there are at least two nodes that are not connected to each other by a path.
-
-### tab:2 visual
-[04_graph.excalidraw](../draw/03/07_DFS/04_graph.excalidraw)
-
-
+- A **connected graph** is a graph where there is a path between every pair of nodes
+- A **disconnected graph** is a graph where there are at least two nodes that are not connected to each other by a path.
+> 💡A tree is a connected graph with no cycles 
 
 ---
 ## DFS on graph
-> DFS for a graph is conceptually similar to DFS on a binary tree. Pattern: 
+> DFS for a graph is conceptually similar to DFS on a binary tree. **Pattern**: 
 > - connected components
 > - boundary traversal
 > - cycle detection
 
-Graph problems **add complexity**:
+Graph problems **adds complexity**:
 - you need to handle cycles,
 - different representations (adjacency lists and matrices),
 - and sometimes disconnected components.
@@ -45,11 +43,16 @@ def dfs(node, visited):
     # than making calls to the left and right children of the current node.
     for neighbor in node.neighbors:
         dfs(neighbor, visited)
+
+# Handle disconnected components
+for node in nodes:
+     if node not in visited:
+         dfs(node)
 ```
 
 **Summary**
-- Use a **set** to keep track of visited nodes. Each time you visit a node, add it to the set.
-- If you encounter a node that has already been visited, **return immediately** without making any further recursive calls.
+- Use a **set** to keep track of visited nodes.
+- If you encounter, visited node **return immediately** without making any further recursive calls.
 - Use a **for loop** to iterate over each neighbor of the current node, and recursively call dfs on each neighbor.
 
 ---
@@ -66,8 +69,8 @@ def dfs(node, visited):
 ### tab:1 Example
 - n = 4
 - edges = [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]]
-
-```neighbours
+- node and its **neighbours**:
+```adjList
 adjList = 
 {
   0: [1, 3, 2],
@@ -161,7 +164,7 @@ def dfs(matrix):
 ---
 Short form:
 
-@[code:section::section-template-1](../../../../src/leetcode/hellointerview/DFS/exercise-2.py)
+@[code:section::section-template-1](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
 
 ### tab:3 visual
 [06_graph_2d-matrices.excalidraw](../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
