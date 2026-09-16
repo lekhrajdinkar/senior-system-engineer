@@ -2,32 +2,7 @@
 from typing import List
 
 
-# section::section-2::start
-def find_boundary_connected(grid: List[List[int]]):
-    rows, cols = len(grid), len(grid[0])
-    visited = set()
-    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-    def dfs(r, c):
-        if (r, c) in visited: return
-        if r < 0 or r >= rows or c < 0 or c >= cols: return
-        if grid[r][c] != 1: return # break
 
-        # grid[r][c] = 9 #  mark land with 9
-
-        visited.add((r, c))
-        for dr, dc in directions: # DFS on neighbours
-            dfs(r + dr, c + dc)
-
-    # Start DFS from boundary cells with value 1 ⭐
-    for r in range(rows):
-        if grid[r][0] == 1: dfs(r, 0) # col-0
-        if grid[r][cols-1] == 1: dfs(r, cols-1) # col-last
-    for c in range(cols):
-        if grid[0][c] == 1: dfs(0, c) # row-0
-        if grid[rows-1][c] == 1: dfs(rows-1, c) # row-last
-
-    print(visited) # see answer, coordinates
-# section::section-2::end
 
 
 # ============ DFS on Binart tree  ====

@@ -19,7 +19,7 @@
     - "Pacific Atlantic Water Flow.
 - trick: start from the border and see which cells can be reached from this boundary cell.
 
-@[code:section:section-2](../../../../src/leetcode/hellointerview/DFS/exercise-0.py)
+@[code:section:section-130-hint](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
 
 ---
 ## 733 | E. Flood Fill ✔️
@@ -36,7 +36,7 @@
 - https://www.hellointerview.com/learn/code/depth-first-search/surrounded-regions
 - https://leetcode.com/problems/surrounded-regions/description/
 
-@[code:section::section-130](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
+@[code:section::section-130,section-130-hint](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
 
 ---
 ## 417 | M. pacific-atlantic-water-flow
