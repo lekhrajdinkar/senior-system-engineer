@@ -1,4 +1,4 @@
-# 3. DFS : exercise (Graph: adjList)
+# DFS : exercise (Graph: adjList)
 
 ## problem-1. Copy Graph
 - Build `adjList` from `IntGraphNode`

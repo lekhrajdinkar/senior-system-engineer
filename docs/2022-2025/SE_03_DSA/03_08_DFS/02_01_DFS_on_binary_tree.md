@@ -1,4 +1,4 @@
-# 2. DFS:  on Binary Tree
+# DFS:  on Binary Tree
 ## Overview
 > Pattern:
 > - finding depth,
@@ -76,4 +76,4 @@ def dfs(node): # DFS on binary tree
 
 ---
 ## More Exercises
-[Exercise-1-BS.md](02_Exercise-BT.md)
+[Exercise-1-BS.md](02_02_Exercise-BT.md)

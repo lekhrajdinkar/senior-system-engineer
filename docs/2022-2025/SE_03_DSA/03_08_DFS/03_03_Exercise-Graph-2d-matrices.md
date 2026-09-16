@@ -1,17 +1,18 @@
-# 4. DFS : exercise (Graph: 2D matrices)
+#  DFS : exercise (Graph: 2D matrices)
 
 ---
 ## Visual
-[06_graph_2d-matrices.excalidraw](../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
-
-[graph-2d-matrices.excalidraw](../draw/03/07_DFS/01_problem-connected-island.excalidraw)
+[graph_2d-matrices.excalidraw](../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
 
 ---
-## problem-1: Counting Connected Components
-@[code:section:section-1](../../../../src/leetcode/hellointerview/DFS/exercise-0.py)
+## Island count
+### 200 | M. number-of-islands (All)
+- https://www.hellointerview.com/learn/code/depth-first-search/number-of-islands
+- https://leetcode.com/problems/number-of-islands/
 
----
-## problem-2: Boundary
+@[code:section:section-200](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
+
+### From Boundary
 - same as counting problem, but from boundary
 - find cells that are connected to the edge of a grid.  Meaning, all connected cells which are on boundary of the matrix.
     - "Surrounded Regions"
@@ -21,21 +22,17 @@
 @[code:section:section-2](../../../../src/leetcode/hellointerview/DFS/exercise-0.py)
 
 ---
-## 733 | E. Flood Fill
+## 733 | E. Flood Fill ✔️
 - https://www.hellointerview.com/learn/code/depth-first-search/flood-fill
 - https://leetcode.com/problems/flood-fill/description/
 
-@[code:section::section-733](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
-
----
-## 200 | M. number-of-islands
-- https://www.hellointerview.com/learn/code/depth-first-search/number-of-islands
-- https://leetcode.com/problems/number-of-islands/
-
-@[code:section::section-733](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
+@[code:section::section-733-v2](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
 
 ---
 ## 130 | M. surrounded-regions
+>   - find 0's cell from border - mark then S safe ⭐⭐
+>   - for rest 0, flip to X and flip S back to 0
+
 - https://www.hellointerview.com/learn/code/depth-first-search/surrounded-regions
 - https://leetcode.com/problems/surrounded-regions/description/
 

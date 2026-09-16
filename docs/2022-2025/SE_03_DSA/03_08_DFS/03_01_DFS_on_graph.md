@@ -1,4 +1,4 @@
-# 3. DSA: on Graph
+# DSA: on Graph
 ## reference
 - https://www.hellointerview.com/learn/code/depth-first-search/graphs-overview
 
@@ -62,7 +62,7 @@ def dfs(node, visited):
 
 ---
 ## 1. representation: Adjacency Lists 
-[Exercise-Graph-adjList.md](03_Exercise-Graph-adjList.md)
+[Exercise-Graph-adjList.md](03_02_Exercise-Graph-adjList.md)
 ### tab:1 Example
 - n = 4
 - edges = [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]]
@@ -114,7 +114,7 @@ def dfs(adjList: dict):
 
 ---
 ## 2. representation: 2D matrix grids
-[Exercise-Graph-2d-matrices.md](04_Exercise-Graph-2d-matrices.md)
+[Exercise-Graph-2d-matrices.md](03_03_Exercise-Graph-2d-matrices.md)
 ### tab:1 Example
 - Another common way to represent a graph is as a matrix (2D-grid). 
 - Each cell in the grid represents a node. | node: `(x,y)`

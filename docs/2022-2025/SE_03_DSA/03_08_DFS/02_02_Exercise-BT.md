@@ -1,4 +1,4 @@
-# 2. DFS: Exercise (Binary Tree, 10 problems)
+# DFS: Exercise (Binary Tree, 10 problems)
 
 ## 00. Find the maximum value in a binary tree ✔️
 - `max(left, node.val, right )`
