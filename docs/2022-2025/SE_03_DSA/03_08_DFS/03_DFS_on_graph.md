@@ -62,6 +62,7 @@ def dfs(node, visited):
 
 ---
 ## 1. representation: Adjacency Lists 
+[Exercise-Graph-adjList.md](03_Exercise-Graph-adjList.md)
 ### tab:1 Example
 - n = 4
 - edges = [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]]
@@ -113,6 +114,7 @@ def dfs(adjList: dict):
 
 ---
 ## 2. representation: 2D matrix grids
+[Exercise-Graph-2d-matrices.md](04_Exercise-Graph-2d-matrices.md)
 ### tab:1 Example
 - Another common way to represent a graph is as a matrix (2D-grid). 
 - Each cell in the grid represents a node. | node: `(x,y)`
@@ -156,9 +158,11 @@ def dfs(matrix):
   
   dfs_helper(0, 0)
 ```
-### tab:3 visual on dfs
+---
+Short form:
+
+@[code:section::section-template-1](../../../../src/leetcode/hellointerview/DFS/exercise-2.py)
+
+### tab:3 visual
 [06_graph_2d-matrices.excalidraw](../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
 
----
-## Exercise
-[Exercise-2-Graph.md](03_Exercise-Graph.md)

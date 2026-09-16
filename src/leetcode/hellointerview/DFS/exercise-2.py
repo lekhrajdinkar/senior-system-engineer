@@ -17,7 +17,7 @@ class IntGraphNode:
          self.neighbors = neighbors
 # section::section-0::end
 
-
+# ============================================
 
 class Solution:
     # section::section-3::start
@@ -37,6 +37,17 @@ class Solution:
         dfs(node, visited) # start here
         return adjList
     # section::section-3::end
+
+    # ===============================================
+    # section::section-util-1::start
+    def build_adj_list(self, n:int, edges: List[List[int]]) -> dict:
+        adj_list = {i: [] for i in range(n)}
+        for u, v in edges:
+            adj_list[u].append(v)
+            adj_list[v].append(u)
+        print(f">> build_adj_list: {adj_list}")
+        return adj_list
+    # section::section-util-1::end
 
     # section::section-4::start
     # valid graph tree - no cycle, no disconnected node
@@ -62,38 +73,15 @@ class Solution:
         return True if len(visited) == n else False # Check single connectivity | condition 2
     # section::section-4::end
 
-    # ======================= 2d Matrices ==========
-
-    # section::section-200::start
-    # section::section-200::end
-
-    # section::section-733::start
-    # section::section-733::end
-
-    # section::section-130::start
-    # section::section-130::end
-
-    # section::section-417::start
-    # section::section-417::end
-
-
-    # =================
-    # Graph Util
-    # =================
-    # section::section-util-1::start
-    def build_adj_list(self, n:int, edges: List[List[int]]) -> dict:
-        adj_list = {i: [] for i in range(n)}
-        for u, v in edges:
-            adj_list[u].append(v)
-            adj_list[v].append(u)
-        print(f">> build_adj_list: {adj_list}")
-        return adj_list
-    # section::section-util-1::end
-
 # ===============
 
 if __name__ == "__main__":
-    Solution().graph_valid_tree(n=4, edges=[[0,1],[2,3]])
-    Solution().graph_valid_tree(n=2, edges=[[0,1]])
-    Solution().graph_valid_tree(n=5, edges=[[0,1],[0,2],[0,3],[1,3],[1,4]])
-    Solution().graph_valid_tree(n=6, edges=[[0,1],[1,2],[2,0],[3,4],[4,5]])
+
+    def graph_valid_tree_text():
+        Solution().graph_valid_tree(n=4, edges=[[0,1],[2,3]])
+        Solution().graph_valid_tree(n=2, edges=[[0,1]])
+        Solution().graph_valid_tree(n=5, edges=[[0,1],[0,2],[0,3],[1,3],[1,4]])
+        Solution().graph_valid_tree(n=6, edges=[[0,1],[1,2],[2,0],[3,4],[4,5]])
+
+
+    graph_valid_tree_text()
