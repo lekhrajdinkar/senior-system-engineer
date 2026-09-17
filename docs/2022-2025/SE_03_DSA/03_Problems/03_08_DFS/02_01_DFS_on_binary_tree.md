@@ -1,9 +1,34 @@
 # DFS:  on Binary Tree
-## Overview
-> Pattern:
-> - finding depth,
-> - validating structure,
-> - and path problems
+## References
+- [02_Binary-Tree.md](../../01_DS/02_Binary-Tree.md)
+- https://leetcode.com/problem-list/depth-first-search/
+- https://www.hellointerview.com/learn/code/depth-first-search/introduction
+- https://www.hellointerview.com/learn/code/depth-first-search/fundamentals
+
+---
+## DFS: Overview
+> Understanding when to use DFS vs BFS is critical.
+> - In short: use DFS when you need to explore all paths or find any valid solution,
+> - use BFS when you need the shortest path or level-by-level traversal.
+
+- DFS arguably the **most important algorithm** to master for coding interviews.
+- It's called "depth-first" (go deep, then backtrack) because:
+    - it explores **as far down a path as possible** before backtracking to try another path
+    - achieve by **recursion**. **callStack** handles backtrack 👈👈
+- DFS is a **traversal algorithm** for:
+    - **trees** :
+        - have no cycles, so don't need to track visited nodes
+        - We start with DFS on **binary trees** because they're the simplest structure to work
+    - **graphs**:
+        - have cycle
+
+
+DFS excels when you need to:
+- Explore **all possible paths** (like finding all solutions or any valid solution)
+- **Traverse hierarchical structures** (trees, nested data)
+- Find connected components in graphs or grids
+- **Detect cycles in graphs**
+- Process nodes in a specific order (pre-order, in-order, post-order)
 
 ---
 ## Time and Space Complexity
@@ -12,22 +37,10 @@
 - `O(N)`
 
 ---
-## Binary tree
-> https://leetcode.com/problem-list/binary-tree/
-- The **height** of a binary tree is the **number of edges** on the longest path between the root node and a leaf node
-- A binary tree is **balanced** if the height of the left and right subtrees of every node differ by at most 1
-- A binary tree is **complete** if every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
-- A **binary search tree (BST)** is a binary tree where:
-  - All nodes in the left subtree of the root have a value less than the root.
-  - All nodes in the right subtree of the root have a value greater than the root.
-
-[03_bs.excalidraw](../draw/03/07_DFS/03_bs.excalidraw)
-
----
-## DFS implementation (on binary tree)
+## DFS implementation :: on Binary Tree
 ### 1. Traversal 
 
-[02_dfs-in-tree.excalidraw](../draw/03/07_DFS/02_dfs-in-tree.excalidraw)
+[02_dfs-in-tree.excalidraw](../../draw/03/07_DFS/02_dfs-in-tree.excalidraw)
 
 ```python
 def dfs(node): # DFS on binary tree
@@ -76,4 +89,4 @@ def dfs(node): # DFS on binary tree
 
 ---
 ## More Exercises
-[Exercise-1-BS.md](02_02_Exercise-BT.md)
+[check here](02_02_Exercise-Binary-Tree.md)

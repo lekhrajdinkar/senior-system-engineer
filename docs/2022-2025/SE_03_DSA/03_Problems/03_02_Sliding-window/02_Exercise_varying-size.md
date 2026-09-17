@@ -33,16 +33,16 @@ def variable_length_sliding_window(nums):
 - https://www.hellointerview.com/learn/code/sliding-window/variable-length
 - `len(state) > basket` | state is dict, basket is int
 
-[02_02_vary-window.excalidraw](../draw/03/02/02_02_vary-window.excalidraw)
+[02_02_vary-window.excalidraw](../../draw/03/02/02_02_vary-window.excalidraw)
 
-@[code:section::section-1](../../../../src/leetcode/hellointerview/slidingWindow/leetcode-sliding-904.py)
+@[code:section::section-1](../../../../../src/leetcode/hellointerview/slidingWindow/leetcode-sliding-904.py)
 
 
 ## 004. longest-substring (Distinct)
 - https://leetcode.com/problems/longest-substring-without-repeating-characters/
 - https://www.hellointerview.com/learn/code/sliding-window/longest-substring-without-repeating-characters
 
-@[code:section::leetcode-004](../../../../src/leetcode/hellointerview/slidingWindow/leetcode-sliding-4.py)
+@[code:section::leetcode-004](../../../../../src/leetcode/hellointerview/slidingWindow/leetcode-sliding-4.py)
 
 
 ---
@@ -50,4 +50,4 @@ def variable_length_sliding_window(nums):
 - https://leetcode.com/problems/longest-repeating-character-replacement/description/
 - https://www.hellointerview.com/learn/code/sliding-window/longest-repeating-character-replacement
 
-@[code:section::leetcode-424](../../../../src/leetcode/hellointerview/slidingWindow/leetcode-sliding-4.py)
+@[code:section::leetcode-424](../../../../../src/leetcode/hellointerview/slidingWindow/leetcode-sliding-4.py)

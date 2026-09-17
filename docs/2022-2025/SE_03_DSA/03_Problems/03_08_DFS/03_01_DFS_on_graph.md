@@ -1,28 +1,10 @@
 # DSA: on Graph
 ## reference
 - https://www.hellointerview.com/learn/code/depth-first-search/graphs-overview
+- [03_graph.md](../../01_DS/03_graph.md)
 
 ---
-## Graph Basic
-[04_graph.excalidraw](../draw/03/07_DFS/04_graph.excalidraw)
 
-- representations : 
-  - adjacency lists 
-  - 2d matrices
-- Graphs consist of **nodes** (also frequently referred to as vertices), and **edges** that connect the nodes.
-- graphs can be either directed or undirected.
-- Nodes that are connected to each other via an edge are known as the **neighbors** of that node.
-- A graph can contain **cycles**| A cycle is a path that starts and ends at the same node.
-- A **connected graph** is a graph where there is a path between every pair of nodes
-- A **disconnected graph** is a graph where there are at least two nodes that are not connected to each other by a path.
-> 💡A tree is a connected graph with no cycles 
-
----
-## DFS on graph
-> DFS for a graph is conceptually similar to DFS on a binary tree. **Pattern**: 
-> - connected components
-> - boundary traversal
-> - cycle detection
 
 Graph problems **adds complexity**:
 - you need to handle cycles,
@@ -164,8 +146,8 @@ def dfs(matrix):
 ---
 Short form:
 
-@[code:section::section-template-1](../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
+@[code:section::section-template-1](../../../../../src/leetcode/hellointerview/DFS/exercise-3.py)
 
 ### tab:3 visual
-[06_graph_2d-matrices.excalidraw](../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
+[06_graph_2d-matrices.excalidraw](../../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
 

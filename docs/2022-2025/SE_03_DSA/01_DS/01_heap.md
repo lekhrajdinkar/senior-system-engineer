@@ -20,7 +20,7 @@ print ("After: ",arr)
 # Parent <= Children/s (2)
 ```
 
-![img.png](img.png)
+![img.png](../../../99_img/2026/07/02/03/img.png)
 
 | Relationship    | Formula        |
 | --------------- | -------------- |
@@ -77,14 +77,4 @@ min_element = heapq.heappop(arr)
 # peek the new min element = 1. O(1)
 arr[0]
 ```
----
-## Patterns ⭐
-**When to use**
-- "Top K" problems
-- k smallest
-- k largest
-- closet
-- most frequent
-
-![img_1.png](img_1.png)
 

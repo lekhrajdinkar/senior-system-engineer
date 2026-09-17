@@ -1,5 +1,6 @@
 # Stacks
 ## Reference
+- [04_stack_linked-list.md](../../01_DS/04_stack_linked-list.md)
 - https://www.hellointerview.com/learn/code/stack/overview
 
 ## Overview
@@ -17,22 +18,18 @@
 - https://leetcode.com/problems/valid-parentheses/
 - https://www.hellointerview.com/learn/code/stack/valid-parentheses
 
-@[code:section::section-20](../../../../src/leetcode/hellointerview/stack_and_linlkedList/stack.py)
+@[code:section::section-20](../../../../../src/leetcode/hellointerview/stack_and_linlkedList/stack.py)
 
 ---
 ## 394. decode-string
 - https://leetcode.com/problems/decode-string/
 - https://www.hellointerview.com/learn/code/stack/decode-string
 
-@[code:section::decodeString,decodeStringConsole](../../../../src/leetcode/hellointerview/stack_and_linlkedList/stack.py)
+@[code:section::decodeString,decodeStringConsole](../../../../../src/leetcode/hellointerview/stack_and_linlkedList/stack.py)
 
 ## 32. Longest Valid Parentheses 🟡
 - https://leetcode.com/problems/longest-valid-parentheses/description/
 - https://www.hellointerview.com/learn/code/stack/longest-valid-parentheses
 
-@[code:section::section-32](../../../../src/leetcode/hellointerview/stack_and_linlkedList/stack.py)
+@[code:section::section-32](../../../../../src/leetcode/hellointerview/stack_and_linlkedList/stack.py)
 
----
-## More
-
-[00_01_Array.excalidraw](../draw/03/02/00_01_Array.excalidraw)

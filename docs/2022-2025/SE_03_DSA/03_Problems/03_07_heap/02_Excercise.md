@@ -1,7 +1,20 @@
 # Heap : Exercise
 
+## Reference
+- [01_heap.md](../../01_DS/01_heap.md)
+
+---
 ## Pattern
-![01_heap.excalidraw](../draw/03/06/01_heap.excalidraw)
+**When to use**
+- "Top K" problems
+- k smallest
+- k largest
+- closet
+- most frequent
+
+![img_1.png](../../../../99_img/2026/07/02/03/img_1.png)
+
+![01_heap.excalidraw](../../draw/03/06/01_heap.excalidraw)
 
 ---
 ## 215. Kth Largest Element in an Array ✔️
@@ -10,7 +23,7 @@
 - check above drawing
 - `O(n log k)`
 
-@[code:section::section-215](../../../../src/leetcode/hellointerview/heap/excercise1.py)
+@[code:section::section-215](../../../../../src/leetcode/hellointerview/heap/excercise1.py)
 
 ---
 ## 973. K Closest Points to Origin ✔️
@@ -18,7 +31,7 @@
 - https://leetcode.com/problems/k-closest-points-to-origin/
 - check above drawing
 
-@[code:section::section-973](../../../../src/leetcode/hellointerview/heap/excercise1.py)
+@[code:section::section-973](../../../../../src/leetcode/hellointerview/heap/excercise1.py)
 
 ---
 ## 658. Find K Closest Elements ✔️
@@ -26,7 +39,7 @@
 - https://leetcode.com/problems/find-k-closest-elements/description/
 - check above drawing
 
-@[code:section::section-658](../../../../src/leetcode/hellointerview/heap/excercise1.py)
+@[code:section::section-658](../../../../../src/leetcode/hellointerview/heap/excercise1.py)
 
 ---
 ## 295. Find Median from Data Stream ✔️
@@ -34,17 +47,17 @@
 - https://www.hellointerview.com/learn/code/heap/find-median-from-data-stream
 - check above drawing
 
-@[code:section::section-295](../../../../src/leetcode/hellointerview/heap/excercise1.py)
-@[code:section::section-295-brute](../../../../src/leetcode/hellointerview/heap/excercise1.py)
+@[code:section::section-295](../../../../../src/leetcode/hellointerview/heap/excercise1.py)
+@[code:section::section-295-brute](../../../../../src/leetcode/hellointerview/heap/excercise1.py)
 
 ---
 ## 23. Merge k Sorted Lists ✔️
 - https://leetcode.com/problems/merge-k-sorted-lists/description/
 - https://www.hellointerview.com/learn/code/heap/merge-k-sorted-lists#step-1-initialize-the-heap
 
-![02_sort-and-ll.excalidraw](../draw/03/06/02_sort-and-ll.excalidraw)
+![02_sort-and-ll.excalidraw](../../draw/03/06/02_sort-and-ll.excalidraw)
 
-@[code:section::section-23](../../../../src/leetcode/hellointerview/heap/excercise1.py)
+@[code:section::section-23](../../../../../src/leetcode/hellointerview/heap/excercise1.py)
 
 ---
 ## 378. Kth Smallest Element in a Sorted Matrix 
@@ -52,7 +65,7 @@
 - https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
 - https://www.hellointerview.com/learn/code/binary-search/kth-smallest-element-in-a-sorted-matrix
 
-[03_378.excalidraw](../draw/03/06/03_378.excalidraw)
+[03_378.excalidraw](../../draw/03/06/03_378.excalidraw)
 
-@[code:section::section-378-1,section::section-378-2,section-378-example](../../../../src/leetcode/hellointerview/heap/leetcode-378.py)
+@[code:section::section-378-1,section::section-378-2,section-378-example](../../../../../src/leetcode/hellointerview/heap/leetcode-378.py)
 

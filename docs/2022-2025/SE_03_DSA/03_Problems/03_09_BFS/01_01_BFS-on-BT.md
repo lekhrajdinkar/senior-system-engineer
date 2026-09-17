@@ -1,11 +1,12 @@
 # BFS : Tree
 ## Reference
+- [02_Binary-Tree.md](../../01_DS/02_Binary-Tree.md)
 - https://www.hellointerview.com/learn/code/breadth-first-search/introduction
 - https://www.hellointerview.com/learn/code/breadth-first-search/fundamentals
 
 ---
 ## Overview
-[01_basic.excalidraw](../draw/03/08_BFS/01_basic.excalidraw)
+[01_basic.excalidraw](../../draw/03/08_BFS/01_basic.excalidraw)
 - `O(n)` - space and time
 - BFS is a **level-by-level** traversal algorithm
 - visits all nodes **at the current level** before moving to the next level of the tree
@@ -17,8 +18,8 @@
   - > py: from collections import deque
 
 ---
-## implementation of BFS on a binary tree
-###  tab:1 Basic 
+##  BFS :: binary tree
+###  tab:2 Basic 
 
 ```python
 from collections import deque
@@ -36,7 +37,7 @@ def bfs(root):
         
 ```
 
-###  tab:2  Extended
+###  tab:1  Extended
 > Using a **for-loop to iterate over the nodes at each level** is such a common pattern, that it is the version of BFS on binary trees you need to know for interviews.
 
 ```python
