@@ -1,6 +1,7 @@
 # BFS : Tree
 ## Reference
-- [02_Binary-Tree.md](../../01_DS/02_Binary-Tree.md)
+- [Binary-Tree.md](../../01_DS/02_Binary-Tree.md)
+- [BFS-on-graph.md](02_01_BFS-on-graph.md)
 - https://www.hellointerview.com/learn/code/breadth-first-search/introduction
 - https://www.hellointerview.com/learn/code/breadth-first-search/fundamentals
 
@@ -18,7 +19,7 @@
   - > py: from collections import deque
 
 ---
-##  BFS :: binary tree
+##  BFS :: binary tree (traverse)
 ###  tab:2 Basic 
 
 ```python
@@ -38,7 +39,8 @@ def bfs(root):
 ```
 
 ###  tab:1  Extended
-> Using a **for-loop to iterate over the nodes at each level** is such a common pattern, that it is the version of BFS on binary trees you need to know for interviews.
+- having levels
+- Using a **for-loop to iterate over the nodes at each level** is such a common pattern
 
 ```python
 from collections import deque
