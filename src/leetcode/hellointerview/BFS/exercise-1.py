@@ -1,6 +1,5 @@
 from collections import deque
 from typing import Optional, List
-
 from src.leetcode.hellointerview.BFS.util import array_to_tree
 
 

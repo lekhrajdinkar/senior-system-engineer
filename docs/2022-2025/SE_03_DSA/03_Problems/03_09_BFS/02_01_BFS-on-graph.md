@@ -123,7 +123,8 @@ def bfs_level_by_level(matrix):
     directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
     # start at the top-left corner
-    queue = deque([(0, 0)]);  visited = set([(0, 0)])
+    queue = deque([(0, 0)]) #  arr = [(0,0)]; queue = deque(arr)
+    visited = set([(0, 0)]) #  visited = { (0,0) } 
 
     levels = []
     while queue:
@@ -148,5 +149,6 @@ def bfs_level_by_level(matrix):
 ---
 ## BFS vs DFS
 - example: find shorted path
+- ??
 
 ![img.png](img.png)
