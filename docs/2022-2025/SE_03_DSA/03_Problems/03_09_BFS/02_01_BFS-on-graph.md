@@ -152,3 +152,11 @@ def bfs_level_by_level(matrix):
 - ??
 
 ![img.png](img.png)
+
+```
+       ┌── DFS → recursion / stack → go deep
+       │
+GRAPH ─┤
+       │
+       └── BFS → queue → level/ripple
+```

@@ -45,45 +45,49 @@ class Solution:
 
     # ============================
     # section:problem-994-hi:start
-    # section:problem-994-hi:end
+    def orangesRotting(self, matrix: list[list[int]]) -> int:
+        rows, cols = len(matrix), len(matrix[0])
+        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
-    # section:problem-994:start
-    # in progress ... 🔺
-    def orangesRotting(self, grid: list[list[int]]) -> int:
-        row = len(grid)
-        col = len(grid[0])
-        direction = [(1,0), (-1,0), (0,1), (0,-1)] # L R U D
-        # BFS
-        visited = {(0,0)}
-        arr = [(0,0)]; queue = deque(arr)
+        #queue = deque([(0, 0)]) # arr = [(0,0)]; queue = deque(arr)
+        #visited = {(0,0)}
+
+        # STEP-1 : prep START Point
         minute = -1
+        queue = deque() # ⭐Will have rotten, or eventual rotten | 0 --> 1 --> 2
+        for r in range(rows):
+            for c in range(cols):
+                if matrix[r][c] == 2:
+                    queue.append((r, c))  # Add all initially rotten oranges
 
-        while queue: # Fifo
-            minute += 1  # Each iteration represents one minute
-            x,y = queue.popleft()
-            #if grid[x][y] == 2:
+        print(f"STARTING... \nqueue: {queue}")
+        for i in range(rows): print(matrix[i]);
 
+        # STEp-2 : BFS
+        while queue:
+            # === level Starts here ===
             level_size = len(queue)
-            if grid[x][y] == 2: pass
 
-            # === level start ===
             for _ in range(level_size):
+                row, col = queue.popleft()
+                print(f"- popped Rotten at ({row},{col})  {matrix[row][col]} | queue: {queue}")
+                for dr, dc in directions:
+                    nr, nc = row + dr, col + dc
+                    if 0 <= nr < rows and 0 <= nc < cols :
+                        if matrix[nr][nc] == 1: # ⭐ if Fresh found, will become rotten
+                            matrix[nr][nc] = 2 # mark rotten
+                            queue.append((nr, nc))
+                            print(f"- Added new Rotten at ({nr},{nc})  {matrix[nr][nc]} | queue: {queue}")
 
-                for dx,dy in direction:
-                    nx,ny = x+nx, y+ny
-                    if (nx,ny) not in visited and ( 0 <= nx < row and 0 <= ny < col) :
-                        visited.add((nx,ny))
-                        if grid[nx][ny] != 0:
-                            queue.append((nx,ny))
-            # === level end ===
+            # === level Ends here ===
+            minute += 1
+            print(f"\n minute passed: {minute}")
+            for i in range(rows): print(matrix[i]);
 
         return minute
-    # section:problem-994:end
+    # section:problem-994-hi:end
 
     # ============================
-    # section:problem-542:start
-    # section:problem-542:end
-
     # section:problem-542-hi:start
     def updateMatrix(self, mat):
         # Multi-source BFS: start from all 0s simultaneously to find nearest distances
@@ -101,8 +105,7 @@ class Solution:
                     queue.append((r, c))  # Add all 0 positions to queue
                     output[r][c] = 0      # Distance to itself is 0
         directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]  # Right, Down, Left, Up
-        for i in range(rows): print(output[i])
-        print(queue)
+        #for i in range(rows): print(output[i]); print(queue)
 
         # ⭐Step 2: Perform BFS traversal level by level
         distance = 1
@@ -126,6 +129,40 @@ class Solution:
 
         return output
     # section:problem-542-hi:end
+
+    # section:problem-815:start
+    # section:problem-815:end
+
+# =========== MAIN ===========
+
+if __name__ == "__main__":
+    mat = [
+        [1, 0, 1],
+        [0, 1, 0],
+        [1, 1, 1],
+    ]
+
+    grid0 = [
+        ["R", "F", "F", "F"],
+        ["F", "F", "F", "R"],
+        ["E", "E", "F", "F"],
+    ]
+    # 0 representing an empty cell
+    # 1 representing a fresh orange
+    # 2 representing a rotten orange
+
+    grid1=[[2,1,1],[1,1,0],[0,1,1]]
+    grid2=[[2,1,1],[0,1,1],[1,0,1]]
+    grid3=[[0,2]]
+
+    Solution().updateMatrix(mat)
+
+    Solution().orangesRotting(grid1)
+    #Solution().orangesRotting(grid2)
+    #Solution().orangesRotting(grid3)
+
+
+# =========== OUTPUT PRINT ===========
 
     # section:problem-542-hi-console:start
     """
@@ -166,15 +203,50 @@ class Solution:
     """
     # section:problem-542-hi-console:end
 
-    # section:problem-815:start
-    # section:problem-815:end
-
-
-if __name__ == "__main__":
-    mat = [
-        [1, 0, 1],
-        [0, 1, 0],
-        [1, 1, 1],
-    ]
-
-    Solution().updateMatrix(mat)
+    # section:problem-994-hi-console:start
+    """
+    STARTING... 
+    queue: deque([(0, 0)])
+    [2, 1, 1]
+    [1, 1, 0]
+    [0, 1, 1]
+    - popped Rotten at (0,0)  2 | queue: deque([])
+    - Added new Rotten at (0,1)  2 | queue: deque([(0, 1)])
+    - Added new Rotten at (1,0)  2 | queue: deque([(0, 1), (1, 0)])
+    
+     minute passed: 0
+    [2, 2, 1]
+    [2, 1, 0]
+    [0, 1, 1]
+    - popped Rotten at (0,1)  2 | queue: deque([(1, 0)])
+    - Added new Rotten at (0,2)  2 | queue: deque([(1, 0), (0, 2)])
+    - Added new Rotten at (1,1)  2 | queue: deque([(1, 0), (0, 2), (1, 1)])
+    - popped Rotten at (1,0)  2 | queue: deque([(0, 2), (1, 1)])
+    
+     minute passed: 1
+    [2, 2, 2]
+    [2, 2, 0]
+    [0, 1, 1]
+    - popped Rotten at (0,2)  2 | queue: deque([(1, 1)])
+    - popped Rotten at (1,1)  2 | queue: deque([])
+    - Added new Rotten at (2,1)  2 | queue: deque([(2, 1)])
+    
+     minute passed: 2
+    [2, 2, 2]
+    [2, 2, 0]
+    [0, 2, 1]
+    - popped Rotten at (2,1)  2 | queue: deque([])
+    - Added new Rotten at (2,2)  2 | queue: deque([(2, 2)])
+    
+     minute passed: 3
+    [2, 2, 2]
+    [2, 2, 0]
+    [0, 2, 2]
+    - popped Rotten at (2,2)  2 | queue: deque([])
+    
+     minute passed: 4
+    [2, 2, 2]
+    [2, 2, 0]
+    [0, 2, 2]
+    """
+    # section:problem-994-hi-console:end

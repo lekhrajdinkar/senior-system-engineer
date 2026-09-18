@@ -12,5 +12,17 @@
 
 ---
 ## representations
-- adjacency lists
-- 2d matrices
+adjacency lists
+
+2d matrices
+
+```Direction
+
+(r, c) = node
+
+        (r-1,c)
+           ↑
+(r,c-1) ← (r,c) → (r,c+1)
+           ↓
+        (r+1,c)
+```
