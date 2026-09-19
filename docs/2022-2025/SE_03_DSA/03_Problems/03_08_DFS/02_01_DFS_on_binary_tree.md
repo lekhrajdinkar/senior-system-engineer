@@ -22,16 +22,7 @@
     - **graphs**:
         - have cycle
 
-
-DFS excels when you need to:
-- Explore **all possible paths** (like finding all solutions or any valid solution)
-- **Traverse hierarchical structures** (trees, nested data)
-- Find connected components in graphs or grids
-- **Detect cycles in graphs**
-- Process nodes in a specific order (pre-order, in-order, post-order)
-
----
-## Time and Space Complexity
+Time and Space Complexity
 - there are `N` nodes in a binary tree
 - `O(N)`
 - `O(N)`
@@ -87,6 +78,3 @@ def dfs(node): # DFS on binary tree
 - in some cases, questions require us to **pass information down** from parents to child nodes
 - If we need more parameters than the original function signature allows, then we need to introduce a **helper function** to help us
 
----
-## More Exercises
-[check here](02_02_Exercise-Binary-Tree.md)

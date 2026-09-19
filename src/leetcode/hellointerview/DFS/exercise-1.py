@@ -97,45 +97,51 @@ class Solution:
         return result
     # section::section-113::end
 
-
     # ==========================
     # section::section-1448::start
     def goodNodes(self, root:  Optional[TreeNode]) -> int:
-        def dfs2(node: TreeNode, parentValue: int) -> int :
-            count=0
-            # dont need to handle leaf case
-            if node is None:
-                return 0
-            else:
-                if node.val >= parentValue:count+=1
-                l = dfs2(node.left, node.val)
-                r = dfs2(node.right, node.val)
-                return l + count + r
-
         # same as dfs2() function above, but does not return
         count = 0
         def dfs(node: TreeNode, parentValue: int) :
             nonlocal count # 👈👈
             if node is None:
-                pass
-            elif node.left is None and node.right is None:
-                if node.val >= parentValue:
-                    count+=1
-                    print(f"leaf Node: {node.val} > parent Node : {parentValue} | count: {count}" )
-                #else: print(f"leaf Node: {node.val} < parent Node : {parentValue} 🔺"  )
+                return
             else:
                 if node.val >= parentValue:
                     count+=1
-                    print(f"Node: {node.val} > parent Node : {parentValue} | count: {count}" )
-                #else: print(f"Node: {node.val} < parent Node : {parentValue} 🔺"  )
+                    print(f"Node: {node.val} >= parent Node : {parentValue} | count: {count}" )
+                else:
+                    print(f"Node: {node.val} < parent Node : {parentValue} 🔺"  )
 
                 dfs(node.left, node.val)
                 dfs(node.right, node.val)
 
-        #dfs(root,root.val);print(f"Final good node count: {count}")
-        count=dfs2(root,root.val); print(f"Final good node count: {count}")
+        dfs(root, root.val);print(f"Final good node count: {count}")
         return count  # assumes root is non-null
     # section::section-1448::end
+
+    # section::section-1448-console::start
+    """
+    ==================================================
+    └── 3
+        │   ┌── 2
+        └── 3
+            └── 4
+    Node: 3 >= parent Node : 3 | count: 1
+    Node: 3 >= parent Node : 3 | count: 2
+    Node: 4 >= parent Node : 3 | count: 3
+    Node: 2 < parent Node : 3 🔺
+    Final good node count: 3
+    ==================================================
+    │   ┌── 3
+    │   │   └── 6
+    └── 9
+    Node: 9 >= parent Node : 9 | count: 1
+    Node: 3 < parent Node : 9 🔺
+    Node: 6 >= parent Node : 3 | count: 2
+    Final good node count: 2
+    """
+    # section::section-1448-console::end
 
 
     # ==========================
@@ -191,12 +197,9 @@ class Solution:
             else:
                 left   = dfs(node.left)
                 right  = dfs(node.right)
-
-                # capture diameter
-                max_diameter = max(max_diameter, (left + right))
+                max_diameter = max(max_diameter, (left + right))  # capture max diameter
                 print(f"Node: {node.val} | Left height: {left} | Right height: {right} | Diameter: {(left + right)} | Max: {max_diameter}")
-                # return depth from parent node (Not ROOT)
-                return 1 + max(left, right) # Return height to parent 👈👈⭐
+                return 1 + max(left, right) # Return height to parent, check visual ⭐
 
         max_diameter = 0
         dfs(root)
@@ -271,6 +274,12 @@ if __name__ == "__main__":
         print('='*50);Solution().longestUnivaluePath(array_to_tree([1,2,2,2,2]))
         print('='*50);Solution().longestUnivaluePath(array_to_tree([1,None,1,1,1,1,1,1]))
 
+    def goodNodes_text():
+        print('='*50);Solution().goodNodes(array_to_tree([9,None,3,6]))
+        print('='*50);Solution().goodNodes(array_to_tree([3,1,4,3,None,1,5]))
+        print('='*50);Solution().goodNodes(array_to_tree([3,3,None,4,2]))
+        print('='*50);Solution().goodNodes(array_to_tree([9,None,3,6]))
 
     #test_113()
-    test_687()
+    #test_687()
+    goodNodes_text()

@@ -5,6 +5,10 @@
 > - path problems
 
 ---
+## visual
+[07_problems.excalidraw](../../draw/03/07_DFS/07_problems.excalidraw)
+
+---
 ## 00. Find the maximum value in a binary tree ✔️
 - `max(left, node.val, right )`
 
@@ -35,6 +39,9 @@
 
 ---
 ## 112 | E. Path Sum ✔️
+- if the tree has a **root-to-leaf** path such that adding up all the values along the path equals `targetSum`
+- has any PathSum == targetSum  -> T/F
+- return all paths [path1, path2. etc] having PathSum == targetSum True  |  Path Sum II (below)
 - https://leetcode.com/problems/path-sum/description/
 - https://www.hellointerview.com/learn/code/depth-first-search/path-sum | skip
 
@@ -77,12 +84,14 @@ node : 5 , new partialSum : 22, arr: [5, 8, 4, 5] | Leaf
 node : 1 , new partialSum : 18, arr: [5, 8, 4, 1] | Leaf
 ```
 ---
-## 1448 | M. Count Good Nodes in Binary Tree ⭐⭐
+## 1448 | M. Count Good Nodes in Binary Tree 🔺
 > Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X.
+> - need to explore paths
+> - Wrong Answer  11 / 63 testcases passed
 - https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/
 - https://www.hellointerview.com/learn/code/depth-first-search/global-variables
 
-@[code:section::section-1448](../../../../../src/leetcode/hellointerview/DFS/exercise-1.py)
+@[code:section::section-1448,section-1448-console](../../../../../src/leetcode/hellointerview/DFS/exercise-1.py)
 
 ---
 ## 98 | M. Validate Binary Search Tree
