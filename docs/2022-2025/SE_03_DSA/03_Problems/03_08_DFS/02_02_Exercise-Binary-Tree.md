@@ -83,6 +83,9 @@ node : 5 , new partialSum : 22, arr: [5, 8, 4, 5] | Leaf
 	result: [[5, 4, 11, 2], [5, 8, 4, 5]]
 node : 1 , new partialSum : 18, arr: [5, 8, 4, 1] | Leaf
 ```
+### tab:1 Solution: BackT
+@[code:section::problem-113](../../../../../src/leetcode/hellointerview/backtracking/exercise-1.py)
+
 ---
 ## 1448 | M. Count Good Nodes in Binary Tree 🔺
 > Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X.

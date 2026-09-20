@@ -5,7 +5,7 @@ from src.leetcode.hellointerview.BFS.util import array_to_tree
 
 # section:TreeNode-class:start
 class TreeNode:
-    def __init__(self, vastart: int, left= None, right= None):
+    def __init__(self, val: int, left= None, right= None):
         self.val = val
         self.left = left
         self.right = right

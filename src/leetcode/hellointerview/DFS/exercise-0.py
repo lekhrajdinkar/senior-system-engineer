@@ -1,9 +1,23 @@
 # ============ DFS on graph : 2d matrix ====
 from typing import List
 
+# section::DFS-template-1::start
+def maxValue(node):
+    # empty L/R subtree
+    if node is None:
+        return
 
+    # leaf node cases:
+    # eg: need to calculate sum all the till leaf. ⭐⭐⭐⭐⭐
+    # eg: print max leaf node
+    if node.left is None and node.right is None:
+        print(node.val)
 
+    maxValue(node.left)
+    maxValue(node.right)
+    #return 1 + max(left, right) # longest path
 
+# section::DFS-template-1::end
 
 # ============ DFS on Binart tree  ====
 

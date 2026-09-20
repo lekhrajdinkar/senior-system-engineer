@@ -33,9 +33,11 @@ def array_to_tree(arr) -> Optional[TreeNode]:
         i += 1
 
     draw_tree(root)
+    #draw_tree_horizontal(root)
     return root
 
 
+# ======= Draw tree ===========
 def draw_tree(node, prefix="", is_left=True):
     if node is None:
         return
@@ -56,3 +58,44 @@ def draw_tree(node, prefix="", is_left=True):
             prefix + ("    " if is_left else "│   "),
             True
         )
+
+def draw_tree_horizontal(root):
+    def draw(node, prefix="", is_left=True):
+        if not node:
+            return
+
+        print(prefix + ("├── " if is_left else "└── ") + str(node.val))
+
+        children = []
+
+        if node.left:
+            children.append(("L", node.left))
+
+        if node.right:
+            children.append(("R", node.right))
+
+        for i, (_, child) in enumerate(children):
+            is_last = i == len(children) - 1
+
+            if is_last:
+                new_prefix = prefix + "    "
+            else:
+                new_prefix = prefix + "│   "
+
+            draw(child, new_prefix, not is_last)
+
+    if root:
+        print(root.val)
+
+        children = []
+        if root.left:
+            children.append(root.left)
+        if root.right:
+            children.append(root.right)
+
+        for i, child in enumerate(children):
+            draw(
+                child,
+                "",
+                i == len(children) - 1
+            )

@@ -33,15 +33,8 @@ Time and Space Complexity
 
 [02_dfs-in-tree.excalidraw](../../draw/03/07_DFS/02_dfs-in-tree.excalidraw)
 
-```python
-def dfs(node): # DFS on binary tree
-  if  node is None:
-    return # prevent from going beyond leaf nodes
+@[code:section:DFS-template-1](../../../../../src/leetcode/hellointerview/DFS/exercise-0.py)
 
-  # process the current node
-  dfs(node.left)
-  dfs(node.right)
-```
 > whenever a recursive function returns, we have finished visiting all nodes in the left and right subtrees of the current node
 
 **Recursion and the Call Stack**
