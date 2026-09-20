@@ -3,13 +3,19 @@
 - https://www.hellointerview.com/learn/code/depth-first-search/graphs-overview
 - [03_graph.md](../../01_DS/03_graph.md)
 
----
+## Overview
+Graph problems **adds complexity**, need to handle:
+- cycles,
+- different representations (adjacency lists and matrices)
+- disconnected components.
 
+**Tips**
+- Use a `set` to keep track of **visited nodes.**
+- then, If encounter visited node, **return immediately** without making any further recursive calls.
+- then, Use a `for loop` to recursively call **dfs on each neighbor**.
 
-Graph problems **adds complexity**:
-- you need to handle cycles,
-- different representations (adjacency lists and matrices),
-- and sometimes disconnected components.
+## Template :: traversal
+- check this template
 
 ```python
 visited = set()
@@ -32,22 +38,16 @@ for node in nodes:
          dfs(node)
 ```
 
-**Summary**
-- Use a **set** to keep track of visited nodes.
-- If you encounter, visited node **return immediately** without making any further recursive calls.
-- Use a **for loop** to iterate over each neighbor of the current node, and recursively call dfs on each neighbor.
 
----
-## Time and space Complexity
-**DFS traversal**
+**Time and space Complexity (for above template)**
 - `O(N + M)` time and `O(N + M)` space
 - where N is the number of nodes
 - and M is the number of edges in the graph
 - The space complexity is due to the **adjacency list** that stores the graph structure
 
 ---
-## 1. representation: Adjacency Lists 
-[Exercise-Graph-adjList.md](03_02_Exercise-Graph-adjList.md)
+## representation-1 : "Adjacency Lists" 
+
 ### tab:1 Example
 - n = 4
 - edges = [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]]
@@ -61,7 +61,8 @@ adjList =
   3: [2, 0]
 }
 ```
-### tab:2 build AdjList
+**build AdjList**
+
 ```python
 # build
 def build_adj_list(n, edges):
@@ -73,7 +74,7 @@ def build_adj_list(n, edges):
     return adj_list
 ```
 
-### tab:3 DFS on AdjList (template)
+### tab:2 refined template
 ```python
 # DFS on adjList
 def dfs(adjList: dict):
@@ -98,8 +99,7 @@ def dfs(adjList: dict):
 ```
 
 ---
-## 2. representation: 2D matrix grids
-[Exercise-Graph-2d-matrices.md](03_03_Exercise-Graph-2d-matrices.md)
+## representation-2 : "2D matrix grids"
 ### tab:1 Example
 - Another common way to represent a graph is as a matrix (2D-grid). 
 - Each cell in the grid represents a node. | node: `(x,y)`
@@ -115,7 +115,7 @@ def dfs(adjList: dict):
             [0, 0, 1]
       ]
 ```
-### tab:2 DFS on 2d-matrices
+### tab:2 Refined template
 - DFS on a matrix is similar to DFS on an adjacency list
 -  We still have to keep track of visited nodes, and we **recursively call DFS on each neighbor** of the current node.
 - main difference is that each cell can have at most 4 neighbors (up, down, left, right)
@@ -151,3 +151,7 @@ Short form:
 ### tab:3 visual
 [06_graph_2d-matrices.excalidraw](../../draw/03/07_DFS/06_graph_2d-matrices.excalidraw)
 
+---
+## Exercise
+- [Exercise-Graph :: adjList](03_02_Exercise-Graph-adjList.md)
+- [Exercise-Graph :: 2d-matrices](03_03_Exercise-Graph-2d-matrices.md)
