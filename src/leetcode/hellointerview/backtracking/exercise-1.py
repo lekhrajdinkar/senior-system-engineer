@@ -123,8 +123,21 @@ class Solution:
     # section:problem-79-BACKT-1-hi:end
 
     # section:problem-78:start
-    def problem78(self, root, target):
-        pass
+    def subsets(self, nums: list[int]) -> list[list[int]]:
+        def dfs(index, path):
+            nonlocal result
+            if len(nums) == index:
+                result.append(path[:])
+                return
+
+            print(f" index:{index} | result:{result}, path: {path}")
+            path.append(nums[index]); dfs(index+1, path) # include nums[index]
+            path.pop(); dfs(index+1, path)  # exclude nums[index]
+
+        result=[]
+        dfs(0,[])
+        return result
+
     # section:problem-78:end
 
     # section:problem-22:start
@@ -163,5 +176,6 @@ if __name__ == "__main__":
         print('-'*50,"SEE");Solution().exist_backt_1(grid1,"SEE")
         print('-'*50,"ABCB");Solution().exist_backt_1(grid1,"ABCB")
 
-    test79_dfs() # working
+    #test79_dfs() # working
     #test79_backT()
+    Solution().subsets([1,2,3])
