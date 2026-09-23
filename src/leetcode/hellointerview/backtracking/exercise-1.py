@@ -116,7 +116,7 @@ class Solution:
                     print(f"{word} found ✅"); return True # early return
 
         print(f"{word} not found 🔺"); return False # eventually False fallback
-    # section:problem-79-sol2:end
+    # section:problem-79-DFS-2:end
 
     # section:problem-79-BACKT-1-hi:start
     # Did nt understand
