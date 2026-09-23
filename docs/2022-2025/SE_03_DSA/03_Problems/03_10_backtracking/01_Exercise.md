@@ -53,6 +53,7 @@
 
 ---
 ## 78. subsets
+- Solution space Tree
 - https://www.hellointerview.com/learn/code/backtracking/subsets
 - https://leetcode.com/problems/subsets/description/
 
@@ -64,6 +65,13 @@
 ## 22. generate-parentheses
 - https://www.hellointerview.com/learn/code/backtracking/generate-parentheses
 - https://leetcode.com/problems/generate-parentheses/description/
+
+Rule/logic
+- starting from an empty string `s = ""`
+- We can add an opening parenthesis `(` to s
+  - if the number of opening parentheses in s < `n`.
+- We can add a closing parenthesis `)` to s
+  - if the number of closing parentheses in s < number of opening parentheses in s.
 
 @[code:section::problem-22](../../../../../src/leetcode/hellointerview/backtracking/exercise-1.py)
 

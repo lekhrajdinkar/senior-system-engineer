@@ -1,4 +1,6 @@
 # section:TreeNode-class:start
+from typing import List
+
 from src.leetcode.hellointerview.DFS.util import array_to_tree
 
 
@@ -141,8 +143,24 @@ class Solution:
     # section:problem-78:end
 
     # section:problem-22:start
-    def problem22(self, root, target):
-        pass
+    def generateParenthesis(self, n: int) -> List[str]:
+        def dfs(s, open, close):
+            if len(s) == 2 * n:
+                res.append(s)
+                return
+            print(f"{s} | open ( Count in s: {open}, close ) count in s: {close}")
+            if open < n:
+                # add an opening parenthesis and increment the open count
+                dfs(s + '(', open + 1, close)
+
+            if close < open:
+                # add a closing parenthesis and increment the close count
+                dfs(s + ')', open, close + 1)
+
+
+        res = []
+        dfs("", 0, 0)
+        print(res);return res
     # section:problem-22:end
 
     # section:problem-39:start
@@ -178,4 +196,8 @@ if __name__ == "__main__":
 
     #test79_dfs() # working
     #test79_backT()
-    Solution().subsets([1,2,3])
+    #Solution().subsets([1,2,3]) # 78
+
+    print('-'*50,"leetcode-22");Solution().generateParenthesis(2)
+    print('-'*50,"leetcode-22");Solution().generateParenthesis(3)
+    print('-'*50,"leetcode-22");Solution().generateParenthesis(4)
