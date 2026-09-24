@@ -16,8 +16,12 @@ shortest path from one source node to all other nodes
 - Unweighted graph traversal | can assume, weight is 1 for all edges
 - Finding **minimum** number of steps/moves
 
-### Algo
+### visual 
+[03_bfs-shortest-path.excalidraw](../draw/03/10_graph_more/03_bfs-shortest-path.excalidraw)
+
 ![img_3.png](../../../99_img/2026/hi/dsa/11/01/img_3.png)
+
+### Algo
 
 ```python
 graph_AdjList = {
@@ -46,19 +50,25 @@ def bfs(graph: dict, source: int):
     return distances
 ```
 
+**Complexity**
+- `O(V + E)` | space
+- `O(V + E)` | time
+
 ---
 ## 2. Dijkstra's Algorithm
-### tab:1 When to Use
+### When to Use
 - Weighted graphs with **non-negative** edges
 - Finding the **shortest path** from one source to all nodes
 - Problems involving **"minimum cost" or "minimum time"**
 
-### tab:2  visual
+### visual
 [02_Dijkstra.excalidraw](../draw/03/10_graph_more/02_Dijkstra.excalidraw)
+
+![img_2.png](../../../99_img/2026/hi/dsa/11/01/img_2.png)
 
 ---
 ### Algo
-![img_2.png](../../../99_img/2026/hi/dsa/11/01/img_2.png)
+
 
 
 ```python
