@@ -1,5 +1,5 @@
-# Graph Sort
-## Topological Sort
+# Graph : Sort
+## 1. Topological Sort
 - takes a directed acyclic graph **(DAG)** and turns it into a **linear ordering of nodes**
 - such that the directed edges only point forward, from left-to-right.
 - A given graph may have **more than one valid topological sorts**.
@@ -46,10 +46,10 @@ def indegree2(n,adj_list):
             indegree[v] += 1
 ```
 
-### tab:2 Kahn's Algorithm
+### tab:2 Kahn's Algorithm ⭐
 > Kahn's algorithm is a form of **BFS** in which nodes with lower indegrees are placed on the queue before nodes with higher indegrees.
 
-Algo:
+**Algo:**
 - Calculate the indegree of each node.
 - Add all nodes with an indegree of 0 to a queue.
 - While the queue is not empty:
@@ -59,6 +59,7 @@ Algo:
   - Repeat
 - Return the topological order.
 
+[01_kahn-algo.excalidraw](../draw/03/10_graph_more/01_kahn-algo.excalidraw)
 
 ### tab:3  Kahn's Algorithm (solution.py)
 @[code:section::topological_sort](../../../../src/leetcode/hellointerview/graph/Exercise-1.py)

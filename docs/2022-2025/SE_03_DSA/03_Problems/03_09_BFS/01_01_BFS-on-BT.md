@@ -9,7 +9,7 @@
 ## Overview
 [01_basic.excalidraw](../../draw/03/08_BFS/01_basic.excalidraw)
 - `O(n)` - space and time
-- BFS is a **level-by-level** traversal algorithm
+- BFS is a **level-by-level** `Unweighted graph` traversal algorithm
 - visits all nodes **at the current level** before moving to the next level of the tree
 - BFS uses a **queue** to keep track of the nodes it needs to visit
   - Add **root** it to the queue.

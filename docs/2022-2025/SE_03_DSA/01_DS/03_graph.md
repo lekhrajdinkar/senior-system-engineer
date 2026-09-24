@@ -1,5 +1,5 @@
 # Graph 
-## Overview
+## Graph :: Overview
 [04_graph.excalidraw](../draw/03/07_DFS/04_graph.excalidraw)
 
 - Graphs consist of **nodes** (also frequently referred to as vertices), and **edges** that connect the nodes.
@@ -11,10 +11,13 @@
 > 💡A tree is a connected graph with no cycles
 
 ---
-## Representations
-**adjacency lists**
+## Representations of graph
+### adjacency lists
 
 ```adjList
+# ==================================
+# unweighted graph, un-directed 👈
+# ==================================
 adjList = 
 {
   0: [1, 3, 2],
@@ -22,20 +25,34 @@ adjList =
   2: [1, 3, 0],
   3: [2, 0]
 }
+
+# ==================================
+# weighted graph 👈
+# ==================================
+
+adjList2 = {
+    "A": [("B", 4), ("C", 2)],
+    "B": [("A", 4), ("D", 1)],
+    "C": [("A", 2), ("D", 3)],
+    "D": [("B", 1), ("C", 3)]
+}
 ```
 
-**2d matrices**
+### 2d matrices
 
 ```2d
+# unweighted graph, un-directed 👈
  grid = [
             [1, 0, 1],      
             [1, 0, 0],
             [0, 0, 1]
       ]
 
----
+```
 
-(r, c) = node
+```neighbors
+(r, c) = node, is refrered by coordinates
+neighbours are  coordinates shift in 4 direction
 
         (r-1,c)
            ↑
@@ -48,4 +65,5 @@ adjList =
 ## Graph problems
 - [DFS_on_graph.md](../03_Problems/03_08_DFS/03_01_DFS_on_graph.md)
 - [BFS-on-graph.md](../03_Problems/03_09_BFS/02_01_BFS-on-graph.md)
-- [Graphs](../03_Problems/03_11_Graphs)
+- [01_03_topological-sort.md](../02_Algo/01_03_topological-sort.md)
+- [02_shortest-path-algos.md](../02_Algo/02_shortest-path-algos.md)

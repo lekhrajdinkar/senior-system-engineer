@@ -1,4 +1,13 @@
 # Exercise: Graph
+## Reference
+internal
+- [graph.md](../../01_DS/03_graph.md)
+- [topological-sort.md](../../02_Algo/01_03_topological-sort.md)
+- [shortest-path-algos.md](../../02_Algo/02_shortest-path-algos.md)
+
+hello-interview
+- https://www.hellointerview.com/learn/code/graphs/topological-sort
+- https://www.hellointerview.com/learn/code/graphs/shortest-path-algorithms
 
 ## 207. course-schedule ✔️
 - perform **topological sort** and see all node present in result list
@@ -18,7 +27,7 @@
 
 ---
 ## 743. network-delay-time
-
+- Dijkstra's Algorithm | Shortest path
 - https://www.hellointerview.com/learn/code/graphs/network-delay-time
 - https://leetcode.com/problems/network-delay-time/description/
 
@@ -26,6 +35,7 @@
 
 ---
 ## 787. cheapest-flights-k-stops
+- Dijkstra's Algorithm | Shortest path
 - https://www.hellointerview.com/learn/code/graphs/cheapest-flights-k-stops
 - https://leetcode.com/problems/cheapest-flights-within-k-stops/description/
 
@@ -33,6 +43,7 @@
 
 ---
 ## 1631. path-minimum-effort
+- Dijkstra's Algorithm | Shortest path
 - https://www.hellointerview.com/learn/code/graphs/path-minimum-effort
 - https://leetcode.com/problems/path-with-minimum-effort/description/
 
