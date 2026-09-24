@@ -1,20 +1,22 @@
 # Exercise: Graph
 
-## 207. course-schedule
+## 207. course-schedule ✔️
 - https://www.hellointerview.com/learn/code/graphs/course-schedule
 - https://leetcode.com/problems/course-schedule/description/
 
-@[code:section::problem-207](../../../../../src/leetcode/hellointerview/graph/Exercise-1.py)
+@[code:section::problem-207,topological_sort,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-1.py)
 
 ---
-## 210. course-schedule
+## 210. course-schedule ✔️
+- perform **topological sort** and see all node present in result list
 - https://www.hellointerview.com/learn/code/graphs/course-schedule-ii
 - https://leetcode.com/problems/course-schedule-ii/description/
 
-@[code:section::problem-210](../../../../../src/leetcode/hellointerview/graph/Exercise-1.py)
+@[code:section::problem-210,topological_sort,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-1.py)
 
 ---
 ## 743. network-delay-time
+- same as above, only return type is updated
 - https://www.hellointerview.com/learn/code/graphs/network-delay-time
 - https://leetcode.com/problems/network-delay-time/description/
 

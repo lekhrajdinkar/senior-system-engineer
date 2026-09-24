@@ -11,12 +11,29 @@
 > 💡A tree is a connected graph with no cycles
 
 ---
-## representations
-adjacency lists
+## Representations
+**adjacency lists**
 
-2d matrices
+```adjList
+adjList = 
+{
+  0: [1, 3, 2],
+  1: [0, 2],
+  2: [1, 3, 0],
+  3: [2, 0]
+}
+```
 
-```Direction
+**2d matrices**
+
+```2d
+ grid = [
+            [1, 0, 1],      
+            [1, 0, 0],
+            [0, 0, 1]
+      ]
+
+---
 
 (r, c) = node
 
@@ -26,3 +43,9 @@ adjacency lists
            ↓
         (r+1,c)
 ```
+
+---
+## Graph problems
+- [DFS_on_graph.md](../03_Problems/03_08_DFS/03_01_DFS_on_graph.md)
+- [BFS-on-graph.md](../03_Problems/03_09_BFS/02_01_BFS-on-graph.md)
+- [Graphs](../03_Problems/03_11_Graphs)

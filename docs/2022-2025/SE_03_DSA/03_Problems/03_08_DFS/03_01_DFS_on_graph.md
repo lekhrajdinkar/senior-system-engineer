@@ -1,4 +1,4 @@
-# DSA: on Graph
+# DFS: on Graph
 ## reference
 - https://www.hellointerview.com/learn/code/depth-first-search/graphs-overview
 - [03_graph.md](../../01_DS/03_graph.md)
