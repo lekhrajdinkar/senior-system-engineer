@@ -5,7 +5,7 @@
 ## Overview
 shortest path from one source node to all other nodes
 
-![img_1.png](img_1.png)
+![img_1.png](../../../99_img/2026/hi/dsa/11/01/img_1.png)
 
 ---
 ## 1. BFS
@@ -17,6 +17,8 @@ shortest path from one source node to all other nodes
 - Finding **minimum** number of steps/moves
 
 ### Algo
+![img_3.png](../../../99_img/2026/hi/dsa/11/01/img_3.png)
+
 ```python
 graph_AdjList = {
     0: [1, 2],
@@ -56,7 +58,7 @@ def bfs(graph: dict, source: int):
 
 ---
 ### Algo
-![img_2.png](img_2.png)
+![img_2.png](../../../99_img/2026/hi/dsa/11/01/img_2.png)
 
 
 ```python

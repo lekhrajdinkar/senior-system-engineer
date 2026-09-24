@@ -4,7 +4,7 @@
 - such that the directed edges only point forward, from left-to-right.
 - A given graph may have **more than one valid topological sorts**.
 
-![img.png](img.png)
+![img.png](../../../99_img/2026/hi/dsa/11/01/img.png)
 
 ###  tab:1 indegree
 - number of incoming edges to that node
