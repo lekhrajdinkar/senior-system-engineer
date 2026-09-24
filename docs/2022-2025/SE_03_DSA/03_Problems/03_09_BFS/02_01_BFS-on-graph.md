@@ -5,7 +5,7 @@
 - https://www.hellointerview.com/learn/code/breadth-first-search/graphs-overview
 
 ---
-## BFS :: Graph
+## Overview
 [02_bfs_graph.excalidraw](../../draw/03/08_BFS/02_bfs_graph.excalidraw)
 
 -  breadth-first search is also used to **traverse graphs.**
@@ -150,6 +150,7 @@ def bfs_level_by_level(matrix):
 ## BFS vs DFS
 - example: find shorted path
 - ??
+- Notice direction of execution-flow
 
 ![img.png](img.png)
 
