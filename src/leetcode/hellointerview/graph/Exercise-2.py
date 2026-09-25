@@ -3,7 +3,7 @@ import heapq
 
 class Solution:
     # section:util-1:start
-    def build_adj_list_2(self, n, edges, start_from_one = False): # DAG
+    def build_adj_list_2(self, n, edges, start_from_one = False): # ⭐DAG
         if start_from_one:
             adj_list = {i: [] for i in range(1,n+1)}
         else:
@@ -26,7 +26,7 @@ class Solution:
         } 
     """
 
-    def build_adj_list(self, n, edges): # undirected
+    def build_adj_list(self, n, edges): # ⭐undirected
         adj_list = {i: [] for i in range(n)}
         for u, v in edges:
             adj_list[u].append(v)
@@ -109,7 +109,6 @@ class Solution:
             for neighbor, weight in adjList[node]:
                 heapq.heappush(heap,(dist2Node + weight, neighbor, stopCountToReachToNode+1)) # increment stop by 1 ⭐
 
-        print(f"dijkstra_2 | best_routes from {source} to {dst}: {best_routes}")
         return -1
     # section:short_path_dijkstra_2:end
 
@@ -135,8 +134,28 @@ class Solution:
     # section:problem-787:end
 
     # section:problem-1631:start
-    def problem1631(self):
-        pass
+    def minimumEffortPath(self, heights: list[list[int]]) -> int:
+        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)] # shift
+        rows = len(heights)
+        cols= len(heights[0])
+
+
+
+        start = (0,0)
+
+        for nr, nc in directions:
+            r + nr , c + nc
+
+
+
+
+
+        for r in range(rows):
+            for c in range(cols):
+
+
+
+
     # section:problem-1631:end
 
     # section:problem-1334:start

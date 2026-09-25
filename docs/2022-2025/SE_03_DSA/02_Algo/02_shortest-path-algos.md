@@ -42,7 +42,7 @@ shortest path from one source node to all other nodes
 
 ---
 ### Algo
-@[code:section::short_path_dijkstra,util-1](../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
+@[code:section::short_path_dijkstra,short_path_dijkstra_2,util-1](../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
 
 **Complexity:**
 - `O((V + E) log V)` | time
