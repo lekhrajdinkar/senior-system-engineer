@@ -22,40 +22,14 @@ shortest path from one source node to all other nodes
 ![img_3.png](../../../99_img/2026/hi/dsa/11/01/img_3.png)
 
 ### Algo
-
-```python
-graph_AdjList = {
-    0: [1, 2],
-    1: [3],
-    2: [1, 3],
-    3: [4],
-    4: []
-}
-start = 0
-
-#====================
-# O(V + E)
-from collections import deque
-def bfs(graph: dict, source: int):
-    distances = {node: float('inf') for node in graph}
-    distances[source] = 0
-    queue = deque([source])
-
-    while queue:
-        node = queue.popleft()
-        for neighbor in graph[node]:
-            if distances[neighbor] == float('inf'):
-                distances[neighbor] = distances[node] + 1
-                queue.append(neighbor)
-    return distances
-```
+@[code:section::short_path_bfs,util-1](../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
 
 **Complexity**
 - `O(V + E)` | space
 - `O(V + E)` | time
 
 ---
-## 2. Dijkstra's Algorithm
+## 2. Dijkstra's Algorithm 
 ### When to Use
 - Weighted graphs with **non-negative** edges
 - Finding the **shortest path** from one source to all nodes
@@ -68,39 +42,7 @@ def bfs(graph: dict, source: int):
 
 ---
 ### Algo
-
-
-
-```python
-# AdjList | key:int --> value:list[tuple(node, weight)]
-graph_AdjList = {
-    0: [(1, 4), (2, 1)],
-    1: [(3, 1)],
-    2: [(1, 2), (3, 5)],
-    3: [(4, 3)],
-    4: []
-}
-
-# ========================
-import heapq
-def dijkstra(graph:dict, source:int):
-    distances = {node: float('inf') for node in graph} # result
-    distances[source] = 0 # [ 0, inf, inf, inf, inf]
-    heap = [(0, source)] 
-
-    while heap:
-        dist2Node, node = heapq.heappop(heap) # heap will pop next smallest
-        if dist2Node > distances[node]: continue # ignore long path
-        
-        # explore short path further
-        for neighbor, weight in graph[node]:
-            dist2neighbor = dist2Node + weight
-            if dist2neighbor < distances[neighbor]:
-                distances[neighbor] = dist2neighbor # update result
-                heapq.heappush(heap,(dist2neighbor, neighbor)) # so that can further explore it.
-
-    return distances
-```
+@[code:section::short_path_dijkstra,util-1](../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
 
 **Complexity:**
 - `O((V + E) log V)` | time

@@ -28,7 +28,7 @@ hello-interview
 
 ---
 ## 743. network-delay-time
-- Shortest path
+- Shortest path | dijkstra standard
 - https://www.hellointerview.com/learn/code/graphs/network-delay-time
 - https://leetcode.com/problems/network-delay-time/description/
 
@@ -36,11 +36,19 @@ hello-interview
 
 ---
 ## 787. cheapest-flights-k-stops
-- Shortest path
+- Shortest path | dijkstra 2
 - https://www.hellointerview.com/learn/code/graphs/cheapest-flights-k-stops
 - https://leetcode.com/problems/cheapest-flights-within-k-stops/description/
 
-@[code:section::problem-787,short_path_bfs,short_path_dijkstra,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
+```python
+n = 4
+flights = [[0,1,100], [1,2,100], [2,3,100], [0,3,500]]
+src = 0
+dst = 3
+k = 1
+```
+
+@[code:section::problem-787,short_path_dijkstra_2,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
 
 ---
 ## 1631. path-minimum-effort
