@@ -138,7 +138,7 @@ class Solution:
     def minimumEffortPath(self, heights: list[list[int]]) -> int:
         directions = [(-1, 0), (1, 0), (0, -1), (0, 1)] # shift
         rows,cols = len(heights),len(heights[0]); print(f"rows: {rows}, cols: {cols}")
-        heap = [(0,0,0,0)] # (effort, nodeHeight, r, c)
+        heap = [(0,0,0,0)] # (effort, nodeHeight, r, c) # nodeHeight is not needed
         best_routes = {}
 
         while heap:
@@ -156,9 +156,9 @@ class Solution:
                 rn,cn = r+dr,c+dc
                 if (0 <= rn < rows) and (0 <= cn < cols):
                     edge_effort = abs(heights[rn][cn] - heights[r][c])
-                    #The key difference from normal Dijkstra
+                    #The key difference from normal Dijkstra 👈
                     # - new_distance = distance + weight
-                    # - new_effort = max(effort, edge_effort)
+                    # - new_effort = max(effort, edge_effort) ??
                     heapq.heappush(heap,(max(effort, edge_effort),heights[rn][cn],rn,cn))
                     #heapq.heappush(heap,(edge_effort,heights[rn][cn],rn,cn))
 
