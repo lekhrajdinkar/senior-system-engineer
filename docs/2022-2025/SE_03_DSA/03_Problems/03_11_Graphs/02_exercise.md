@@ -27,16 +27,16 @@ hello-interview
 @[code:section::problem-210,topological_sort,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-1.py)
 
 ---
-## 743. network-delay-time
-- Shortest path | dijkstra standard
+## 743. network-delay-time | adjList graph
+- Shortest path | [dijkstra 1](../../02_Algo/02_shortest-path-algos.md#2-dijkstras-algorithm-)
 - https://www.hellointerview.com/learn/code/graphs/network-delay-time
 - https://leetcode.com/problems/network-delay-time/description/
 
 @[code:section::problem-743,short_path_dijkstra,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
 
 ---
-## 787. cheapest-flights-k-stops
-- Shortest path | dijkstra 2
+## 787. cheapest-flights-k-stops ⭐ | adjList graph 
+- Shortest path | [dijkstra 2](../../02_Algo/02_shortest-path-algos.md#2-dijkstras-algorithm-)
 - https://www.hellointerview.com/learn/code/graphs/cheapest-flights-k-stops
 - https://leetcode.com/problems/cheapest-flights-within-k-stops/description/
 
@@ -51,12 +51,13 @@ k = 1
 @[code:section::problem-787,short_path_dijkstra_2,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
 
 ---
-## 1631. path-minimum-effort
-- Shortest path
+## 1631. path-minimum-effort | 2D graph
+- Shortest path 
+- between top-left and right-down node in **2D graph**
 - https://www.hellointerview.com/learn/code/graphs/path-minimum-effort
 - https://leetcode.com/problems/path-with-minimum-effort/description/
 
-@[code:section::problem-1631,short_path_bfs,short_path_dijkstra,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
+@[code:section::problem-1631,problem-1631-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
 
 ---
 ## 1334. find-city-fewest-reachable

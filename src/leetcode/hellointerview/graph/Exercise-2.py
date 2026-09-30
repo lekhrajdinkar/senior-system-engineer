@@ -134,29 +134,71 @@ class Solution:
     # section:problem-787:end
 
     # section:problem-1631:start
+    # dijkstra 2
     def minimumEffortPath(self, heights: list[list[int]]) -> int:
         directions = [(-1, 0), (1, 0), (0, -1), (0, 1)] # shift
-        rows = len(heights)
-        cols= len(heights[0])
+        rows,cols = len(heights),len(heights[0]); print(f"rows: {rows}, cols: {cols}")
+        heap = [(0,0,0,0)] # (effort, nodeHeight, r, c)
+        best_routes = {}
 
+        while heap:
+            effort,nodeHeight,r,c = heapq.heappop(heap) #; print( ">> ", nodeHeight,effort,r,c)
 
+            if (r,c) == (rows-1, cols-1):
+                print(f"final result, {effort}");return effort
 
-        start = (0,0)
+            key = (r, c)
+            if key in best_routes and best_routes[key] <= effort: continue
+            best_routes[(r, c)]=effort
 
-        for nr, nc in directions:
-            r + nr , c + nc
+            print(f"current node at ({r},{c}) with height: {heights[r][c]} and best effort to reach {effort} ")
+            for dr,dc in directions:
+                rn,cn = r+dr,c+dc
+                if (0 <= rn < rows) and (0 <= cn < cols):
+                    edge_effort = abs(heights[rn][cn] - heights[r][c])
+                    #The key difference from normal Dijkstra
+                    # - new_distance = distance + weight
+                    # - new_effort = max(effort, edge_effort)
+                    heapq.heappush(heap,(max(effort, edge_effort),heights[rn][cn],rn,cn))
+                    #heapq.heappush(heap,(edge_effort,heights[rn][cn],rn,cn))
 
-
-
-
-
-        for r in range(rows):
-            for c in range(cols):
-
-
-
-
+        print(f"final result : 0");return 0
     # section:problem-1631:end
+
+    # section:problem-1631-1:start
+    # used queue instead of min-heap. my attempt-1
+    def minimumEffortPath_1(self, heights: list[list[int]]) -> int:
+        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)] # shift
+        rows,cols = len(heights),len(heights[0]); print(f"rows: {rows}, cols: {cols}")
+        visited = [(0,0)];  maxEffort = 0 ; queue = deque([(0,0,0,0)]) # (nodeHeight, r, c, effort)
+
+        while queue:
+            nodeHeight,r,c,effort = queue.popleft()
+            maxEffort = max(maxEffort,effort)
+
+            if (r,c) == (rows-1, cols-1):
+                print(f"final result, maxEffort : {maxEffort}")
+                return maxEffort
+
+            print(f"current node at ({r},{c}) with height: {heights[r][c]}")
+            next_dr, next_dc, next_effort, minH =  0,0,0,float('inf')
+            for dr,dc in directions:
+                    rn,cn = r+dr,c+dc
+                    if (0 <= rn < rows) and (0 <= cn < cols) and (rn,cn) not in visited:
+                            effort = abs(heights[rn][cn] - heights[r][c])
+
+                            if effort < minH:
+                                next_dr, next_dc, next_effort = rn, cn, effort
+                                minH = effort
+
+                            print(f"\t- checking its neighbour at ({rn},{cn}) of height {heights[rn][cn]} | minH: {minH}")
+                            visited.append((rn,cn))
+
+            queue.append((heights[next_dr][next_dc],next_dr,next_dc,next_effort))
+            print(f"\tNeighbour ({next_dr},{next_dc}) added to queue next : {queue} | max effort : {maxEffort}")
+        print(f"final result, maxEffort : {maxEffort}")
+        return maxEffort
+    # section:problem-1631-1:end
 
     # section:problem-1334:start
     def problem1334(self):
@@ -172,5 +214,20 @@ if __name__ == "__main__":
     def findCheapestPrice_test():
         Solution().findCheapestPrice( n = 4, flights = [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], src = 0, dst = 3, k = 1)
 
+    def minimumEffortPath_1_test():
+        Solution().minimumEffortPath_1([[4,3,2], [2,6,3], [3,2,1]])
+        Solution().minimumEffortPath_1([[1,10,2], [2,3,3], [3,2,1]]) # hi
+        Solution().minimumEffortPath_1([[1,2,2],[3,8,2],[5,3,5]]) # lc
+
+    def minimumEffortPath_test():
+        #Solution().minimumEffortPath([[4,3,2], [2,6,3], [3,2,1]])
+        #Solution().minimumEffortPath([[1,10,2], [2,3,3], [3,2,1]]) # hi
+        Solution().minimumEffortPath([[1,2,2],[3,8,2],[5,3,5]]) # lc
+        Solution().minimumEffortPath([[1,2,3],[3,8,4],[5,3,5]]) # lc
+        Solution().minimumEffortPath([[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]]) # lc
+
+    # ====================================
     # networkDelayTime_test()   # problem-743
-    findCheapestPrice_test()    # problem-787
+    # findCheapestPrice_test()    # problem-787
+    #minimumEffortPath_1_test()
+    minimumEffortPath_test()
