@@ -1,5 +1,5 @@
 # System Design - Artifacts
-## hello interview `hi` ⭐
+## hello interview ⭐
 - https://www.hellointerview.com/learn/courses/system-design $280 | premium | ldus@g
 - https://www.hellointerview.com/learn/system-design/in-a-hurry/problem-breakdowns
     - read about common deep dives and pitfalls | Common Patterns
@@ -27,6 +27,9 @@ YouTube playlist | as of `7/26/2026`
 - https://www.youtube.com/watch?v=USLwIwyWVIM&list=PLJq-63ZRPdBtLBbzA2fIG9mOPclbPDSxq | Design pattern | `3/3`
 - https://www.youtube.com/watch?v=ZDuRmhLSLOY&list=PLJq-63ZRPdBt-RFGwsJO9Pv6A8ZwYHua9 | security | `7/7`
 - https://www.youtube.com/watch?v=iQ9arr3TTMA&list=PLJq-63ZRPdBu38EjXRXzyPat3sYMHbIWU | LLM | `77/77`
+
+## KodeKloud
+- https://www.youtube.com/watch?v=oz5c88cO5P8 | System Design Interview Prep for Beginners (Full Course)
 
 ---
 ## Books

@@ -1,0 +1,50 @@
+# Exercise: Graph (Shortest path)
+## Reference
+internal
+- [graph.md](../../01_DS/03_graph.md)
+- [topological-sort.md](../../02_Algo/01_03_topological-sort.md)
+- [shortest-path-algos.md](../../02_Algo/02_shortest-path-algos.md)
+
+hello-interview
+- https://www.hellointerview.com/learn/code/graphs/topological-sort
+- https://www.hellointerview.com/learn/code/graphs/shortest-path-algorithms
+
+---
+## 743. network-delay-time | adjList graph
+- Shortest path | [dijkstra 1](../../02_Algo/02_shortest-path-algos.md#2-dijkstras-algorithm-)
+- https://www.hellointerview.com/learn/code/graphs/network-delay-time
+- https://leetcode.com/problems/network-delay-time/description/
+
+@[code:section::problem-743,short_path_dijkstra,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
+
+---
+## 787. cheapest-flights-k-stops ⭐ | adjList graph 
+- Shortest path | [dijkstra 2](../../02_Algo/02_shortest-path-algos.md#2-dijkstras-algorithm-)
+- https://www.hellointerview.com/learn/code/graphs/cheapest-flights-k-stops
+- https://leetcode.com/problems/cheapest-flights-within-k-stops/description/
+
+```python
+n = 4
+flights = [[0,1,100], [1,2,100], [2,3,100], [0,3,500]]
+src = 0
+dst = 3
+k = 1
+```
+
+@[code:section::problem-787,short_path_dijkstra_2,util-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
+
+---
+## 1631. path-minimum-effort | 2D graph
+- Shortest path 
+- between top-left and right-down node in **2D graph**
+- https://www.hellointerview.com/learn/code/graphs/path-minimum-effort
+- https://leetcode.com/problems/path-with-minimum-effort/description/
+
+@[code:section::problem-1631,problem-1631-1](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)
+
+---
+## 1334. find-city-fewest-reachable
+- https://www.hellointerview.com/learn/code/graphs/find-city-fewest-reachable
+- https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/
+
+@[code:section::problem-1334](../../../../../src/leetcode/hellointerview/graph/Exercise-2.py)

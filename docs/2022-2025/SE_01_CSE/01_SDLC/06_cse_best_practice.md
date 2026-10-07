@@ -31,7 +31,7 @@
 - **Feedback Loops**: 🔸
     - implement feedback loops to gather insights from users and stakeholders
 
-## ✔️Prioritize **security** from the start 
+## ✔️Prioritize security from the start 
 - **shift security left** in the SDLC
     - integrate security practices into the development process
 
@@ -106,25 +106,5 @@
 - **Languages**: Java, Python, JavaScript, TypeScript, Go, C#, Ruby, Rust
 - **Frameworks**: Spring Boot, Django, Flask, React, Angular
 - **Databases**: PostgreSQL, dynamoDB, Redis, Cassandra
-
-## 🤖AI-powered development tools 
-- improves productivity + code quality 
-- Agentic AI tools + build own agents
-- AI-assisted code reviews
-- AI-driven testing frameworks
-- AI-based monitoring and observability tools
-- AI-powered documentation generation
-- AI-assisted debugging tools
-- AI-driven code refactoring tools
-- AI-based performance optimization tools
-- AI-powered security scanning tools
-- AI-assisted knowledge management systems
-- AI-driven incident response tools
-- AI-powered project management tools
-- AI-assisted requirement analysis tools
-- AI-driven user experience design tools
-- AI-powered code generation tools
-- AI-assisted code completion tools
-- AI-driven code search and navigation tools
 
 
