@@ -15,8 +15,9 @@ class TrieNode:
         """
 # section::TrieNode::end
 
-# section::Trie::start
+
 class Solution:
+    # section::Trie-basic::start
     def __init__(self, words=''):
         self.root = TrieNode()
         for word in words:
@@ -48,7 +49,9 @@ class Solution:
             else: return False
 
         return True
+    # section::Trie-basic::end
 
+    # section::suggest-prefixed-word::start
     # Return a list of all words in the trie that start with the given prefix.
     # ✔️ solved
     def prefix(self, prefix):
@@ -68,7 +71,9 @@ class Solution:
 
         word(prefix,curr_node)
         return res
+    # section::suggest-prefixed-word::end
 
+    # section::delete::start
     # --- Check helloI solution --- 👈
     def delete(self, word):
         curr_node = self.root
@@ -80,4 +85,4 @@ class Solution:
         curr_node.isEndOfWord = False
         if curr_node.children == {}:
             del curr_node
-# section::Trie::end
+    # section::delete::end

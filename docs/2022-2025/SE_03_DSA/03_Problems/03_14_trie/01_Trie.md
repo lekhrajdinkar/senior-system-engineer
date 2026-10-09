@@ -2,8 +2,9 @@
 ## Reference
 - https://www.hellointerview.com/learn/code/trie/overview
 
+---
 ## Overview
--  stores a set of strings in a tree-like data structure. 
+-  stores a set of strings in a **tree-like** data structure. (not binary tree)
 - Strings with a common prefix share the same nodes in the trie
 - A trie is commonly used to implement features like **spell checkers and auto-complete.**
 - Each node also has a boolean value that indicates whether the node represents the **end of a word**
@@ -15,7 +16,19 @@
     - and mark the last node as the end of a word
   - `delete(word)`, `O(L)`
 
+---
+## Visual
 [01_tries-1.excalidraw](../../draw/03/rest/01_tries-1.excalidraw)
 
-@[code:section::TrieNode,Trie](../../../../../src/leetcode/hellointerview/trie/Exercise-1.py)
+---
+## Problem-1: basic operation
+- https://www.hellointerview.com/learn/code/trie/implement-trie
 
+@[code:section::TrieNode,Trie-basic,delete](../../../../../src/leetcode/hellointerview/trie/Exercise-1.py)
+
+
+---
+## Problem-2: suggest prefixed word
+- https://www.hellointerview.com/learn/code/trie/prefix-matching
+
+@[code:section::suggest-prefixed-word](../../../../../src/leetcode/hellointerview/trie/Exercise-1.py)
