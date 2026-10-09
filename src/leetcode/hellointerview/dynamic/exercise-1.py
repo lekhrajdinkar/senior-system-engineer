@@ -17,14 +17,9 @@ class Solution:
     def climbStairs2(self, n: int) -> int:
         memo = {}
         def climb_helper(i: int) -> int:
-            if i <= 1:
-                return 1
+            if i <= 1: return 1
 
-            # check if value is already in cache
-            # before making recursive calls
-            # corresponds to the green nodes in the diagram
-            if i in memo:
-                return memo[i]
+            if i in memo: return memo[i]
 
             # store result in cache before returning
             memo[i] = climb_helper(i - 1) + climb_helper(i - 2)
@@ -35,7 +30,7 @@ class Solution:
 
     # section:problem-70-bottom-up:start
     # O(n)
-    def stairs(self, n):
+    def climbStairs3(self, n):
         if n <= 1:
             return 1
         dp = [0] * (n + 1)
@@ -45,3 +40,10 @@ class Solution:
             dp[i] = dp[i - 1] + dp[i - 2]
         return dp[n]
     # section:problem-70-bottom-up:end
+
+    # section:problem-198:start
+    class Solution:
+        def rob(self, nums: list[int]) -> int:
+            pass
+
+    # section:problem-198:end
