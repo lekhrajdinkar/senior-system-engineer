@@ -22,6 +22,14 @@ class Solution:
         for word in words:
             self.insert(word)
 
+    def insert(self, word): # ⭐
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                node.children[char] = TrieNode()
+            node = node.children[char]
+        node.isEndOfWord = True
+
     def search(self, word):
         curr_node = self.root
         for w in word:
@@ -41,13 +49,25 @@ class Solution:
 
         return True
 
-    def insert(self, word): # ⭐
-        node = self.root
-        for char in word:
-            if char not in node.children:
-                node.children[char] = TrieNode()
-            node = node.children[char]
-        node.isEndOfWord = True
+    # Return a list of all words in the trie that start with the given prefix.
+    # ✔️ solved
+    def prefix(self, prefix):
+        # Step-1 : reach/traverse to prefix  === search
+        curr_node = self.root
+        for w in prefix:
+            if w in curr_node.children:
+                curr_node = curr_node.children[w]
+            else: return []
+
+        # Step-2 : from there, form words | recursively ⭐
+        res = []
+        def word(pre, node: TrieNode):
+            for k,v in node.children.items():
+                word(pre+k, v)
+            if node.isEndOfWord: res.append(pre)
+
+        word(prefix,curr_node)
+        return res
 
     # --- Check helloI solution --- 👈
     def delete(self, word):
