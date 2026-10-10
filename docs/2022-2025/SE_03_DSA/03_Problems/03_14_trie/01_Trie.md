@@ -21,14 +21,14 @@
 [01_tries-1.excalidraw](../../draw/03/rest/01_tries-1.excalidraw)
 
 ---
-## Problem-1: basic operation
+## Problem-1: basic operation ✔️
 - https://www.hellointerview.com/learn/code/trie/implement-trie
 
 @[code:section::TrieNode,Trie-basic,delete](../../../../../src/leetcode/hellointerview/trie/Exercise-1.py)
 
 
 ---
-## Problem-2: suggest prefixed word
+## Problem-2: suggest prefixed word ✔️
 - https://www.hellointerview.com/learn/code/trie/prefix-matching
 
 @[code:section::suggest-prefixed-word](../../../../../src/leetcode/hellointerview/trie/Exercise-1.py)
